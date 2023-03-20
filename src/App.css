@@ -20,8 +20,21 @@ nav {
 
 #bookByGenre{
   display: grid;
-  background-color: blue;
+  background-color: brown;
   width:95%;
   margin:0 2.5% 0 2.5%;
   grid-template-columns: 1fr 1fr 1fr;
+}
+
+.bookList{
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: 1fr;
+  width:95%;
+  margin: 0 2.5% 0 2.5%;
+  background-color: aquamarine;
+}
+
+.bookInList{
+  display: Flex;
 }
