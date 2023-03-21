@@ -1,6 +1,9 @@
 header {
+  background-color:pink;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  height:auto;
 }
 
 nav {
@@ -53,4 +56,17 @@ nav {
 .bookOnList{
   display: Flex;
   flex-wrap: wrap;
+}
+
+.no-style{
+  all:unset;
+}
+
+#myAccountDropDown{
+  display: flex;
+  flex-direction: column;
+}
+
+#logoAndTitle{
+  display: flex;
 }
