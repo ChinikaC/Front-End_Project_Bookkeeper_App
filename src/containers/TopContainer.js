@@ -15,7 +15,7 @@ const TopContainer = () => {
     const [ownedBooks, setOwnedBooks] = useState([]);
     const [currentUser, setCurrentUser] = useState(null);
     const [updateCurrentUser, setUpdateCurrentUser] = useState(null);
-    const [myBooks, setMyBooks] = useState([]);
+    const [addNewMyBook, setNewMyBook] = useState([]);
 
 
     useEffect(() => {
@@ -23,10 +23,6 @@ const TopContainer = () => {
         fetchUsers();
         fetchOwnedBooks();
     }, [])
-
-    const logIn = (e) => {
-        setCurrentUser(e);
-    }
 
     const fetchBooks = async () => {
         const response = await fetch("http://localhost:8080/books");
@@ -50,26 +46,32 @@ const TopContainer = () => {
     }
 
     const postOwnedBook = (bookId) => {
+        //check if the user already owns the book - i.e try to find if and if you can't go ahead
         if (currentUser !== null) {
-
-
-            fetch("http://localhost:8080/ownedBooks", {
-                method: "POST",
-                headers:
-                    { "Content-Type": "application/json" },
-                body: JSON.stringify({
-                    user: { id: currentUser.id },
-                    book: { id: bookId }
+            const doYouOwnThis = ownedBooks.filter((book) => { return book.book.id == bookId && book.user.id == currentUser.id })
+            console.log(doYouOwnThis)
+            if (doYouOwnThis.length === 0) {
+                fetch("http://localhost:8080/ownedBooks", {
+                    method: "POST",
+                    headers:
+                        { "Content-Type": "application/json" },
+                    body: JSON.stringify({
+                        user: { id: currentUser.id },
+                        book: { id: bookId }
+                    })
                 })
-            })
-                .then((response) => response.json())
-                .then((response) => {
-                    setOwnedBooks([ ...ownedBooks, response ]);
-                    //console.log(`{user: {id:${currentUser.id} },book: {id:${bookId} }}`);
-                    // Find the book id and the user id
-                    // currentUser.id - to find the user id
-                    // book id comes from the event - event.target.value 
-                });
+                    .then((response) => response.json())
+                    .then((response) => {
+                        setOwnedBooks([...ownedBooks, response]);
+                        //console.log(`{user: {id:${currentUser.id} },book: {id:${bookId} }}`);
+                        // Find the book id and the user id
+                        // currentUser.id - to find the user id
+                        // book id comes from the event - event.target.value 
+                    });
+                console.log("you can add that")
+            } else {
+                console.log("already owned")
+            }
         }
     };
 
@@ -99,7 +101,7 @@ const TopContainer = () => {
     if (error !== "") return <p>Error! {error}</p>;
 
     const handleAddBook = (newBook) => {
-        setMyBooks([...myBooks, newBook]);
+        setNewMyBook([...addNewMyBook, newBook]);
       };
 
     return (
@@ -113,7 +115,7 @@ const TopContainer = () => {
                         } />
                     <Route path='/OurBooks' element=
                         {
-                            <OurBooks books={books} postOwnedBook={postOwnedBook} />
+                            <OurBooks books={books} postOwnedBook={postOwnedBook}/>
                         } />
                     <Route path='/MyBooks' element=
                         {
@@ -125,7 +127,7 @@ const TopContainer = () => {
                         } />
                     <Route path='/MyBookForm' element= 
                     {
-                        <MyBookForm myBooks={myBooks} setMyBooks={setMyBooks} />
+                        <MyBookForm addNewMyBook={addNewMyBook} setMyBooks={setNewMyBook} onAddBook={handleAddBook} />
                     } />
                         
                 </Routes>
