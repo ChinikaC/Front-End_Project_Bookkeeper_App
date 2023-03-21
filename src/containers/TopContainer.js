@@ -44,20 +44,31 @@ const TopContainer = () => {
         setOwnedBooks(data);
     }
 
-    const postOwnedBook = (newBook) => {
-        fetch("http://localhost:8080/ownedBooks", {
-        method: "POST",
-        headers:
-         {"Content-Type": "application/json"},
-         body: JSON.stringify(newBook),
-        })
-        .then((response) => response.json())
-        .then((response) => {
-            setOwnedBooks({...ownedBooks, response});
-        });
+    const postOwnedBook = (bookId) => {
+        if (currentUser !== null) {
+
+
+            fetch("http://localhost:8080/ownedBooks", {
+                method: "POST",
+                headers:
+                    { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                    user: { id: currentUser.id },
+                    book: { id: bookId }
+                })
+            })
+                .then((response) => response.json())
+                .then((response) => {
+                    setOwnedBooks({ ...ownedBooks, response });
+                    console.log(`{user: {id:${currentUser.id} },book: {id:${bookId} }}`);
+                    // Find the book id and the user id
+                    // currentUser.id - to find the user id
+                    // book id comes from the event - event.target.value 
+                });
+        }
     };
 
-    
+
     if (error !== "") return <p>Error! {error}</p>;
 
     return (
@@ -66,17 +77,17 @@ const TopContainer = () => {
                 <NavBar />
                 <Routes>
                     <Route path='/Home' element=
-                    {
-                        <Home />
-                    } />
+                        {
+                            <Home />
+                        } />
                     <Route path='/OurBooks' element=
-                    {
-                        <OurBooks books={books}/>
-                    } />
+                        {
+                            <OurBooks books={books} postOwnedBook={postOwnedBook} />
+                        } />
                     <Route path='/MyBooks' element=
-                    {
-                        <MyBooks ownedBooks={ownedBooks} currentUser={currentUser} newBook={postOwnedBook} users={users} setCurrentUser={setCurrentUser}/>
-                    } />
+                        {
+                            <MyBooks ownedBooks={ownedBooks} currentUser={currentUser} postOwnedBook={postOwnedBook} users={users} setCurrentUser={setCurrentUser} />
+                        } />
                 </Routes>
 
             </Router>

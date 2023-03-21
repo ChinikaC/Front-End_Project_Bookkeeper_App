@@ -1,13 +1,13 @@
 import React from "react"
 import BookList from "../components/BookList"
 
-const OurBooks = ({books}) => {
+const OurBooks = ({books, postOwnedBook}) => {
     return (
         <>
         <div>
             Our Books
         </div>
-        <BookList books={books}></BookList>
+        <BookList books={books} postOwnedBook={postOwnedBook} ></BookList>
         </>
     )
 }

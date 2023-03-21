@@ -1,10 +1,9 @@
 import Book from "./Book";
 
-const BookList = ({books, newBook}) => {
-
-    const bookList = books.map((book,index) => {
+const BookList = ({books, postOwnedBook}) => {
+    const bookList = books.map((book, index) => {
         return(
-            <Book book = {book} key = {index} newBook = {newBook}/>
+            <Book book = {book} key = {index} postOwnedBook={postOwnedBook} />
         )
     })
 
