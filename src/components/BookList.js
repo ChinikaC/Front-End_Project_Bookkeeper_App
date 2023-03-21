@@ -1,9 +1,9 @@
 import Book from "./Book";
 
-const BookList = ({books, postOwnedBook}) => {
+const BookList = ({books, postOwnedBook,filterBooksByEnum}) => {
     const bookList = books.map((book, index) => {
         return(
-            <Book book = {book} key = {index} postOwnedBook={postOwnedBook} />
+            <Book book = {book} key = {index} postOwnedBook={postOwnedBook}/>
         )
     })
 

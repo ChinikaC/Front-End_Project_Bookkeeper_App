@@ -86,7 +86,7 @@ const TopContainer = () => {
                         } />
                     <Route path='/MyBooks' element=
                         {
-                            <MyBooks ownedBooks={ownedBooks} users={users} books={books}currentUser={currentUser} setCurrentUser={setCurrentUser} />
+                            <MyBooks ownedBooks={ownedBooks} users={users} books={books} currentUser={currentUser} setCurrentUser={setCurrentUser} />
                         } />
                 </Routes>
 

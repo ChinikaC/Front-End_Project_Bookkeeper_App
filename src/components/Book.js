@@ -1,4 +1,4 @@
-const Book = ({ book, postOwnedBook }) => {
+const Book = ({ book, postOwnedBook}) => {
 
     const handleClick = (e) => {
         console.log(e);
@@ -6,26 +6,22 @@ const Book = ({ book, postOwnedBook }) => {
         postOwnedBook(book.id)
     }
 
-    const handleChangeBookStatus = (e) => {
-        
-    }
-
-    if(document.URL === "http://localhost:3000/MyBooks"){
-        return(
+    if (document.URL === "http://localhost:3000/MyBooks") {
+        return (
             <li className="bookOnList">
                 <h3 className="bookTitle">{book.title}</h3>
                 <p className="bookDescription"><b>Description: </b>{book.description}</p>
                 <select
-                        onChange={handleChangeBookStatus}
-                        name="BookStatus">
-                        <option value="filter">Change Status</option>
-                        <option value="to-read">To Read</option>
-                        <option value="reading">Reading</option>
-                        <option value="read">Read</option>
-                    </select>
+                    onChange={handleClick}
+                    name="BookStatus">
+                    <option value="filter">Change Status</option>
+                    <option value="to-read">To Read</option>
+                    <option value="reading">Reading</option>
+                    <option value="read">Read</option>
+                </select>
             </li>
         )
-    } else{
+    } else {
         return (
             <li className="bookOnList">
                 <h3 className="bookTitle">{book.title}</h3>
