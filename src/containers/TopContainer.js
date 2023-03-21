@@ -11,15 +11,17 @@ const TopContainer = () => {
     const [books, setBooks] = useState([]);
     const [users, setUsers] = useState([]);
     const [ownedBooks, setOwnedBooks] = useState([]);
-    const [currentUser, setCurrentUser] = useState({});
-    // const []
+    const [currentUser, setCurrentUser] = useState(null);
 
     useEffect(() => {
         fetchBooks();
         fetchUsers();
         fetchOwnedBooks();
-        setCurrentUser(users[1]);
     }, [])
+
+    const logIn = (e) => {
+        setCurrentUser(e);
+    }
 
     const fetchBooks = async () => {
         const response = await fetch("http://localhost:8080/books");
@@ -73,7 +75,7 @@ const TopContainer = () => {
                     } />
                     <Route path='/MyBooks' element=
                     {
-                        <MyBooks ownedBooks={ownedBooks} currentUser={currentUser} newBook={postOwnedBook}/>
+                        <MyBooks ownedBooks={ownedBooks} currentUser={currentUser} newBook={postOwnedBook} users={users} setCurrentUser={setCurrentUser}/>
                     } />
                 </Routes>
 

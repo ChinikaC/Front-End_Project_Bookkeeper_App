@@ -9,9 +9,9 @@ const Book = ({ book, newBook }) => {
 
     return (
         <li className="bookOnList">
-            <h3>{book.title}</h3>
-            <p><b>Description: </b>{book.description}</p>
-            <button onClick={handleClick}>Add to my list</button>
+            <h3 className="bookTitle">{book.title}</h3>
+            <p className="bookDescription"><b>Description: </b>{book.description}</p>
+            <button onClick={handleClick} className="bookButton">Add to my list</button>
         </li>
     )
 }
