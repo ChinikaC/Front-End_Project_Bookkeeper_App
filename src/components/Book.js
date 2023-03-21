@@ -1,24 +1,41 @@
-const Book = ({ book, postOwnedBook}) => {
+const Book = ({ book, postOwnedBook, updateBookStatus, currentUser, ownedBooks }) => {
 
     const handleClick = (e) => {
-        console.log(e);
-        console.log("You have successfully added this book to your list!");
+        //console.log(e);
+        //console.log("You have successfully added this book to your list!");
         postOwnedBook(book.id)
     }
 
+    const handleStatusUpdate = (e) => {
+        updateBookStatus(book.id, e.target.value)
+        e.target.value = "filter"
+    }
+
     if (document.URL === "http://localhost:3000/MyBooks") {
+        const ob = ownedBooks.filter((ownedBook) => { return ownedBook.book.id === book.id && ownedBook.user.id === currentUser.id })
+        let bookStatus = ob[0].status;
+        if (bookStatus === "READING") {
+            bookStatus = "Reading"
+        } else if (bookStatus === "READ") {
+            bookStatus = "Read"
+        } else if (bookStatus === "TO_READ") {
+            bookStatus = "To Read"
+        }
         return (
             <li className="bookOnList">
                 <h3 className="bookTitle">{book.title}</h3>
                 <p className="bookDescription"><b>Description: </b>{book.description}</p>
-                <select
-                    onChange={handleClick}
-                    name="BookStatus">
-                    <option value="filter">Change Status</option>
-                    <option value="to-read">To Read</option>
-                    <option value="reading">Reading</option>
-                    <option value="read">Read</option>
-                </select>
+                <div>
+                    <select
+                        onChange={handleStatusUpdate}
+                        name="BookStatus">
+                        <option value="filter" >Change Status</option>
+                        <option value="TO_READ">To Read</option>
+                        <option value="READING">Reading</option>
+                        <option value="READ">Read</option>
+                    </select>
+                    <p>{bookStatus}</p>
+                </div>
             </li>
         )
     } else {
