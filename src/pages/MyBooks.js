@@ -1,7 +1,7 @@
 import React from "react";
 import BookList from "../components/BookList";
 
-const MyBooks = ({ ownedBooks, currentUser, newBook,users,setCurrentUser }) => {
+const MyBooks = ({ ownedBooks, users, books, currentUser, setCurrentUser }) => {
 
     const userOptions = users.map((user) => {
         return (
@@ -26,24 +26,41 @@ const MyBooks = ({ ownedBooks, currentUser, newBook,users,setCurrentUser }) => {
                 <select
                     onChange={handleLogIn}
                     name="Users">
-                <option value="select user">Select a user</option>
-                {userOptions}
+                    <option value="select user">Select a user</option>
+                    {userOptions}
                 </select>
             </div>
         );
     } else {
-    
-    const userOwnedBooks = ownedBooks.filter((ownedBook) => { return ownedBook.user.id === currentUser.id });
-    const booksOwned = userOwnedBooks.map((ownedBook) => ownedBook.book)
 
-    return (
-        <>
-            <div>
-                Hello
-            </div>
-            <BookList books={booksOwned} newBook={newBook}></BookList>
-        </>
-    );
+        const ownedBookIds = ownedBooks.map((ownedBook) => {
+            if (ownedBook.user.id === currentUser.id) {
+                return ownedBook.book.id
+            }
+        });
+        const booksOwned = books.filter((book) => { return ownedBookIds.includes(book.id) })
+
+        return (
+            <>
+                <div>
+                    Hello {currentUser.fullName}
+                </div>
+                <div>
+                    Edit Account Details:
+                    <button>Edit</button>
+                </div>
+                <div>
+                    Filter by book status:
+                    <select
+                        onChange={handleLogIn}
+                        name="BookStatus">
+                        <option value="filter">Filter By Book Status</option>
+                        {userOptions}
+                    </select>
+                </div>
+                <BookList books={booksOwned}></BookList>
+            </>
+        );
     }
-    }
-    export default MyBooks;
+}
+export default MyBooks;

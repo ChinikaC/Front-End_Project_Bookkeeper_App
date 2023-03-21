@@ -60,8 +60,8 @@ const TopContainer = () => {
             })
                 .then((response) => response.json())
                 .then((response) => {
-                    setOwnedBooks([...ownedBooks, response ]);
-                    console.log(`{user: {id:${currentUser.id} },book: {id:${bookId} }}`);
+                    setOwnedBooks([ ...ownedBooks, response ]);
+                    //console.log(`{user: {id:${currentUser.id} },book: {id:${bookId} }}`);
                     // Find the book id and the user id
                     // currentUser.id - to find the user id
                     // book id comes from the event - event.target.value 
@@ -87,7 +87,7 @@ const TopContainer = () => {
                         } />
                     <Route path='/MyBooks' element=
                         {
-                            <MyBooks ownedBooks={ownedBooks} currentUser={currentUser} postOwnedBook={postOwnedBook} users={users} setCurrentUser={setCurrentUser} />
+                            <MyBooks ownedBooks={ownedBooks} users={users} books={books}currentUser={currentUser} setCurrentUser={setCurrentUser} />
                         } />
                     <Route path='/UserForm' element=
                         {
