@@ -92,6 +92,10 @@ const MyBooks = ({ ownedBooks, users, books, currentUser, setCurrentUser }) => {
                         <option value="READ">Read</option>
                     </select>
                 </div>
+                <div>
+                    Add New Book To List
+                    <button> <NavLink to="/MyBookForm"> Add Book </NavLink> </button>
+                </div>
                 <BookList books={currentList} ></BookList>
             </>
         );

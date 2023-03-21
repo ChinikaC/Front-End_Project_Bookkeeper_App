@@ -16,7 +16,7 @@ const TopContainer = () => {
     const [ownedBooks, setOwnedBooks] = useState([]);
     const [currentUser, setCurrentUser] = useState(null);
     const [updateCurrentUser, setUpdateCurrentUser] = useState(null);
-    const [myBooks, setMyBooks] = useState([]);
+    const [addNewMyBook, setNewMyBook] = useState([]);
 
 
     useEffect(() => {
@@ -100,7 +100,7 @@ const TopContainer = () => {
     if (error !== "") return <p>Error! {error}</p>;
 
     const handleAddBook = (newBook) => {
-        setMyBooks([...myBooks, newBook]);
+        setNewMyBook([...addNewMyBook, newBook]);
       };
 
     return (
@@ -130,7 +130,7 @@ const TopContainer = () => {
                         } />
                     <Route path='/MyBookForm' element= 
                     {
-                        <MyBookForm myBooks={myBooks} setMyBooks={setMyBooks} />
+                        <MyBookForm addNewMyBook={addNewMyBook} setMyBooks={setNewMyBook} onAddBook={handleAddBook} />
                     } />
                         
                 </Routes>
