@@ -1,7 +1,35 @@
-import React from "react";
+import React, {useState} from "react";
 import BookList from "../components/BookList";
 
 const MyBooks = ({ ownedBooks, users, books, currentUser, setCurrentUser }) => {
+   
+const [newBookTitle, setNewBookTitle] = useState("");
+const [newBookAuthor, setNewBookAuthor] = useState("");
+const [newBookDescription, setNewBookDescription] = useState("");
+const [newBookGenre, setNewBookGenre] = useState("");
+
+const handleAddBook = async (e) => {
+    e.preventDefault();
+    const response = await fetch('http://localhost:8080/books', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            title: newBookTitle,
+            author: newBookAuthor,
+            description: newBookDescription,
+            genre: newBookGenre,
+            ownedBooks: []
+        })
+    });
+    const newBook = await response.json();
+    console.log(newBook);
+    setNewBookTitle("");
+    setNewBookAuthor("");
+    setNewBookDescription("");
+    setNewBookGenre("");
+};
 
     const userOptions = users.map((user) => {
         return (
