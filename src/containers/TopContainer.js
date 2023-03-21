@@ -4,6 +4,7 @@ import Home from '../pages/Home.js';
 import OurBooks from '../pages/OurBooks.js';
 import NavBar from '../header-and-footer/Navbar';
 import MyBooks from "../pages/MyBooks.js";
+import UserForm from "../pages/UserForm.js";
 
 const TopContainer = () => {
 
@@ -59,7 +60,7 @@ const TopContainer = () => {
             })
                 .then((response) => response.json())
                 .then((response) => {
-                    setOwnedBooks({ ...ownedBooks, response });
+                    setOwnedBooks([...ownedBooks, response ]);
                     console.log(`{user: {id:${currentUser.id} },book: {id:${bookId} }}`);
                     // Find the book id and the user id
                     // currentUser.id - to find the user id
@@ -87,6 +88,10 @@ const TopContainer = () => {
                     <Route path='/MyBooks' element=
                         {
                             <MyBooks ownedBooks={ownedBooks} currentUser={currentUser} postOwnedBook={postOwnedBook} users={users} setCurrentUser={setCurrentUser} />
+                        } />
+                    <Route path='/UserForm' element=
+                        {
+                            <UserForm users={users} setCurrentUser={setCurrentUser} />
                         } />
                 </Routes>
 
