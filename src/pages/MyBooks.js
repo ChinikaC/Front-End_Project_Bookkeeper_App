@@ -1,10 +1,34 @@
-import React, {useState} from "react";
+import React, { useEffect, useState } from "react";
 import BookList from "../components/BookList";
 import { NavLink } from "react-router-dom";
 
 const MyBooks = ({ ownedBooks, users, books, currentUser, setCurrentUser }) => {
 
     const [currentList, setCurrentList] = useState([]);
+    const [currentFilter, setCurrentFilter] = useState("filter")
+
+    useEffect(() => {
+        getBooks();
+    }, [])
+
+    const updateBookStatus = (bookId, newStatus) => {
+        if (newStatus === "filter") {
+
+        } else {
+            const toUpdate = ownedBooks.filter((book) => {
+                return book.book.id === bookId && book.user.id === currentUser.id
+            });
+            let bookToUpdate = toUpdate[0];
+            bookToUpdate.status = newStatus;
+            fetch(`http://localhost:8080/ownedBooks/${bookToUpdate.id}`, {
+                method: "PUT",
+                headers:
+                    { "Content-Type": "application/json" },
+                body: JSON.stringify(bookToUpdate)
+            })
+            filter(currentFilter);
+        }
+    }
 
     const handleLogIn = (e) => {
         //find the user to log in
@@ -22,31 +46,38 @@ const MyBooks = ({ ownedBooks, users, books, currentUser, setCurrentUser }) => {
     }
 
     const getBooks = () => {
-        //get owned book Ids
-        const userBooksIds = ownedBooks.map((book) => {
-            if (book.user.id === currentUser.id) {
-                return book.book.id
-            }
-        })
-        //retrieve a book once from the books array
-        const userBooks = books.filter((book) => { return userBooksIds.includes(book.id) });
-        console.log(userBooks);
-        setCurrentList(userBooks);
+        if (currentUser != null) {
+            //get owned book Ids
+            const userBooksIds = ownedBooks.map((book) => {
+                if (book.user.id === currentUser.id) {
+                    return book.book.id
+                }
+            })
+            //retrieve a book once from the books array
+            const userBooks = books.filter((book) => { return userBooksIds.includes(book.id) });
+            setCurrentList(userBooks);
+        }
     }
 
-    const handleFilter = (e) => {
-        if (e.target.value === "filter") {
+    const filter = (filt) => {
+        if (filt === "filter") {
             getBooks();
         } else {
             //get status of all books and Id from owned book list
-            const bookStatuses = ownedBooks.filter((book) => { return book.user.id === currentUser.id })
-            const en = JSON.stringify(e.target.value);
-            //filter current list
-            let filteredList = bookStatuses.filter((book) => { return JSON.stringify(book.status) == en })
-            filteredList = filteredList.map((book) => { return book.book })
-            console.log(filteredList)
-            setCurrentList(filteredList);
+            const bookStatuses = ownedBooks.map((book) => {
+                if (book.user.id === currentUser.id && JSON.stringify(book.status) == JSON.stringify(filt)) {
+                    return book.book.id
+                }
+            })
+            //retrieve a book once from the books array
+            const userBooks = books.filter((book) => { return bookStatuses.includes(book.id) });
+            setCurrentList(userBooks);
         }
+    }
+
+    const handleFilter = (e) => {
+        setCurrentFilter(e.target.value);
+        filter(e.target.value);
     }
 
     const userOptions = users.map((user) => {
@@ -92,7 +123,7 @@ const MyBooks = ({ ownedBooks, users, books, currentUser, setCurrentUser }) => {
                         <option value="READ">Read</option>
                     </select>
                 </div>
-                <BookList books={currentList} ></BookList>
+                <BookList books={currentList} updateBookStatus={updateBookStatus} ></BookList>
             </>
         );
     }
