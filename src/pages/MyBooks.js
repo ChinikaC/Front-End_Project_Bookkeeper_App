@@ -117,7 +117,7 @@ const MyBooks = ({ ownedBooks, users, books, currentUser, setCurrentUser }) => {
                     <select
                         onChange={handleFilter}
                         name="BookStatus">
-                        <option value="filter">Filter</option>
+                        <option value="filter">All your books</option>
                         <option value="TO_READ">To Read</option>
                         <option value="READING">Reading</option>
                         <option value="READ">Read</option>
@@ -127,7 +127,7 @@ const MyBooks = ({ ownedBooks, users, books, currentUser, setCurrentUser }) => {
                     Add New Book To List
                     <button> <NavLink to="/MyBookForm"> Add Book </NavLink> </button>
                 </div>
-                <BookList books={currentList} updateBookStatus={updateBookStatus} ></BookList>
+                <BookList books={currentList} updateBookStatus={updateBookStatus} ownedBooks={ownedBooks} currentUser={currentUser}></BookList>
             </>
         );
     }
