@@ -1,5 +1,6 @@
 import React from "react";
 import BookList from "../components/BookList";
+import { NavLink } from "react-router-dom";
 
 const MyBooks = ({ ownedBooks, users, books, currentUser, setCurrentUser }) => {
 
@@ -47,7 +48,7 @@ const MyBooks = ({ ownedBooks, users, books, currentUser, setCurrentUser }) => {
                 </div>
                 <div>
                     Edit Account Details:
-                    <button>Edit</button>
+                    <button> <NavLink to="/UserForm">Edit</NavLink></button>
                 </div>
                 <div>
                     Filter by book status:

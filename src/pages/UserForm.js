@@ -26,12 +26,14 @@ const UserForm = ({currentUser}) => {
     }
 
     return (
+        <div>
+        <h1>Update My Account Details</h1>
         <form onSubmit={handleFormSubmit}>
             <input 
             type="text" 
             name="fullName"
             placeholder="Full Name"
-            value={changeUserDetails.name}
+            value={changeUserDetails.fullName}
             onChange={handleChange}
             />
 
@@ -43,8 +45,9 @@ const UserForm = ({currentUser}) => {
             onChange={handleChange}
             />
 
-           < button type="submit"></button>
+           < button type="submit">Submit</button>
         </form>
+        </div>
     );
 
 };
