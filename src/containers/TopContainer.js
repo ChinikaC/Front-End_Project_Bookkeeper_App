@@ -5,6 +5,7 @@ import OurBooks from '../pages/OurBooks.js';
 import NavBar from '../header-and-footer/Navbar';
 import MyBooks from "../pages/MyBooks.js";
 import UserForm from "../pages/UserForm.js";
+import MyBookForm from "../pages/MyBookForm.js";
 
 const TopContainer = () => {
 
@@ -14,6 +15,8 @@ const TopContainer = () => {
     const [ownedBooks, setOwnedBooks] = useState([]);
     const [currentUser, setCurrentUser] = useState(null);
     const [updateCurrentUser, setUpdateCurrentUser] = useState(null);
+    const [myBooks, setMyBooks] = useState([]);
+
 
     useEffect(() => {
         fetchBooks();
@@ -94,6 +97,10 @@ const TopContainer = () => {
 
     if (error !== "") return <p>Error! {error}</p>;
 
+    const handleAddBook = (newBook) => {
+        setMyBooks([...myBooks, newBook]);
+      };
+
     return (
         <>
             <Router>
@@ -115,8 +122,11 @@ const TopContainer = () => {
                         {
                             <UserForm users={users} setCurrentUser={setCurrentUser} currentUser={updateCurrentUser} />
                         } />
+                    <Route path='/MyBookForm' element= 
+                    {
+                        <MyBookForm myBooks={myBooks} setMyBooks={setMyBooks} />
+                    } />
                 </Routes>
-
             </Router>
         </>
     )
