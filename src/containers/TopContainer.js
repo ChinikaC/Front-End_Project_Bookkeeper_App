@@ -5,6 +5,7 @@ import OurBooks from '../pages/OurBooks.js';
 import NavBar from '../header-and-footer/Navbar';
 import MyBooks from "../pages/MyBooks.js";
 import UserForm from "../pages/UserForm.js";
+import UserList from "../pages/UserList.js";
 
 const TopContainer = () => {
 
@@ -70,26 +71,27 @@ const TopContainer = () => {
         }
     };
 
-    const updateUserDetails = (currentUser) => {
+    const updateUserDetails = (updatedUser) => {
         fetch(`http://localhost:8080/users/${currentUser.id}`, {
             method: "PUT",
-            headers: {"Content-Type": "applicaton/json"},
-            body: JSON.stringify(currentUser)
+            headers: {"Content-Type": "application/json"},
+            body: JSON.stringify(updatedUser)
         })
 
         .then((response) => response.json())
         .then((responseCurrentUser) => {
-            const updatedUserDetails = currentUser.map((currentUser) => {
-                if(currentUser.id === responseCurrentUser.id){
+            const updatedUserDetails = users.map((user) => {
+                if(user.id === responseCurrentUser.id){
                     return responseCurrentUser;
                 } else {
-                    return currentUser;
+                    return user;
                 }
             })
-            setCurrentUser(updatedUserDetails)
-        })
-        setUpdateCurrentUser(null);
-    }
+            setUsers(updatedUserDetails)
+            setUpdateCurrentUser(null);
+            setCurrentUser(responseCurrentUser);
+        });
+    };
 
 
     if (error !== "") return <p>Error! {error}</p>;
@@ -113,8 +115,13 @@ const TopContainer = () => {
                         } />
                     <Route path='/UserForm' element=
                         {
-                            <UserForm users={users} setCurrentUser={setCurrentUser} currentUser={updateCurrentUser} />
+                            <UserForm users={users} setCurrentUser={setCurrentUser} updateCurrentUser={updateCurrentUser} updateUserDetails={updateUserDetails}/>
                         } />
+                    <Route path='/UserList' element=
+                        {
+                            <UserList users={users} updateCurrentUser={updateCurrentUser} />
+                        } />
+                        
                 </Routes>
 
             </Router>

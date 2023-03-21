@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const UserForm = ({currentUser}) => {
+const UserForm = ({currentUser, updateUserDetails}) => {
     const [changeUserDetails, setChangeUserDetails] = useState({
         fullName: "",
         email: ""
@@ -12,13 +12,14 @@ const UserForm = ({currentUser}) => {
 
     const handleChange = (e) => {
         const propertyName = e.target.name;
-        const copiedUserDetails = {...currentUser};
+        const copiedUserDetails = {...changeUserDetails};
         copiedUserDetails[propertyName] = e.target.value;
         setChangeUserDetails(copiedUserDetails);
     }
 
     const handleFormSubmit = (e) => {
         e.preventDefault();
+        updateUserDetails(changeUserDetails);
         setChangeUserDetails({
             fullName: "",
             email: ""
