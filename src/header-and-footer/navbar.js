@@ -8,7 +8,7 @@ const Header = ({ currentUser, setCurrentUser }) => {
     const [isMenuDropDownOpen, setMenuDropDownOpen] = useState(false);
 
     const closeHoverMenu = () => {
-        setMenuDropDownOpen(false);
+            setMenuDropDownOpen(false);
     };
 
     useOnHoverOutside(dropdownRef, closeHoverMenu); // Call the hook
@@ -24,7 +24,7 @@ const Header = ({ currentUser, setCurrentUser }) => {
                 <h1>Book-Keepers</h1>
             </div>
             <nav>
-                <NavLink to="/Home">
+                <NavLink to="/home">
                     Home
                 </NavLink>
                 <NavLink to="/OurBooks">
@@ -34,7 +34,7 @@ const Header = ({ currentUser, setCurrentUser }) => {
                     <div ref={dropdownRef} id="myAccountDropDown">
                         <button
                             className="no-style"
-                            onMouseOver={() => setMenuDropDownOpen(true)}
+                            onMouseOver={() => {if(currentUser!=null) {setMenuDropDownOpen(true)}}}
                         >
                             My Account
                         </button>

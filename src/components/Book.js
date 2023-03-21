@@ -31,7 +31,7 @@ const Book = ({ book, postOwnedBook, updateBookStatus, currentUser, ownedBooks, 
             <li className="bookOnList">
                 <h3 className="bookTitle">{book.title}</h3>
                 <p className="bookDescription"><b>Description: </b>{book.description}</p>
-                <div>
+                <div id="userButtons">
                     <select
                         onChange={handleStatusUpdate}
                         name="BookStatus">
