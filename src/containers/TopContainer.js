@@ -4,6 +4,7 @@ import Home from '../pages/Home.js';
 import OurBooks from '../pages/OurBooks.js';
 import NavBar from '../header-and-footer/Navbar';
 import MyBooks from "../pages/MyBooks.js";
+import UserForm from "../pages/UserForm.js";
 
 const TopContainer = () => {
 
@@ -12,6 +13,7 @@ const TopContainer = () => {
     const [users, setUsers] = useState([]);
     const [ownedBooks, setOwnedBooks] = useState([]);
     const [currentUser, setCurrentUser] = useState(null);
+    const [updateCurrentUser, setUpdateCurrentUser] = useState(null);
 
     useEffect(() => {
         fetchBooks();
@@ -68,6 +70,27 @@ const TopContainer = () => {
         }
     };
 
+    const updateUserDetails = (currentUser) => {
+        fetch(`http://localhost:8080/users/${currentUser.id}`, {
+            method: "PUT",
+            headers: {"Content-Type": "applicaton/json"},
+            body: JSON.stringify(currentUser)
+        })
+
+        .then((response) => response.json())
+        .then((responseCurrentUser) => {
+            const updatedUserDetails = currentUser.map((currentUser) => {
+                if(currentUser.id === responseCurrentUser.id){
+                    return responseCurrentUser;
+                } else {
+                    return currentUser;
+                }
+            })
+            setCurrentUser(updatedUserDetails)
+        })
+        setUpdateCurrentUser(null);
+    }
+
 
     if (error !== "") return <p>Error! {error}</p>;
 
@@ -87,6 +110,10 @@ const TopContainer = () => {
                     <Route path='/MyBooks' element=
                         {
                             <MyBooks ownedBooks={ownedBooks} users={users} books={books} currentUser={currentUser} setCurrentUser={setCurrentUser} />
+                        } />
+                    <Route path='/UserForm' element=
+                        {
+                            <UserForm users={users} setCurrentUser={setCurrentUser} currentUser={updateCurrentUser} />
                         } />
                 </Routes>
 
