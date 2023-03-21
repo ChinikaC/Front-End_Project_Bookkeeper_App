@@ -130,7 +130,7 @@ const TopContainer = () => {
                         } />
                     <Route path='/MyBookForm' element= 
                     {
-                        <MyBookForm addNewMyBook={addNewMyBook} setMyBooks={setNewMyBook} onAddBook={handleAddBook} />
+                        <MyBookForm addNewMyBook={addNewMyBook} setMyBooks={setNewMyBook} onAddBook={handleAddBook} setBooks={setBooks} />
                     } />
                         
                 </Routes>

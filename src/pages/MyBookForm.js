@@ -28,7 +28,7 @@ const MyBooksForm = ({onAddBook}) => {
       }
   
       const newBook = await response.json();
-      onAddBook(newBook); // Call onAddBook with the new book to add it to MyBooks
+      onAddBook(newBook); 
       setNewBookTitle("");
       setNewBookAuthor("");
       setNewBookDescription("");
@@ -39,13 +39,7 @@ const MyBooksForm = ({onAddBook}) => {
   };
   
 
-//   const handleFormSubmit = (e) => {
-//     e.preventDefault();
-//     onAddBook(newBookTitle);
-//     setNewBookTitle({
-//         bookTitle: ""
-//     })
-// }
+
 
 
   return (
