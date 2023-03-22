@@ -1,14 +1,10 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
-const UserForm = ({currentUser, updateUserDetails}) => {
+const UserForm = ({updateUserDetails}) => {
     const [changeUserDetails, setChangeUserDetails] = useState({
         fullName: "",
         email: ""
     })
-
-    // useEffect(() => {
-
-    // })
 
     const handleChange = (e) => {
         const propertyName = e.target.name;

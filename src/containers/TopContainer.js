@@ -5,7 +5,6 @@ import OurBooks from '../pages/OurBooks.js';
 import NavBar from '../header-and-footer/Navbar';
 import MyBooks from "../pages/MyBooks.js";
 import UserForm from "../pages/UserForm.js";
-import UserList from "../pages/UserList.js";
 import MyBookForm from "../pages/MyBookForm.js";
 
 const TopContainer = () => {
@@ -133,12 +132,6 @@ const TopContainer = () => {
                             setCurrentUser={setCurrentUser} 
                             updateCurrentUser={updateCurrentUser} 
                             updateUserDetails={updateUserDetails}/>
-                        } />
-                    <Route path='/UserList' element=
-                        {
-                            <UserList 
-                            users={users} 
-                            updateCurrentUser={updateCurrentUser} />
                         } />
                     <Route path='/MyBookForm' element= 
                     {
