@@ -1,7 +1,7 @@
 import { React, useRef, useState } from "react";
 import { NavLink } from "react-router-dom";
 import { useOnHoverOutside } from "../hooks/useOnHover";
-import logo from "../assets/bookkeeperslogo.png";
+import logo from "../assets/bookkeeperslogo.jpeg";
 
 const Header = ({ currentUser, setCurrentUser, setCurrentFilter }) => {
 
@@ -43,18 +43,17 @@ const Header = ({ currentUser, setCurrentUser, setCurrentFilter }) => {
                 <NavLink to="/home">
                     <img src={logo} alt="Book-Keepers Logo" id="logo" />
                 </NavLink>
-                <h1>Book-Keepers</h1>
+                <h1 id="title">Book-Keepers</h1>
             </div>
-
             <nav>
                 <NavLink to="/home">
-                    Home
+                    <button className="nav-button">Home</button>
                 </NavLink>
                 <NavLink to="/OurBooks">
                     <button className="nav-button" onClick={handleClick}>Our Books</button>
                 </NavLink>
                 <NavLink to="/MyBooks">
-                    <div ref={dropdownRef} id="myAccountDropDown">
+                    <div ref={dropdownRef} className="nav-button">
                         <button
                             className="nav-button"
                             onMouseOver={() => { if (currentUser != null) { setMenuDropDownOpen(true) } }}
@@ -62,20 +61,23 @@ const Header = ({ currentUser, setCurrentUser, setCurrentFilter }) => {
                             My Account
                         </button>
 
-                        {isMenuDropDownOpen && <button className="nav-button" onClick={handleLogOut}>Log out</button>}
+                        {isMenuDropDownOpen &&
+                            <div className="dropdown-menu">
+                                <button className="nav-button" onClick={handleLogOut}>Log out</button>
+                            </div>}
                     </div>
                 </NavLink>
                 <NavLink to="/SignUp">
-                    Sign Up
+                    <button className="nav-button">Sign Up</button>
                 </NavLink>
-                <div id="searchBar">
-                    <input
-                        type="text"
-                        placeholder="Search Here"
-                        onChange={handleChange}
-                        value={searchInput} />
-                </div>
             </nav>
+            <div id="searchBar">
+                <input
+                    type="text"
+                    placeholder="Search Here"
+                    onChange={handleChange}
+                    value={searchInput} />
+            </div>
         </header>
     )
 }
