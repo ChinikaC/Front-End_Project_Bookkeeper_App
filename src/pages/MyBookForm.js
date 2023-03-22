@@ -26,7 +26,7 @@ const MyBooksForm = ({onAddBook}) => {
       if (!response.ok) {
         throw new Error("Failed to add book");
       }
-  
+      
       const newBook = await response.json();
       onAddBook(newBook); 
       setNewBookTitle("");
@@ -44,7 +44,7 @@ const MyBooksForm = ({onAddBook}) => {
 
   return (
     <div>
-        <h1> Add A New Book to your List </h1>
+        <h1> Add A New Book </h1>
     <form onSubmit={handleAddBook}>
       <input
         type="text"
