@@ -11,3 +11,20 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.list {
+  list-style: none;}
+  
+ 
+
+
+
+.list-item::before {
+  content: '';
+display: inline-block;
+height: 20px;
+width: 20px;
+background-size: contain;
+background-image: url("https://cdn-icons-png.flaticon.com/128/2702/2702134.png");
+margin-right: 5px;
+}
