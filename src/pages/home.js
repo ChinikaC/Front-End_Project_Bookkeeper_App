@@ -1,9 +1,38 @@
+import devitoBook from './images/devitoBook.jpeg';
 import React, { useState, useRef } from "react";
 import { useOnHoverOutside } from "../hooks/useOnHover";
+
 import 'react-tippy/dist/tippy.css'
 import { Tooltip } from "react-tippy";
+import { NavLink } from "react-router-dom";
 
-const Home = () => {
+const Home = ({ books, setCurrentFilter }) => {
+
+  const handleClick = (e) => {
+    setCurrentFilter(e.target.value)
+  }
+
+  const uniqueGenres = books.filter((value, index, self) => {
+    return self.findIndex(v => v.genre === value.genre) === index 
+  })
+  
+  const listOfGenres = uniqueGenres.map((book, index) => {
+    return (
+      <Tooltip
+        title= {`Here's an example of a ${book.genre}:\n ${book.title} - ${book.description} \n Click here to find more ${book.genre} books!`}
+        position="bottom-end"
+        key={index}
+        id={book.genre}>
+        <NavLink to="/OurBooks">
+          <button
+            onClick={handleClick}
+            value={book.genre}>
+            {book.genre}
+          </button>
+        </NavLink>
+      </Tooltip>
+    )
+  })
 
   return (
     <section>
@@ -25,23 +54,7 @@ const Home = () => {
       </article>
       <h2>Books by Genre</h2>
       <article id="bookByGenre">
-        <Tooltip
-          title="Distopian fiction is about something or other, idk"
-          position="bottom-end">
-          <button>Dystopian Fiction
-          </button>
-        </Tooltip>
-        <button >Coming-Of-Age Fiction</button>
-        <button>Regency Romance</button>
-        <button>Literary Fiction</button>
-        <button>High Fantasy</button>
-        <button>Science Fiction</button>
-        <button>Crime Fiction</button>
-        <button>Political Satire</button>
-        <button>Magical Realism</button>
-        <button>Modernist fiction</button>
-        <button >Autobiographical fiction</button>
-        <button>Gothic Fiction</button>
+        {listOfGenres}
       </article>
     </section>
   )

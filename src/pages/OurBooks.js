@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from "react"
 import BookList from "../components/BookList"
 
-const OurBooks = ({ books, postOwnedBook }) => {
+const OurBooks = ({ books, postOwnedBook, currentFilter, setCurrentFilter}) => {
 
     const [filteredBooks, setFilteredBooks] = useState([]);
 
     useEffect(() => {
-        setFilteredBooks(books)}, [books])
+        filterBooks(currentFilter)
+    }, [books,currentFilter])
 
     const genres = books.map(book => book.genre)
 
@@ -20,14 +21,20 @@ const OurBooks = ({ books, postOwnedBook }) => {
         )
     })
 
-    const filterBooks = (e) => {
-        if (e.target.value === "all") {
-            setFilteredBooks(books);
-        } else {
-            console.log(e.target.value)
-            //filter books and set filtered books to that
-            const filtered = books.filter(book => { return book.genre === e.target.value })
-            setFilteredBooks(filtered)
+    const handleClick = (e) => {
+        setCurrentFilter(e.target.value)
+        filterBooks(e.target.value)
+    }
+
+    const filterBooks = (filter) => {
+        if (books != []) {
+            if (filter == "all") {
+                setFilteredBooks(books);
+            } else {
+                //filter books and set filtered books to that
+                const filtered = books.filter(book => { return book.genre === filter })
+                setFilteredBooks(filtered)
+            }
         }
     }
 
@@ -40,8 +47,9 @@ const OurBooks = ({ books, postOwnedBook }) => {
                 Filter by genre:
 
                 <select
-                    onChange={filterBooks}
-                    name="BookStatus">
+                    onChange={handleClick}
+                    name="BookStatus"
+                    value={currentFilter}>
                     <option value="all">All books</option>
                     {listOfGenres}
                 </select>
