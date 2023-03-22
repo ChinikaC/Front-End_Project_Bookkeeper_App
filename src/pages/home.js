@@ -1,10 +1,5 @@
-<<<<<<< HEAD
-import React from "react";
-import SkillsButton from "./SkillsButton";
-=======
 import React, {useState} from "react";
 // import devitoBook from './images/devitoBook.jpeg';
->>>>>>> 75b09ab2a02097b2342bca79de3db4a12b4ae4ec
 
 const Home = () => {
     const [isHovering, setIsHovering] = useState("");
@@ -37,7 +32,6 @@ const Home = () => {
             </article>
             <h2>Books by Genre</h2>
             <article id="bookByGenre">
-<<<<<<< HEAD
                 <button>Dystopian Fiction</button>
                 <button>Coming-Of-Age Fiction</button>
                 <button>Regency Romance</button>
@@ -50,32 +44,6 @@ const Home = () => {
                 <button>Modernist fiction</button>
                 <button onClick="SkillsButton">Autobiographical fiction</button>
                 <button>Gothic Fiction</button>
-=======
-                <button>Thriller (these buttons need better styling)</button>
-                <button>Classics</button>
-                <button>Non-Fiction</button>
-                <button>Horror</button>
-                <div>
-      <div>
-        <div
-          onMouseOver={handleMouseOver}
-          onMouseOut={handleMouseOut}
-        >
-          Hover over me
-        </div>
-
-        {isHovering && (
-          <div>
-            <h2>Horror Genre Info</h2>
-            <h2>Scary</h2>
-          </div>
-        )}
-      </div>
-    </div>
-  );
-                
-                <button>Adventure</button>
->>>>>>> 75b09ab2a02097b2342bca79de3db4a12b4ae4ec
             </article>
         </section>
     )
