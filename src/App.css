@@ -60,7 +60,7 @@ nav {
   grid-auto-flow: column;
 }
 
-.no-style{
+.nav-button{
   all:unset;
 }
 
