@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 import BookList from "../components/BookList";
 import { NavLink } from "react-router-dom";
+import SignUp from "./SignUp";
 
-const MyBooks = ({ ownedBooks, users, books, currentUser, setCurrentUser, fetchOwnedBooks }) => {
+const MyBooks = ({ ownedBooks, users, books, currentUser, setCurrentUser }) => {
 
     const [currentList, setCurrentList] = useState([]);
     const [currentFilter, setCurrentFilter] = useState("filter")

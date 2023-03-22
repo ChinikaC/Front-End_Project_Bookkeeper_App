@@ -42,6 +42,9 @@ const Header = ({ currentUser, setCurrentUser }) => {
                         {isMenuDropDownOpen && <button className="no-style" onClick={handleLogOut}>Log out</button>}
                     </div>
                 </NavLink>
+                <NavLink to="/SignUp">
+                    Sign Up
+                </NavLink>
             </nav>
         </header>
     )

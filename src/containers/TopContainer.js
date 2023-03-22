@@ -6,6 +6,7 @@ import NavBar from '../header-and-footer/Navbar';
 import MyBooks from "../pages/MyBooks.js";
 import UserForm from "../pages/UserForm.js";
 import MyBookForm from "../pages/MyBookForm.js";
+import SignUp from "../pages/SignUp.js";
 
 const TopContainer = () => {
 
@@ -95,6 +96,18 @@ const TopContainer = () => {
         });
     };
 
+    const createNewUser = (newUser) => {
+        fetch(`http://localhost:8080/users`, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(newUser)
+        })
+        .then((response) => response.json())
+        .then((response) => {
+            setUsers([...users, response])
+        });
+    };
+
 
     if (error !== "") return <p>Error! {error}</p>;
 
@@ -126,6 +139,10 @@ const TopContainer = () => {
                     <Route path='/MyBookForm' element= 
                     {
                         <MyBookForm addNewMyBook={addNewMyBook} setMyBooks={setNewMyBook} onAddBook={handleAddBook} setBooks={setBooks} />
+                    } />
+                    <Route path='/SignUp' element= 
+                    {
+                        <SignUp users={users} setUsers={setUsers} createNewUser={createNewUser} />
                     } />
                         
                 </Routes>
