@@ -13,14 +13,14 @@ const MyBooks = ({ ownedBooks, users, books, currentUser, setCurrentUser }) => {
 
     const deleteOwnedBook = (bookId) => {
         //find owned book by bookId and currentuser.id
-        const ownedBook = ownedBooks.find(book => book.book.id===bookId && book.user.id===currentUser.id)
-        fetch(`http://localhost:8080/ownedBooks/${ownedBook.id}`,{
+        const ownedBook = ownedBooks.find(book => book.book.id === bookId && book.user.id === currentUser.id)
+        fetch(`http://localhost:8080/ownedBooks/${ownedBook.id}`, {
             method: "DELETE",
-            headers: {"Content-Type":"application/json"},
-            body : ""
+            headers: { "Content-Type": "application/json" },
+            body: ""
         })
         const index = ownedBooks.indexOf(ownedBook);
-        ownedBooks.splice(index,1)
+        ownedBooks.splice(index, 1)
         getBooks();
     }
 
@@ -45,19 +45,18 @@ const MyBooks = ({ ownedBooks, users, books, currentUser, setCurrentUser }) => {
 
     const updateBookRating = (bookId, newRating) => {
         //finding book
-            const toUpdate = ownedBooks.filter((book) => {
-                return book.book.id === bookId && book.user.id === currentUser.id
-            });
-            let bookToUpdate = toUpdate[0];
-            bookToUpdate.rating = newRating;
-            console.log(bookToUpdate)
+        const toUpdate = ownedBooks.filter((book) => {
+            return book.book.id === bookId && book.user.id === currentUser.id
+        });
+        let bookToUpdate = toUpdate[0];
+        bookToUpdate.rating = newRating;
         //putting update
-            fetch(`http://localhost:8080/ownedBooks/${bookToUpdate.id}`, {
-                method: "PUT",
-                headers:
-                    { "Content-Type": "application/json" },
-                body: JSON.stringify(bookToUpdate)
-            }).then((response)=> response.json()).then(response => console.log(response))
+        fetch(`http://localhost:8080/ownedBooks/${bookToUpdate.id}`, {
+            method: "PUT",
+            headers:
+                { "Content-Type": "application/json" },
+            body: JSON.stringify(bookToUpdate)
+        })
 
         //fetch back from server
     }
@@ -159,13 +158,14 @@ const MyBooks = ({ ownedBooks, users, books, currentUser, setCurrentUser }) => {
                     Add New Book To List
                     <button> <NavLink to="/MyBookForm"> Add Book </NavLink> </button>
                 </div>
-                <BookList 
-                books={currentList}  
-                ownedBooks={ownedBooks} 
-                currentUser={currentUser}
-                deleteOwnedBook={deleteOwnedBook}
-                updateBookStatus={updateBookStatus}
-                updateBookRating={updateBookRating}></BookList>
+                <BookList
+                    books={currentList}
+                    ownedBooks={ownedBooks}
+                    currentUser={currentUser}
+                    deleteOwnedBook={deleteOwnedBook}
+                    updateBookStatus={updateBookStatus}
+                    updateBookRating={updateBookRating}
+                ></BookList>
             </>
         );
     }
