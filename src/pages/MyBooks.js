@@ -3,7 +3,7 @@ import BookList from "../components/BookList";
 import { NavLink } from "react-router-dom";
 import SignUp from "./SignUp";
 
-const MyBooks = ({ ownedBooks, users, books, currentUser, setCurrentUser, setUsers}) => {
+const MyBooks = ({ ownedBooks, users, books, currentUser, setCurrentUser }) => {
 
     const [currentList, setCurrentList] = useState([]);
     const [currentFilter, setCurrentFilter] = useState("filter")
@@ -11,6 +11,19 @@ const MyBooks = ({ ownedBooks, users, books, currentUser, setCurrentUser, setUse
     useEffect(() => {
         getBooks();
     }, [])
+
+    const deleteOwnedBook = (bookId) => {
+        //find owned book by bookId and currentuser.id
+        const ownedBook = ownedBooks.find(book => book.book.id===bookId && book.user.id===currentUser.id)
+        fetch(`http://localhost:8080/ownedBooks/${ownedBook.id}`,{
+            method: "DELETE",
+            headers: {"Content-Type":"application/json"},
+            body : ""
+        })
+        const index = ownedBooks.indexOf(ownedBook);
+        ownedBooks.splice(index,1)
+        getBooks();
+    }
 
     const updateBookStatus = (bookId, newStatus) => {
         if (newStatus === "filter") {
@@ -128,7 +141,12 @@ const MyBooks = ({ ownedBooks, users, books, currentUser, setCurrentUser, setUse
                     Add New Book To List
                     <button> <NavLink to="/MyBookForm"> Add Book </NavLink> </button>
                 </div>
-                <BookList books={currentList} updateBookStatus={updateBookStatus} ownedBooks={ownedBooks} currentUser={currentUser}></BookList>
+                <BookList 
+                books={currentList} 
+                updateBookStatus={updateBookStatus} 
+                ownedBooks={ownedBooks} 
+                currentUser={currentUser}
+                deleteOwnedBook={deleteOwnedBook}></BookList>
             </>
         );
     }

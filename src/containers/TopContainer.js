@@ -120,7 +120,7 @@ const TopContainer = () => {
     return (
         <>
             <Router>
-                <NavBar />
+                <NavBar currentUser={currentUser} setCurrentUser={setCurrentUser}/>
                 <Routes>
                     <Route path='/Home' element=
                         {
@@ -132,15 +132,26 @@ const TopContainer = () => {
                         } />
                     <Route path='/MyBooks' element=
                         {
-                            <MyBooks ownedBooks={ownedBooks} users={users} books={books} currentUser={currentUser} setCurrentUser={setCurrentUser} />
+                            <MyBooks ownedBooks={ownedBooks} 
+                            users={users} books={books} 
+                            currentUser={currentUser} 
+                            setCurrentUser={setCurrentUser}
+                            fetchOwnedBooks={fetchOwnedBooks} />
                         } />
                     <Route path='/UserForm' element=
                         {
-                            <UserForm users={users} setCurrentUser={setCurrentUser} updateCurrentUser={updateCurrentUser} updateUserDetails={updateUserDetails}/>
+                            <UserForm 
+                            users={users} 
+                            setCurrentUser={setCurrentUser} 
+                            updateCurrentUser={updateCurrentUser} 
+                            updateUserDetails={updateUserDetails}/>
                         } />
                     <Route path='/MyBookForm' element= 
                     {
-                        <MyBookForm addNewMyBook={addNewMyBook} setMyBooks={setNewMyBook} onAddBook={handleAddBook} />
+                        <MyBookForm 
+                        addNewMyBook={addNewMyBook} 
+                        setMyBooks={setNewMyBook} 
+                        onAddBook={handleAddBook} />
                     } />
                     <Route path='/SignUp' element= 
                     {

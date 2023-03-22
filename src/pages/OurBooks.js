@@ -4,9 +4,9 @@ import BookList from "../components/BookList"
 const OurBooks = ({books, postOwnedBook}) => {
     return (
         <>
-        <div>
+        <h2>
             Our Books
-        </div>
+        </h2>
         <BookList books={books} postOwnedBook={postOwnedBook} ></BookList>
         </>
     )

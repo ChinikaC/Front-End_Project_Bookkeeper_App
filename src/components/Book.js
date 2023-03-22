@@ -1,4 +1,4 @@
-const Book = ({ book, postOwnedBook, updateBookStatus, currentUser, ownedBooks }) => {
+const Book = ({ book, postOwnedBook, updateBookStatus, currentUser, ownedBooks, deleteOwnedBook }) => {
 
     const handleClick = (e) => {
         //console.log(e);
@@ -12,6 +12,11 @@ const Book = ({ book, postOwnedBook, updateBookStatus, currentUser, ownedBooks }
     }
 
     if (document.URL === "http://localhost:3000/MyBooks") {
+
+        const handleDelete = (e) => {
+            deleteOwnedBook(book.id);
+        }
+
         const ob = ownedBooks.filter((ownedBook) => { return ownedBook.book.id === book.id && ownedBook.user.id === currentUser.id })
         let bookStatus = ob[0].status;
         if (bookStatus === "READING") {
@@ -21,11 +26,12 @@ const Book = ({ book, postOwnedBook, updateBookStatus, currentUser, ownedBooks }
         } else if (bookStatus === "TO_READ") {
             bookStatus = "To Read"
         }
+
         return (
             <li className="bookOnList">
                 <h3 className="bookTitle">{book.title}</h3>
                 <p className="bookDescription"><b>Description: </b>{book.description}</p>
-                <div>
+                <div id="userButtons">
                     <select
                         onChange={handleStatusUpdate}
                         name="BookStatus">
@@ -35,6 +41,7 @@ const Book = ({ book, postOwnedBook, updateBookStatus, currentUser, ownedBooks }
                         <option value="READ">Read</option>
                     </select>
                     <p>{bookStatus}</p>
+                    <button onClick={handleDelete}>Remove Book</button>
                 </div>
             </li>
         )
