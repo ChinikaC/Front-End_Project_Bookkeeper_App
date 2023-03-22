@@ -15,6 +15,9 @@ const Header = () => {
                 <NavLink to="/MyBooks">
                     My Account
                 </NavLink>
+                <NavLink to="/SignUp">
+                    Sign Up
+                </NavLink>
             </nav>
         </header>
     )
