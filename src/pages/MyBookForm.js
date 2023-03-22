@@ -1,95 +1,85 @@
 import { useState } from "react";
 
-const MyBooksForm = ({onAddBook}) => {
+const MyBooksForm = ({ books, setBooks }) => {
   const [newBookTitle, setNewBookTitle] = useState("");
   const [newBookAuthor, setNewBookAuthor] = useState("");
   const [newBookDescription, setNewBookDescription] = useState("");
   const [newBookGenre, setNewBookGenre] = useState("");
 
-  const handleAddBook = async (e) => {
+  const handleAddBook =  (e) => {
     e.preventDefault();
-    try {
-      const response = await fetch("http://localhost:8080/books", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          title: newBookTitle,
-          author: newBookAuthor,
-          description: newBookDescription,
-          genre: newBookGenre,
-          ownedBooks: [],
-        }),
+    const response = fetch("http://localhost:8080/books", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        title: newBookTitle,
+        author: newBookAuthor,
+        description: newBookDescription,
+        genre: newBookGenre,
+        ownedBooks: []
+      })
+    })
+      .then((response) => response.json())
+      .then((response) => {
+        setBooks([...books, response]);
+
+        if (!response) {
+          throw new Error("Failed to add book");
+        }
+
+        setNewBookTitle("");
+        setNewBookAuthor("");
+        setNewBookDescription("");
+        setNewBookGenre("");
+
       });
-  
-      if (!response.ok) {
-        throw new Error("Failed to add book");
-      }
-  
-      const newBook = await response.json();
-      onAddBook(newBook); // Call onAddBook with the new book to add it to MyBooks
-      setNewBookTitle("");
-      setNewBookAuthor("");
-      setNewBookDescription("");
-      setNewBookGenre("");
-    } catch (error) {
-      console.log(error);
     }
-  };
+
+    return (
+      <div>
+        <h1> Add A New Book </h1>
+        <form onSubmit={handleAddBook}>
+          <input
+            type="text"
+            name="bookTitle"
+            placeholder="Book Title"
+            value={newBookTitle}
+            onChange={(e) => setNewBookTitle(e.target.value)}
+          />
+          <input
+            type="text"
+            name="bookAuthor"
+            placeholder="Book Author"
+            value={newBookAuthor}
+            onChange={(e) => setNewBookAuthor(e.target.value)}
+          />
+          <input
+            type="text"
+            name="bookDescription"
+            placeholder="Book Description"
+            value={newBookDescription}
+            onChange={(e) => setNewBookDescription(e.target.value)}
+          />
+          <input
+            type="text"
+            name="bookGenre"
+            placeholder="Book Genre"
+            value={newBookGenre}
+            onChange={(e) => setNewBookGenre(e.target.value)}
+          />
+
+          <button type="submit">Add Book</button>
+
+        </form>
+      </div>
+
+    )
   
-
-//   const handleFormSubmit = (e) => {
-//     e.preventDefault();
-//     onAddBook(newBookTitle);
-//     setNewBookTitle({
-//         bookTitle: ""
-//     })
-// }
-
-
-  return (
-    <div>
-        <h1> Add A New Book to your List </h1>
-    <form onSubmit={handleAddBook}>
-      <input
-        type="text"
-        name="bookTitle"
-        placeholder="Book Title"
-        value={newBookTitle}
-        onChange={(e) => setNewBookTitle(e.target.value)}
-      />
-      <input
-        type="text"
-        name="bookAuthor"
-        placeholder="Book Author"
-        value={newBookAuthor}
-        onChange={(e) => setNewBookAuthor(e.target.value)}
-      />
-      <input
-        type="text"
-        name="bookDescription"
-        placeholder="Book Description"
-        value={newBookDescription}
-        onChange={(e) => setNewBookDescription(e.target.value)}
-      />
-      <input
-        type="text"
-        name="bookGenre"
-        placeholder="Book Genre"
-        value={newBookGenre}
-        onChange={(e) => setNewBookGenre(e.target.value)}
-      />
-      
-      <button type="submit">Add Book</button>
-      
-    </form>
-    </div>
-
-  )
 }
 
-export default MyBooksForm
+  export default MyBooksForm
 
 
 
