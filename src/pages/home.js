@@ -3,6 +3,7 @@ import React from "react";
 const Home = () => {
     return (
         <section>
+            <h2>Our Book of the Day</h2>
             <article id="bookOfTheDay">
                 <div>
                     User Review
@@ -17,7 +18,7 @@ const Home = () => {
                     Blurb
                 </div>
             </article>
-            <h2>Books by genre</h2>
+            <h2>Books by Genre</h2>
             <article id="bookByGenre">
                 <button>Thriller (these buttons need better styling)</button>
                 <button>Classics</button>
