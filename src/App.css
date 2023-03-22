@@ -72,3 +72,7 @@ nav {
 #logoAndTitle{
   display: flex;
 }
+
+#logo{
+  height: auto;
+}

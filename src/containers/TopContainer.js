@@ -79,23 +79,23 @@ const TopContainer = () => {
     const updateUserDetails = (updatedUser) => {
         fetch(`http://localhost:8080/users/${currentUser.id}`, {
             method: "PUT",
-            headers: {"Content-Type": "application/json"},
+            headers: { "Content-Type": "application/json" },
             body: JSON.stringify(updatedUser)
         })
 
-        .then((response) => response.json())
-        .then((responseCurrentUser) => {
-            const updatedUserDetails = users.map((user) => {
-                if(user.id === responseCurrentUser.id){
-                    return responseCurrentUser;
-                } else {
-                    return user;
-                }
-            })
-            setUsers(updatedUserDetails)
-            setUpdateCurrentUser(null);
-            setCurrentUser(responseCurrentUser);
-        });
+            .then((response) => response.json())
+            .then((responseCurrentUser) => {
+                const updatedUserDetails = users.map((user) => {
+                    if (user.id === responseCurrentUser.id) {
+                        return responseCurrentUser;
+                    } else {
+                        return user;
+                    }
+                })
+                setUsers(updatedUserDetails)
+                setUpdateCurrentUser(null);
+                setCurrentUser(responseCurrentUser);
+            });
     };
 
     const createNewUser = (newUser) => {
@@ -104,10 +104,10 @@ const TopContainer = () => {
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(newUser)
         })
-        .then((response) => response.json())
-        .then((response) => {
-            setUsers([...users, response])
-        });
+            .then((response) => response.json())
+            .then((response) => {
+                setUsers([...users, response])
+            });
     };
 
 
@@ -115,12 +115,12 @@ const TopContainer = () => {
 
     const handleAddBook = (newBook) => {
         setNewMyBook([...addNewMyBook, newBook]);
-      };
+    };
 
     return (
         <>
             <Router>
-                <NavBar currentUser={currentUser} setCurrentUser={setCurrentUser}/>
+                <NavBar currentUser={currentUser} setCurrentUser={setCurrentUser} />
                 <Routes>
                     <Route path='/Home' element=
                         {
@@ -128,36 +128,36 @@ const TopContainer = () => {
                         } />
                     <Route path='/OurBooks' element=
                         {
-                            <OurBooks books={books} postOwnedBook={postOwnedBook}/>
+                            <OurBooks books={books} postOwnedBook={postOwnedBook} />
                         } />
                     <Route path='/MyBooks' element=
                         {
-                            <MyBooks ownedBooks={ownedBooks} 
-                            users={users} books={books} 
-                            currentUser={currentUser} 
-                            setCurrentUser={setCurrentUser}
-                            fetchOwnedBooks={fetchOwnedBooks} />
+                            <MyBooks ownedBooks={ownedBooks}
+                                users={users} books={books}
+                                currentUser={currentUser}
+                                setCurrentUser={setCurrentUser}
+                                fetchOwnedBooks={fetchOwnedBooks} />
                         } />
                     <Route path='/UserForm' element=
                         {
-                            <UserForm 
-                            users={users} 
-                            setCurrentUser={setCurrentUser} 
-                            updateCurrentUser={updateCurrentUser} 
-                            updateUserDetails={updateUserDetails}/>
+                            <UserForm
+                                users={users}
+                                setCurrentUser={setCurrentUser}
+                                updateCurrentUser={updateCurrentUser}
+                                updateUserDetails={updateUserDetails} />
                         } />
-                    <Route path='/MyBookForm' element= 
-                    {
-                        <MyBookForm 
-                        addNewMyBook={addNewMyBook} 
-                        setMyBooks={setNewMyBook} 
-                        onAddBook={handleAddBook} />
-                    } />
-                    <Route path='/SignUp' element= 
-                    {
-                        <SignUp users={users} setUsers={setUsers} createNewUser={createNewUser} />
-                    } />
-                        
+                    <Route path='/MyBookForm' element=
+                        {
+                            <MyBookForm
+                                addNewMyBook={addNewMyBook}
+                                setMyBooks={setNewMyBook}
+                                onAddBook={handleAddBook} />
+                        } />
+                    <Route path='/SignUp' element=
+                        {
+                            <SignUp users={users} setUsers={setUsers} createNewUser={createNewUser} />
+                        } />
+
                 </Routes>
             </Router>
         </>

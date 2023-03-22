@@ -1,6 +1,7 @@
 import { React, useRef, useState } from "react";
 import { NavLink } from "react-router-dom";
 import { useOnHoverOutside } from "../hooks/useOnHover";
+import logo from "../assets/bookkeeperslogo.png";
 
 const Header = ({ currentUser, setCurrentUser }) => {
 
@@ -20,7 +21,7 @@ const Header = ({ currentUser, setCurrentUser }) => {
     return (
         <header>
             <div id="logoAndTitle">
-                <img src="" alt="Book-Keepers Logo"></img>
+                <img src={logo} alt="Book-Keepers Logo" id="logo"/>
                 <h1>Book-Keepers</h1>
             </div>
             <nav>
