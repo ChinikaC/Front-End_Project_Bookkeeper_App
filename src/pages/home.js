@@ -1,4 +1,5 @@
 import React from "react";
+import SkillsButton from "./SkillsButton";
 
 const Home = () => {
     return (
@@ -20,11 +21,18 @@ const Home = () => {
             </article>
             <h2>Books by Genre</h2>
             <article id="bookByGenre">
-                <button>Thriller (these buttons need better styling)</button>
-                <button>Classics</button>
-                <button>Non-Fiction</button>
-                <button>Horror</button>
-                <button>Adventure</button>
+                <button>Dystopian Fiction</button>
+                <button>Coming-Of-Age Fiction</button>
+                <button>Regency Romance</button>
+                <button>Literary Fiction</button>
+                <button>High Fantasy</button>
+                <button>Science Fiction</button>
+                <button>Crime Fiction</button>
+                <button>Political Satire</button>
+                <button>Magical Realism</button>
+                <button>Modernist fiction</button>
+                <button onClick="SkillsButton">Autobiographical fiction</button>
+                <button>Gothic Fiction</button>
             </article>
         </section>
     )
