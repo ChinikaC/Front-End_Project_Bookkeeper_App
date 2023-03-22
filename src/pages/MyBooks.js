@@ -43,6 +43,25 @@ const MyBooks = ({ ownedBooks, users, books, currentUser, setCurrentUser }) => {
         }
     }
 
+    const updateBookRating = (bookId, newRating) => {
+        //finding book
+            const toUpdate = ownedBooks.filter((book) => {
+                return book.book.id === bookId && book.user.id === currentUser.id
+            });
+            let bookToUpdate = toUpdate[0];
+            bookToUpdate.rating = newRating;
+            console.log(bookToUpdate)
+        //putting update
+            fetch(`http://localhost:8080/ownedBooks/${bookToUpdate.id}`, {
+                method: "PUT",
+                headers:
+                    { "Content-Type": "application/json" },
+                body: JSON.stringify(bookToUpdate)
+            }).then((response)=> response.json()).then(response => console.log(response))
+
+        //fetch back from server
+    }
+
     const handleLogIn = (e) => {
         //find the user to log in
         const userToLogIn = users.filter(user => user.id == e.target.value);
@@ -141,11 +160,12 @@ const MyBooks = ({ ownedBooks, users, books, currentUser, setCurrentUser }) => {
                     <button> <NavLink to="/MyBookForm"> Add Book </NavLink> </button>
                 </div>
                 <BookList 
-                books={currentList} 
-                updateBookStatus={updateBookStatus} 
+                books={currentList}  
                 ownedBooks={ownedBooks} 
                 currentUser={currentUser}
-                deleteOwnedBook={deleteOwnedBook}></BookList>
+                deleteOwnedBook={deleteOwnedBook}
+                updateBookStatus={updateBookStatus}
+                updateBookRating={updateBookRating}></BookList>
             </>
         );
     }

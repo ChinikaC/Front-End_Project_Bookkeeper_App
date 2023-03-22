@@ -1,7 +1,7 @@
 import Book from "./Book";
 
 const BookList = (
-    {books, postOwnedBook,updateBookStatus,currentUser,ownedBooks,deleteOwnedBook}
+    {books, postOwnedBook,updateBookStatus,currentUser,ownedBooks,deleteOwnedBook,updateBookRating}
     ) => {
     const bookList = books.map((book, index) => {
         return(
@@ -10,6 +10,7 @@ const BookList = (
             key = {index} 
             postOwnedBook={postOwnedBook} 
             updateBookStatus={updateBookStatus} 
+            updateBookRating={updateBookRating}
             currentUser={currentUser} 
             ownedBooks={ownedBooks} 
             deleteOwnedBook={deleteOwnedBook}/>

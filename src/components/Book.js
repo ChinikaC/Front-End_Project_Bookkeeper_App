@@ -1,4 +1,8 @@
-const Book = ({ book, postOwnedBook, updateBookStatus, currentUser, ownedBooks, deleteOwnedBook }) => {
+import ReactStars from "react-rating-stars-component";
+import React from "react";
+import { render } from "react-dom";
+
+const Book = ({ book, postOwnedBook, updateBookStatus, currentUser, ownedBooks, deleteOwnedBook, updateBookRating}) => {
 
     const handleClick = (e) => {
         //console.log(e);
@@ -18,6 +22,13 @@ const Book = ({ book, postOwnedBook, updateBookStatus, currentUser, ownedBooks, 
         }
 
         const ob = ownedBooks.filter((ownedBook) => { return ownedBook.book.id === book.id && ownedBook.user.id === currentUser.id })
+
+        const ownedBook = ob[0];
+
+        const ratingChanged = (newRating) => {
+            updateBookRating(book.id,newRating);
+        };
+
         let bookStatus = ob[0].status;
         if (bookStatus === "READING") {
             bookStatus = "Reading"
@@ -42,6 +53,13 @@ const Book = ({ book, postOwnedBook, updateBookStatus, currentUser, ownedBooks, 
                     </select>
                     <p>{bookStatus}</p>
                     <button onClick={handleDelete}>Remove Book</button>
+                    <ReactStars
+                        value={ownedBook.rating}
+                        count={5}
+                        onChange={ratingChanged}
+                        size={24}
+                        activeColor="#ffd700"
+                    />
                 </div>
             </li>
         )
