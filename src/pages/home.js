@@ -56,7 +56,6 @@ const Home = ({ books, setCurrentFilter }) => {
       <article id="bookByGenre">
         {listOfGenres}
       </article>
-
     </section>
   )
 }

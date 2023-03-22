@@ -1,15 +1,54 @@
-header {
-  background-color:pink;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height:auto;
+body {
+  background-color: rgba(1, 114, 108, 0.907);
 }
 
 nav {
+  background-color: rgba(239, 229, 218, 0.94);
   display: flex;
   justify-content: space-around;
-  width:50%;
+  margin-right: 2rem;
+  width: 100%;
+  height: 2rem;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav>ul{
+list-style-type: none;
+margin: 0;
+padding: 0;
+overflow: hidden;
+text-align: left;
+justify-content: space-around;
+}
+
+nav>ul>li{
+  float: left;
+  list-style: none;
+  justify-content: space-around;
+  padding: 8px 28px;
+}
+
+#searchBar{
+  width: 600px;
+}
+
+header {
+  background-color: rgb(240, 227, 211);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height:2rem;
+}
+
+#logoAndTitle h1{
+  text-align:center;
+}
+
+
+#logo{
+  height: 6em;
 }
 
 #bookOfTheDay{
@@ -49,7 +88,6 @@ nav {
   width:95%;
   margin:0 2.5% 0 2.5%;
   justify-content: center;
-  background-color: aquamarine;
   padding :0;
 }
 
@@ -58,6 +96,11 @@ nav {
   grid-template-columns: 4fr 1fr;
   grid-template-rows: 3rem 1fr;
   grid-auto-flow: column;
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 5px;
+  margin-bottom: 10px;
+  margin-top: 10px;
 }
 
 .nav-button{
@@ -69,10 +112,3 @@ nav {
   flex-direction: column;
 }
 
-#logoAndTitle{
-  display: flex;
-}
-
-#logo{
-  height: auto;
-}
