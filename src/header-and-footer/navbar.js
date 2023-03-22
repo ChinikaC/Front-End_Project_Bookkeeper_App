@@ -7,9 +7,14 @@ const Header = ({ currentUser, setCurrentUser }) => {
 
     const dropdownRef = useRef(null); // Create a reference for dropdown container
     const [isMenuDropDownOpen, setMenuDropDownOpen] = useState(false);
+    const [searchInput, setSearchInput] = useState("");
+    const books = [
+        { name: "Jack and the Beanstalk", author: "RD", description: "whatever" }
+    ];
+
 
     const closeHoverMenu = () => {
-            setMenuDropDownOpen(false);
+        setMenuDropDownOpen(false);
     };
 
     useOnHoverOutside(dropdownRef, closeHoverMenu); // Call the hook
@@ -18,36 +23,55 @@ const Header = ({ currentUser, setCurrentUser }) => {
         setCurrentUser(null);
     }
 
-    return (
-        <header>
-            <div id="logoAndTitle">
-                <img src={logo} alt="Book-Keepers Logo" id="logo"/>
-                <h1>Book-Keepers</h1>
-            </div>
-            <nav>
-                <NavLink to="/home">
-                    Home
-                </NavLink>
-                <NavLink to="/OurBooks">
-                    Our Books
-                </NavLink>
-                <NavLink to="/MyBooks">
-                    <div ref={dropdownRef} id="myAccountDropDown">
-                        <button
-                            className="no-style"
-                            onMouseOver={() => {if(currentUser!=null) {setMenuDropDownOpen(true)}}}
-                        >
-                            My Account
-                        </button>
+    const handleChange = (e) => {
+        e.preventDefault();
+        setSearchInput(e.target.value);
+    };
 
-                        {isMenuDropDownOpen && <button className="no-style" onClick={handleLogOut}>Log out</button>}
+    if (searchInput.length > 0) {
+        books.filter((book) => {
+            return book.name.match(searchInput);
+        });
+    }
+
+    return (
+        <div>
+            <header id="logoAndTitle">
+                <img src={logo} alt="Book-Keepers Logo" id="logo" />
+                <h1>Book-Keepers</h1>
+            </header>
+            <nav>
+                <ul>
+                    <li><NavLink to="/home">
+                        Home
+                    </NavLink></li>
+                    <li><NavLink to="/OurBooks">
+                        Our Books
+                    </NavLink></li>
+                    <li><NavLink to="/MyBooks">
+                        <div ref={dropdownRef} id="myAccountDropDown">
+                            <button
+                                className="no-style"
+                                onMouseOver={() => { if (currentUser != null) { setMenuDropDownOpen(true) } }}>
+                                My Account
+                            </button>
+
+                            {isMenuDropDownOpen && <button className="no-style" onClick={handleLogOut}>Log out</button>}
+                        </div>
+                    </NavLink></li>
+                    <li><NavLink to="/SignUp">
+                        Sign Up
+                    </NavLink></li>
+                </ul>
+                <div id="searchBar">
+                <input
+                    type="text"
+                    placeholder="Search Here"
+                    onChange={handleChange}
+                    value={searchInput} />
                     </div>
-                </NavLink>
-                <NavLink to="/SignUp">
-                    Sign Up
-                </NavLink>
             </nav>
-        </header>
+        </div>
     )
 }
 

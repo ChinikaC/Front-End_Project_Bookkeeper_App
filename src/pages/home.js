@@ -1,6 +1,5 @@
 import React, { useState, useRef } from "react";
 import { useOnHoverOutside } from "../hooks/useOnHover";
-// import devitoBook from './images/devitoBook.jpeg';
 import 'react-tippy/dist/tippy.css'
 import { Tooltip } from "react-tippy";
 
@@ -44,7 +43,6 @@ const Home = () => {
         <button >Autobiographical fiction</button>
         <button>Gothic Fiction</button>
       </article>
-
     </section>
   )
 }
