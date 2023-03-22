@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import BookList from "../components/BookList";
 import { NavLink } from "react-router-dom";
-import SignUp from "./SignUp";
 
 const MyBooks = ({ ownedBooks, users, books, currentUser, setCurrentUser }) => {
 

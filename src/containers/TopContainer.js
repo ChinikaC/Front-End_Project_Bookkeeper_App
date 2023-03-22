@@ -15,8 +15,6 @@ const TopContainer = () => {
     const [users, setUsers] = useState([]);
     const [ownedBooks, setOwnedBooks] = useState([]);
     const [currentUser, setCurrentUser] = useState(null);
-    const [updateCurrentUser, setUpdateCurrentUser] = useState(null);
-    const [addNewMyBook, setNewMyBook] = useState([]);
 
 
     useEffect(() => {
@@ -24,10 +22,6 @@ const TopContainer = () => {
         fetchUsers();
         fetchOwnedBooks();
     }, [])
-
-    const logIn = (e) => {
-        setCurrentUser(e);
-    }
 
     const fetchBooks = async () => {
         const response = await fetch("http://localhost:8080/books");
@@ -52,8 +46,6 @@ const TopContainer = () => {
 
     const postOwnedBook = (bookId) => {
         if (currentUser !== null) {
-
-
             fetch("http://localhost:8080/ownedBooks", {
                 method: "POST",
                 headers:
@@ -65,11 +57,7 @@ const TopContainer = () => {
             })
                 .then((response) => response.json())
                 .then((response) => {
-                    setOwnedBooks([ ...ownedBooks, response ]);
-                    //console.log(`{user: {id:${currentUser.id} },book: {id:${bookId} }}`);
-                    // Find the book id and the user id
-                    // currentUser.id - to find the user id
-                    // book id comes from the event - event.target.value 
+                    setOwnedBooks([...ownedBooks, response]);
                 });
         }
     };
@@ -90,8 +78,7 @@ const TopContainer = () => {
                         return user;
                     }
                 })
-                setUsers(updatedUserDetails)
-                setUpdateCurrentUser(null);
+                setUsers(updatedUserDetails);
                 setCurrentUser(responseCurrentUser);
             });
     };
@@ -111,14 +98,12 @@ const TopContainer = () => {
 
     if (error !== "") return <p>Error! {error}</p>;
 
-    const handleAddBook = (newBook) => {
-        setNewMyBook([...addNewMyBook, newBook]);
-    };
-
     return (
         <>
             <Router>
-                <NavBar currentUser={currentUser} setCurrentUser={setCurrentUser} />
+                <NavBar
+                    currentUser={currentUser}
+                    setCurrentUser={setCurrentUser} />
                 <Routes>
                     <Route path='/Home' element=
                         {
@@ -126,33 +111,38 @@ const TopContainer = () => {
                         } />
                     <Route path='/OurBooks' element=
                         {
-                            <OurBooks books={books} postOwnedBook={postOwnedBook} />
+                            <OurBooks
+                                books={books}
+                                postOwnedBook={postOwnedBook} />
                         } />
                     <Route path='/MyBooks' element=
                         {
-                            <MyBooks ownedBooks={ownedBooks}
-                                users={users} books={books}
+                            <MyBooks
+                                ownedBooks={ownedBooks}
+                                users={users} 
+                                books={books}
                                 currentUser={currentUser}
-                                setCurrentUser={setCurrentUser}
-                                fetchOwnedBooks={fetchOwnedBooks} />
+                                setCurrentUser={setCurrentUser} />
                         } />
                     <Route path='/UserForm' element=
                         {
                             <UserForm
-                                users={users}
-                                setCurrentUser={setCurrentUser}
-                                updateCurrentUser={updateCurrentUser}
                                 updateUserDetails={updateUserDetails} />
                         } />
-                    <Route path='/MyBookForm' element= 
-                    {
-                        <MyBookForm  setBooks={setBooks} books={books} />
-                    } />
-                    <Route path='/SignUp' element= 
-                    {
-                        <SignUp users={users} setUsers={setUsers} createNewUser={createNewUser} />
-                    } />
-                        
+                    <Route path='/MyBookForm' element=
+                        {
+                            <MyBookForm
+                                setBooks={setBooks}
+                                books={books} />
+                        } />
+                    <Route path='/SignUp' element=
+                        {
+                            <SignUp
+                                users={users}
+                                setUsers={setUsers}
+                                createNewUser={createNewUser} />
+                        } />
+
                 </Routes>
             </Router>
         </>
