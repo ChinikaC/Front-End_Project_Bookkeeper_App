@@ -37,6 +37,14 @@ nav > a{
   padding: 12px 16px; */
   z-index: 1;
 }
+#theBookkeepers{
+  background-color: rgb(41, 73, 58) ;
+  display: grid;
+  width: 100%;
+  margin: 0;
+  grid-template-columns: 1fr 1fr 1fr;
+  
+}
 
 #logoAndTitle {
   display: flex;
@@ -77,13 +85,24 @@ nav > a{
 .nav-button:active{
   text-decoration: none;
 }
+#theBookkeepers{
+  background-color: rgb(41, 73, 58) ;
+  display: grid;
+  width: 100%;
+  margin: 0;
+  grid-template-columns: 1fr 1fr 1fr;
+  
+}
+
 
 
 #bookOfTheDay {
-  background-color: hotpink;
+  background-color: rgb(226, 225, 183) ;
   display: grid;
   width: 95%;
   margin: 0 2.5% 0 2.5%;
+  width: 100%;
+  margin: 0;
   grid-template-columns: 1fr 1fr 1fr;
 
 }
@@ -268,3 +287,9 @@ font-weight: 600;
   flex-direction: column;
   height:100%
 } */
+
+/* #bookOfTheDay{
+  background-color: rgb(226, 225, 183) ;
+  display: grid;
+  width: 100%;
+  margin: 0; */
