@@ -40,7 +40,9 @@ const Book = ({ book, postOwnedBook, updateBookStatus, currentUser, ownedBooks, 
         return (
             <li className="bookOnList">
                 <h3 className="bookTitle">{book.title}</h3>
+                <p className="bookAuthor"><b>By: </b>{book.author}</p>
                 <p className="bookDescription"><b>Description: </b>{book.description}</p>
+                <p className="bookGenre"><b>Genre: </b>{book.genre}</p>
                 <div id="userButtons">
                     <select
                         onChange={handleStatusUpdate}
@@ -66,7 +68,9 @@ const Book = ({ book, postOwnedBook, updateBookStatus, currentUser, ownedBooks, 
         return (
             <li className="bookOnList">
                 <h3 className="bookTitle">{book.title}</h3>
+                <p className="bookAuthor"><b>Author: </b>{book.author}</p>
                 <p className="bookDescription"><b>Description: </b>{book.description}</p>
+                <p className="bookGenre"><b>Genre: </b>{book.genre}</p>
                 <div className="imageButton" onClick={handleClick}>
                 <img src={bookImg} alt="Image of book" id={book.id} className="bookButton"/>
                 <p>Add to My List</p>

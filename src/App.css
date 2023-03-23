@@ -141,7 +141,7 @@ nav > a{
 .bookOnList {
   display: grid;
   grid-template-columns: 4fr 1fr;
-  grid-template-rows: 3rem 1fr;
+  grid-template-rows: 2rem 2rem 5rem 4rem;
   grid-auto-flow: column;
   border-radius: 5px;
   padding: 5px;
@@ -208,7 +208,7 @@ nav > a{
 /* Light/dark mode button */
 .theme>button{
   background-color: white;
-  margin-top: 400px;
+  margin-top: 100px;
   margin-bottom: 10px;
   margin-left: 5px;
   border-radius: 20px;
@@ -224,7 +224,6 @@ nav > a{
   color:black;
   margin-left: 50px;
   text-decoration: underline;
-  
 }
 
 /* h2 in sign up form */
@@ -251,9 +250,6 @@ nav > a{
   border-radius: 20px;
   padding: 0px 20px 10px 6px;
   display: grid;
-  margin-left: 30px;
-  margin-top: 30px;
-  margin-right: 50%;
 }
 
 .register form input{
@@ -280,6 +276,111 @@ font-weight: 600;
 .register button:hover{
   background-color:#3059a5e4;
   color: #e6ddc5;
+}
+
+/* Add a new book title */
+.newBook h1 {
+  color:black;
+  margin-left: 50px;
+  text-decoration: underline;
+}
+
+/* h2 in new book form */
+.newBook h2{
+  color:black;
+  margin-left: 20px;
+}
+
+/* Paragraph in new book form */
+.newBook p{
+  color: #e6ddc5;
+  margin-left: 20px;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+/* Text above each input sections */
+.newBook {
+  color: #e6ddc5;
+}
+
+.newBook form label{
+  font-weight: bold;
+  border-radius: 20px;
+  padding: 0px 20px 10px 6px;
+  display: grid;
+  margin-left: 30px;
+  margin-top: 30px;
+  margin-right: 50%;
+}
+
+.newBook form input{
+  background-color:#f4efe1;
+  font-weight: bold;
+  border-radius: 20px;
+  padding: 10px 50px 9px 6px;
+  display: grid;
+}
+
+.newBook button{
+  background-color: #e6ddc5;
+  border-radius: 20px;
+  padding: 2px 20px 18px 15px;
+  height: 2px;
+  margin-left: 40px;
+  margin-top: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  }
+
+.myAccount h1 {
+  margin-left: 50px;
+  text-decoration: underline;
+}
+
+.myAccount h2 {
+  color: white;
+  margin-left: 30px;
+  margin-top: 30px;
+  margin-right: 50%;
+  padding-bottom: 0px;
+  font-weight: bold;
+}
+
+.myAccountHeadings {
+  color: #e6ddc5;
+  font-weight: 600;
+  margin-left: 30px;
+  margin-top: 30px;
+  margin-right: 50%;
+  padding-top: 0px;
+}
+
+.myAccountHeadings button{
+background-color: #e6ddc5;
+border-radius: 20px;
+padding: 2px 20px 18px 15px;
+height: 2px;
+margin-left: 40px;
+margin-top: 10px;
+font-size: 13px;
+font-weight: 600;
+}
+
+/* Button in my account form hover */
+.myAccountHeadings button:hover{
+  background-color:#3059a5e4;
+  color: #e6ddc5;
+}
+
+.myAccountHeadings select {
+  background-color: #e6ddc5;
+  border-radius: 20px;
+  padding: 2px 20px 4px 15px;
+  height:auto;
+  margin-left: 40px;
+  margin-top: 10px;
+  color: #000;
 }
 
 /* #myAccountDropDown {
