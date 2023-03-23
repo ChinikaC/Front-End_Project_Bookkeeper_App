@@ -5,7 +5,7 @@ import { NavLink } from "react-router-dom";
 const MyBooks = ({ ownedBooks, users, books, currentUser, setCurrentUser }) => {
 
     const [currentList, setCurrentList] = useState([]);
-    const [currentFilter, setCurrentFilter] = useState("filter")
+    const [currentReadFilter, setCurrentReadFilter] = useState("filter")
 
     useEffect(() => {
         getBooks();
@@ -39,7 +39,7 @@ const MyBooks = ({ ownedBooks, users, books, currentUser, setCurrentUser }) => {
                     { "Content-Type": "application/json" },
                 body: JSON.stringify(bookToUpdate)
             })
-            filter(currentFilter);
+            filter(currentReadFilter);
         }
     }
 
@@ -107,7 +107,7 @@ const MyBooks = ({ ownedBooks, users, books, currentUser, setCurrentUser }) => {
     }
 
     const handleFilter = (e) => {
-        setCurrentFilter(e.target.value);
+        setCurrentReadFilter(e.target.value);
         filter(e.target.value);
     }
 
@@ -134,17 +134,18 @@ const MyBooks = ({ ownedBooks, users, books, currentUser, setCurrentUser }) => {
     } else {
 
         return (
-            <>
-                <div>
-                    Hello {currentUser.fullName}
-                </div>
+            <div className="myAccount">
+                <h1>My Account</h1>
+                <h2>
+                    Hello {currentUser.fullName}!
+                </h2>
+                <div className="myAccountHeadings">
                 <div>
                     Edit Account Details:
                     <button> <NavLink to="/UserForm">Edit</NavLink></button>
                 </div>
                 <div>
                     Filter by book status:
-
                     <select
                         onChange={handleFilter}
                         name="BookStatus">
@@ -158,6 +159,7 @@ const MyBooks = ({ ownedBooks, users, books, currentUser, setCurrentUser }) => {
                     Add New Book To List
                     <button> <NavLink to="/MyBookForm"> Add Book </NavLink> </button>
                 </div>
+                </div>
                 <BookList
                     books={currentList}
                     ownedBooks={ownedBooks}
@@ -166,7 +168,7 @@ const MyBooks = ({ ownedBooks, users, books, currentUser, setCurrentUser }) => {
                     updateBookStatus={updateBookStatus}
                     updateBookRating={updateBookRating}
                 ></BookList>
-            </>
+            </div>
         );
     }
 }
