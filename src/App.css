@@ -127,8 +127,17 @@ nav > a{
   background: url("./assets/genre_pictures/generic\ pic.jpeg");
   background-size: cover;
 }
+#Magicalrealism{
+  background: url("./assets/genre_pictures/magicalRealism.jpg");
+  background-size: cover;
+}
+#Autobiographicalfiction{
+  background: url("./assets/genre_pictures/autofiction.jpg");
+  background-size: cover;
+}
 #Modernistfiction{
   background: url("./assets/genre_pictures/modernism.jpeg");
+  background-size: cover;
 }
 #Gothicfiction{
   background: url("./assets/genre_pictures/gothicFiction.png");
