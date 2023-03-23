@@ -6,7 +6,7 @@ import devitoColouringPages3 from './images/devitoColouringPageC.png'
 import React, { useState, useRef } from "react";
 import bookkeepers from './images/finalLogo.PNG'
 import { useOnHoverOutside } from "../hooks/useOnHover";
-
+import Dystopianfiction from "../assets/genre_pictures/Dystopianfiction.png"
 import 'react-tippy/dist/tippy.css'
 import { Tooltip } from "react-tippy";
 import { NavLink } from "react-router-dom";
@@ -31,12 +31,16 @@ const Home = ({ books, setCurrentFilter }) => {
                 <NavLink to="/OurBooks">
                     <button
                         onClick={handleClick}
-                        value={book.genre}>
+                        value={book.genre}
+                        id={book.genre.replace(/\s+/g,'')}
+                        className="frontPageGenres">
                         {book.genre}
                     </button>
                 </NavLink>
             </Tooltip>
         )})
+
+
     return (
             <section>
                 <article id="theBookkeepers">
