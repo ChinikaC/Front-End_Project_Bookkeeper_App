@@ -11,12 +11,21 @@ nav {
   justify-content: space-around;
   width:50%;
 }
+#theBookkeepers{
+  background-color: rgb(41, 73, 58) ;
+  display: grid;
+  width: 100%;
+  margin: 0;
+  grid-template-columns: 1fr 1fr 1fr;
+  
+}
+
 
 #bookOfTheDay{
-  background-color: hotpink;
+  background-color: rgb(226, 225, 183) ;
   display: grid;
-  width:95%;
-  margin: 0 2.5% 0 2.5% ;
+  width: 100%;
+  margin: 0;
   grid-template-columns: 1fr 1fr 1fr;
   
 }

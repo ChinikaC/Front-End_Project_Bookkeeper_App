@@ -12,19 +12,79 @@ code {
     monospace;
 }
 
+.tbk-heading {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 2.7em;
+  margin-left: 130%;
+  margin-top: 10%;
+  margin-bottom: 10%;
+  margin-right: -20%;
+}
+
+
+.tbk-titles {
+  display: flex;
+  justify-content: flex-end;
+  line-height: 10%;
+  font-size: 1.35em;
+  text-align: right;
+}
+
+.bookkeepers-intro {
+  position: relative;
+}
+
+.bookkeepers-intro img {
+  position: relative;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+h2 {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
 .list {
-  list-style: none;}
-  
- 
+  list-style: none;
+  font-size: 1.1em;
+  padding-left: 1em;
+  padding-top: 25%;
+}
 
+.list-item {
+  margin-bottom: 1.3em;
+  margin-right: 0.5%;
+  font-weight: bold;
+  color: rgb(42, 42, 126);
+  font-family: sans-serif;
+}
 
+.peak-inside {
+  padding-left: 20%;
+}
 
 .list-item::before {
   content: '';
-display: inline-block;
-height: 20px;
-width: 20px;
-background-size: contain;
-background-image: url("https://cdn-icons-png.flaticon.com/128/2702/2702134.png");
-margin-right: 5px;
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  background-size: contain;
+  background-image: url("https://cdn-icons-png.flaticon.com/128/2702/2702134.png");
+  margin-right: 5px;
 }
+
+.reviews {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  padding-top: 15%;
+  padding-left: 1em;
+}
+
+.starReview {
+  display: block;
+  width: 100%;
+  margin: auto;
+}
+
+

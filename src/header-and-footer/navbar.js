@@ -22,7 +22,6 @@ const Header = ({ currentUser, setCurrentUser }) => {
         <header>
             <div id="logoAndTitle">
                 <img src={logo} alt="Book-Keepers Logo" id="logo"/>
-                <h1>Book-Keepers</h1>
             </div>
             <nav>
                 <NavLink to="/home">
