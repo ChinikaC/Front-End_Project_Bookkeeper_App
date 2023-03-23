@@ -29,7 +29,6 @@
     flex-direction: column;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     justify-content: center;
-    padding-left: 1em;
     align-items: center;
   }
   
@@ -51,6 +50,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding: 0;
   }
   #peak-inside{
     display:flex;
@@ -88,8 +88,7 @@
   #bookOfTheDay {
     display: grid;
     width: 95%;
-    margin: 5px 2.5% 5px 2.5%;
-    width: 100%;
+    margin: 0 2.5% 0 2.5%;
     grid-template-columns: 1fr 1fr 1fr;
   }
   #bookByGenre {
