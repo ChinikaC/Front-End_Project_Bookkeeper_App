@@ -39,23 +39,22 @@ const OurBooks = ({ books, postOwnedBook, currentFilter, setCurrentFilter}) => {
     }
 
     return (
-        <>
-            <h2>
+        <div className="filter">
+            <h1>
                 Our Books
-            </h2>
-            <div>
-                Filter by genre:
-
+            </h1>
+                <p>Filter By Genre:</p>
+                <div className="filterDropDown">
                 <select
                     onChange={handleClick}
                     name="BookStatus"
                     value={currentFilter}>
-                    <option value="all">All books</option>
+                    <option value="all">All Books</option>
                     {listOfGenres}
                 </select>
             </div>
             <BookList books={filteredBooks} postOwnedBook={postOwnedBook} ></BookList>
-        </>
+        </div>
     )
 }
 

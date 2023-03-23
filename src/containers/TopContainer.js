@@ -96,6 +96,18 @@ const TopContainer = () => {
             });
     };
 
+    const [theme, setTheme] = useState('light');
+    const toggleButton = () => {
+        if (theme === 'light') {
+            setTheme('dark');
+        } else {
+            setTheme('light');
+        }
+    };
+
+    useEffect(() => {
+        document.body.className = theme;
+    }, [theme]);
 
     if (error !== "") return <p>Error! {error}</p>;
 
@@ -109,9 +121,9 @@ const TopContainer = () => {
                 <Routes>
                     <Route path='/Home' element=
                         {
-                            <Home 
-                            setCurrentFilter={setCurrentFilter}
-                            books = {books}/>
+                            <Home
+                                setCurrentFilter={setCurrentFilter}
+                                books={books} />
                         } />
                     <Route path='/OurBooks' element=
                         {
@@ -148,8 +160,10 @@ const TopContainer = () => {
                                 setUsers={setUsers}
                                 createNewUser={createNewUser} />
                         } />
-
                 </Routes>
+                <div className="theme">
+                    <button onClick={toggleButton}>Dark/Light Mode</button>
+                </div>
             </Router>
         </>
     )

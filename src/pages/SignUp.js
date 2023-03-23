@@ -13,19 +13,19 @@ const SignUp = ({users, setUsers, createNewUser}) => {
 
         // Check if name or email already exists
         if (users.find((user) => user.fullName === fullName)) {
-            errorMessage = "An account with this name already exists"
+            errorMessage = "*An account with this name already exists*"
         }
         if (users.find((user) => user.email === email)) {
-            errorMessage = "An account with this email address already exists"
+            errorMessage = "*An account with this email address already exists*"
         }
 
         // Check that passwords is equal to confirm password
         if (password !== confirmPassword) {
-            errorMessage = "The passwords you have entered do not match" }
+            errorMessage = "*The passwords you have entered do not match*" }
 
             // Check that none of the fields are blank
             if (users.fullName === "" || users.email === "" || password === "") {
-                errorMessage = "Please fill in all of the fields"
+                errorMessage = "* Please fill in all of the fields *"
             }
 
             setError(errorMessage)
@@ -52,9 +52,12 @@ const SignUp = ({users, setUsers, createNewUser}) => {
     };
 
     return (
-        <div>
+        <div className="register">
             <h1>Register</h1>
+            <h2>Enter your details below to become a apart of the Book-Keepers Club!</h2>
+            <p>All fields marked with a * must be filled out</p>
             <form onSubmit={handleSubmit}>
+                <label>Enter your full name *
                 <input 
                     type="text"
                     name="fullName"
@@ -62,6 +65,8 @@ const SignUp = ({users, setUsers, createNewUser}) => {
                     value={fullName}
                     onChange={(e) => {setFullName(e.target.value) }}
                 />
+                </label>
+                <label>Enter your email address *
                 <input
                     type="email"
                     name="email"
@@ -69,6 +74,8 @@ const SignUp = ({users, setUsers, createNewUser}) => {
                     value={email}
                     onChange={(e) => {setEmail(e.target.value) }}
                 />
+                </label>
+                <label>Enter your password *
                 <input
                     type="password"
                     name="password"
@@ -76,6 +83,8 @@ const SignUp = ({users, setUsers, createNewUser}) => {
                     value={password}
                     onChange={(e) => {setPassword(e.target.value) }}
                 />
+                </label>
+                <label>Re-enter your password *
                 <input
                     type="password"
                     name="confirmPassword"
@@ -83,8 +92,9 @@ const SignUp = ({users, setUsers, createNewUser}) => {
                     value={confirmPassword}
                     onChange={(e) => {setConfirmPassword(e.target.value) }}
                 />
+                </label>
                 <button 
-                type="submit">Submit</button>
+                type="submit">Register</button>
             </form>
 
             {error !=="" ? <p>{error}</p> : <></>}

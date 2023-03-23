@@ -1,12 +1,11 @@
 import ReactStars from "react-rating-stars-component";
 import React from "react";
-import { render } from "react-dom";
+import bookImg from "../assets/free-book-clipart.png";
 
 const Book = ({ book, postOwnedBook, updateBookStatus, currentUser, ownedBooks, deleteOwnedBook, updateBookRating}) => {
 
     const handleClick = (e) => {
-        //console.log(e);
-        //console.log("You have successfully added this book to your list!");
+        console.log("You have successfully added this book to your list!");
         postOwnedBook(book.id)
     }
 
@@ -68,7 +67,10 @@ const Book = ({ book, postOwnedBook, updateBookStatus, currentUser, ownedBooks, 
             <li className="bookOnList">
                 <h3 className="bookTitle">{book.title}</h3>
                 <p className="bookDescription"><b>Description: </b>{book.description}</p>
-                <button onClick={handleClick} id={book.id} className="bookButton">Add to my list</button>
+                <div className="imageButton" onClick={handleClick}>
+                <img src={bookImg} alt="Image of book" id={book.id} className="bookButton"/>
+                <p>Add to My List</p>
+                </div>
             </li>
         )
     }
