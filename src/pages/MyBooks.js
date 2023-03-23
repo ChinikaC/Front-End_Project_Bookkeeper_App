@@ -5,7 +5,7 @@ import { NavLink } from "react-router-dom";
 const MyBooks = ({ ownedBooks, users, books, currentUser, setCurrentUser }) => {
 
     const [currentList, setCurrentList] = useState([]);
-    const [currentFilter, setCurrentFilter] = useState("filter")
+    const [currentReadFilter, setCurrentReadFilter] = useState("filter")
 
     useEffect(() => {
         getBooks();
@@ -39,7 +39,7 @@ const MyBooks = ({ ownedBooks, users, books, currentUser, setCurrentUser }) => {
                     { "Content-Type": "application/json" },
                 body: JSON.stringify(bookToUpdate)
             })
-            filter(currentFilter);
+            filter(currentReadFilter);
         }
     }
 
@@ -107,7 +107,7 @@ const MyBooks = ({ ownedBooks, users, books, currentUser, setCurrentUser }) => {
     }
 
     const handleFilter = (e) => {
-        setCurrentFilter(e.target.value);
+        setCurrentReadFilter(e.target.value);
         filter(e.target.value);
     }
 

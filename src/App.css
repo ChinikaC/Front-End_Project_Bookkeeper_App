@@ -1,5 +1,6 @@
 body {
   background-color: #23324d;
+  color:#f4efe1;
 }
 
 header {
@@ -8,6 +9,8 @@ header {
   justify-content: space-between;
   align-items: center;
   height: auto;
+  border-bottom: solid;
+  border-color: #f4efe1;
   /* background-color: #15253F; */
   /* background-color: #2B3D5B; */
   /* background-color: #263652; */
@@ -88,7 +91,7 @@ nav>a {
   align-items: center;
   justify-content: center;
   height: 100%;
-  color: #000;
+  color: #f4efe1;
   text-decoration-line: none;
   background: none;
   border: none;
@@ -106,7 +109,8 @@ nav>a {
 }
 
 .nav-button:hover {
-  background-color: #dfdfbc;
+  /* background-color: #f4efe1; */
+  color: hotpink;
 }
 
 .nav-button:active {
@@ -196,6 +200,7 @@ nav>a {
 }
 
 .bookList {
+  color:#000;
   list-style-type: none;
   display: grid;
   grid-template-columns: 1fr;
