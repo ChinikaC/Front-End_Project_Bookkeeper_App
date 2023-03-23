@@ -46,7 +46,8 @@ const Header = ({ currentUser, setCurrentUser }) => {
                         Home
                     </NavLink></li>
                     <li><NavLink to="/OurBooks">
-                        Our Books
+                        {/* CHANGE THIS SO WE CAN CHANGE THE FONT */}
+                        Our Books  
                     </NavLink></li>
                     <li><NavLink to="/MyBooks">
                         <div ref={dropdownRef} id="myAccountDropDown">
