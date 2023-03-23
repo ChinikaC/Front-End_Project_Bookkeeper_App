@@ -109,10 +109,62 @@ nav > a{
 
 #bookByGenre {
   display: grid;
-  background-color: brown;
-  width: 95%;
-  margin: 0 2.5% 0 2.5%;
+  width: 100%;
+  margin: 0;
   grid-template-columns: 1fr 1fr 1fr;
+  aspect-ratio: 1;
+}
+
+.frontPageGenres{
+  font-size:larger;
+  font-weight: bolder;
+  color: #fff;
+  text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+  height: 100%;
+  width: 100%;
+  border-radius: 15%;
+  /* color: hotpink; */
+  background: url("./assets/genre_pictures/generic\ pic.jpeg");
+  background-size: cover;
+}
+#Modernistfiction{
+  background: url("./assets/genre_pictures/modernism.jpeg");
+}
+#Gothicfiction{
+  background: url("./assets/genre_pictures/gothicFiction.png");
+  background-size: cover;
+}
+#PoliticalSatire{
+  background: url("./assets/genre_pictures/politicalSatire.jpeg");
+  background-size: cover;
+}
+#Dystopianfiction {
+  background: url("./assets/genre_pictures/Dystopianfiction.png");
+  background-size: cover;
+}
+#RegencyRomance {
+  background: url("./assets/genre_pictures/Regency\ Romance\ img.jpeg");
+  background-size: cover;
+}
+#Coming-of-agefiction{
+  background: url("./assets/genre_pictures/commingOfAge.jpeg");
+  background-size: cover;
+}
+#Literaryfiction{
+  background: url("./assets/genre_pictures/literaryFiction.jpeg");
+  background-size: cover;
+}
+#Highfantasy{
+  background: url("./assets/genre_pictures/high-fantasy.jpeg");
+  background-size: cover;
+}
+#Sciencefiction{
+  background: url("./assets/genre_pictures/scifi.jpg");
+  background-size: cover;
+}
+#Crimefiction{
+  background: url("./assets/genre_pictures/crimeFiction.webp");
+  background-size: cover;
 }
 
 .bookTitle {
