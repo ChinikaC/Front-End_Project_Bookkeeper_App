@@ -1,23 +1,20 @@
 body {
   background-color: #23324d;
-  color:#f4efe1;
+  color: #f4efe1;
 }
 
-footer{
+footer {
   border-top: solid;
   border-color: #f4efe1;
   flex-shrink: 0;
 }
 
-#box{
+#box {
   min-height: 66vh
 }
 
-#home{ 
-  background: url("./assets/peakpx.jpg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  color:#f4efe1;
+#home {
+  color: #f4efe1;
 }
 
 header {
@@ -58,24 +55,6 @@ nav>a {
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   padding: 12px 16px; */
   z-index: 1;
-}
-
-#theBookkeepers {
-  display: grid;
-  width: 100%;
-  margin: 0;
-  grid-template-columns: 1fr 1fr 1fr;
-}
-
-#bookOfTheDay {
-
-  display: grid;
-  width: 95%;
-  margin: 0 2.5% 0 2.5%;
-  width: 100%;
-  margin: 0;
-  grid-template-columns: 1fr 1fr 1fr;
-
 }
 
 #logoAndTitle {
@@ -133,75 +112,6 @@ nav>a {
   text-decoration: none;
 }
 
-#bookByGenre {
-  display: grid;
-  width: 100%;
-  margin: 0;
-  grid-template-columns: 1fr 1fr 1fr;
-  aspect-ratio: 1;
-}
-
-.frontPageGenres{
-  font-size:larger;
-  font-weight: bolder;
-  color: #fff;
-  text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
-  height: 100%;
-  width: 100%;
-  border-radius: 15%;
-  /* color: hotpink; */
-  background: url("./assets/genre_pictures/generic\ pic.jpeg");
-  background-size: cover;
-}
-#Magicalrealism{
-  background: url("./assets/genre_pictures/magicalRealism.jpg");
-  background-size: cover;
-}
-#Autobiographicalfiction{
-  background: url("./assets/genre_pictures/autofiction.jpg");
-  background-size: cover;
-}
-#Modernistfiction{
-  background: url("./assets/genre_pictures/modernism.jpeg");
-  background-size: cover;
-}
-#Gothicfiction{
-  background: url("./assets/genre_pictures/gothicFiction.png");
-  background-size: cover;
-}
-#PoliticalSatire{
-  background: url("./assets/genre_pictures/politicalSatire.jpeg");
-  background-size: cover;
-}
-#Dystopianfiction {
-  background: url("./assets/genre_pictures/Dystopianfiction.png");
-  background-size: cover;
-}
-#RegencyRomance {
-  background: url("./assets/genre_pictures/Regency\ Romance\ img.jpeg");
-  background-size: cover;
-}
-#Coming-of-agefiction{
-  background: url("./assets/genre_pictures/commingOfAge.jpeg");
-  background-size: cover;
-}
-#Literaryfiction{
-  background: url("./assets/genre_pictures/literaryFiction.jpeg");
-  background-size: cover;
-}
-#Highfantasy{
-  background: url("./assets/genre_pictures/high-fantasy.jpeg");
-  background-size: cover;
-}
-#Sciencefiction{
-  background: url("./assets/genre_pictures/scifi.jpg");
-  background-size: cover;
-}
-#Crimefiction{
-  background: url("./assets/genre_pictures/crimeFiction.webp");
-  background-size: cover;
-}
-
 .bookTitle {
   width: 100%;
 }
@@ -216,7 +126,7 @@ nav>a {
 }
 
 .bookList {
-  color:#000;
+  color: #000;
   list-style-type: none;
   display: grid;
   grid-template-columns: 1fr;
@@ -368,19 +278,19 @@ nav>a {
 
 /* Add a new book title */
 .newBook h1 {
-  color:black;
+  color: black;
   margin-left: 50px;
   text-decoration: underline;
 }
 
 /* h2 in new book form */
-.newBook h2{
-  color:black;
+.newBook h2 {
+  color: black;
   margin-left: 20px;
 }
 
 /* Paragraph in new book form */
-.newBook p{
+.newBook p {
   color: #e6ddc5;
   margin-left: 20px;
   font-weight: 400;
@@ -392,22 +302,22 @@ nav>a {
   color: #e6ddc5;
 }
 
-.newBook form label{
+.newBook form label {
   font-weight: bold;
   border-radius: 20px;
   padding: 0px 20px 10px 6px;
   display: grid;
 }
 
-.newBook form input{
-  background-color:#f4efe1;
+.newBook form input {
+  background-color: #f4efe1;
   font-weight: bold;
   border-radius: 20px;
   padding: 10px 50px 9px 6px;
   display: grid;
 }
 
-.newBook button{
+.newBook button {
   background-color: #e6ddc5;
   border-radius: 20px;
   padding: 2px 20px 18px 15px;
@@ -416,7 +326,7 @@ nav>a {
   margin-top: 10px;
   font-size: 13px;
   font-weight: 600;
-  }
+}
 
 .myAccount h1 {
   margin-left: 50px;
@@ -441,34 +351,37 @@ nav>a {
   padding-top: 0px;
 }
 
-.myAccountHeadings button{
-background-color: #e6ddc5;
-border-radius: 20px;
-padding: 2px 20px 18px 15px;
-height: 2px;
-margin-left: 40px;
-margin-top: 10px;
-font-size: 13px;
-font-weight: 600;
-text-decoration-line: none;
+.myAccountHeadings button {
+  background-color: #e6ddc5;
+  border-radius: 20px;
+  padding: 2px 20px 18px 15px;
+  height: 2px;
+  margin-left: 40px;
+  margin-top: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration-line: none;
 }
 
-.myAccountHeadings button:link{
+.myAccountHeadings button:link {
   text-decoration: none;
 }
-.myAccountHeadings button:visited{
+
+.myAccountHeadings button:visited {
   text-decoration: none;
 }
-.myAccountHeadings button:active{
+
+.myAccountHeadings button:active {
   text-decoration: none;
 }
-.myAccountHeadings button:default{
+
+.myAccountHeadings button:default {
   text-decoration: none;
 }
 
 /* Button in my account form hover */
-.myAccountHeadings button:hover{
-  background-color:#3059a5e4;
+.myAccountHeadings button:hover {
+  background-color: #3059a5e4;
   color: #e6ddc5;
 }
 
@@ -476,7 +389,7 @@ text-decoration-line: none;
   background-color: #e6ddc5;
   border-radius: 20px;
   padding: 2px 20px 4px 15px;
-  height:auto;
+  height: auto;
   margin-left: 40px;
   margin-top: 10px;
   color: #000;
@@ -487,9 +400,3 @@ text-decoration-line: none;
   flex-direction: column;
   height:100%
 } */
-
-/* #bookOfTheDay{
-  background-color: rgb(226, 225, 183) ;
-  display: grid;
-  width: 100%;
-  margin: 0; */

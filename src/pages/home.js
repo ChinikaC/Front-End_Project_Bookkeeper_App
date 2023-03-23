@@ -1,3 +1,4 @@
+import "../home.css"
 import devitoBook from './images/devitoBook.jpeg';
 import starReview from './images/starRevieww.png';
 import devitoColouringPages from './images/devColouringPage.jpeg'
@@ -54,79 +55,69 @@ const Home = ({ books, setCurrentFilter }) => {
     return (
         <section id="home">
             <article id="theBookkeepers">
-                <div className='tbk-heading'>
+                <div>
                     <h2 className='tbk-titles'> The</h2>
                     <h2 className='tbk-titles' > Book </h2>
                     <h2 className='tbk-titles' > Keepers </h2>
                 </div>
-                <div className='bookkeepers-intro'>
-                    <img src={bookkeepers} alt="image of a book" style={{ width: "55%", margin: "auto" }} />
+                <div id="tbk_HomePageLogoContainer">
+                    <img id="tbk_HomePageLogoBig" src={bookkeepers} alt="image of a book" />
                 </div>
             </article>
 
             <h2 className='bookOTDheader'>Our Book of the Day</h2>
 
             <article id="bookOfTheDay">
+                <ul id="devitoList">
+                    <li className='list-item'>An awesome official Danny DeVito-inspired, biographical colouring book.</li>
+                    <li className='list-item'>Ideal for an evening of relaxation and stress relief</li>
+                    <li className='list-item'>Two copies of each image are provided</li>
+                    <li className='list-item'>Perfect for the whole family!</li>
 
-                <div className='devitoColouringBook'>
-                    <img src={devitoBook}
-                        alt="image of Danny Devito cokouring book"
-                        style={{ margin: "auto" }} />
-                </div>
+                </ul>
 
-                <div>
-                    <ul className='list'>
-                        <li class='list-item'>An awesome official Danny DeVito-inspired, biographical colouring book.</li>
-                        <li className='list-item'>Ideal for an evening of relaxation and stress relief</li>
-                        <li className='list-item'>Two copies of each image are provided</li>
-                        <li className='list-item'>Perfect for the whole family!</li>
+                <img src={devitoBook}
+                    alt="image of Danny Devito cokouring book"
+                    id="devitoColouringBook" />
 
-                    </ul>
-                </div>
-
-                <br />
-
-
-                <div className='devitoColouringPageA'>
-                    <img src={devitoColouringPages}
-                        alt="colouring pages"
-                        style={{ width: "100%", margin: "auto" }} />
-                </div>
-
-                <div className='devitoColouringPageC'>
-                    <h3 className='peak-inside'>Take A Peak Inside</h3>
-                    <img src={devitoColouringPages3}
-                        alt="colouring pages" />
-                </div>
-
-                <div className='devitoColouringPageB'>
-                    <img src={devitoColouringPages2}
-                        alt="colouring pages" />
-                </div>
-
-
-
-
-                <div className='reviews'>
+                <div id='reviews'>
                     <h3> Read what some of our users are saying</h3>
 
                     <p>Aya H : I'll never need another colouring book again!</p>
                     <img src={starReview}
                         alt="star review"
-                        style={{ width: "20%", margin: "auto" }} />
+                        className='starReview' />
 
                     <p>Ramiro R : Love me some Daddy Devito </p>
                     <img src={starReview}
                         alt="star review"
-                        style={{ width: "20%", margin: "auto" }} />
+                        className='starReview' />
 
                     <p>Leah S : If I was Matilda I'd never want to be adopted! </p>
                     <img src={starReview}
                         alt="star review"
-                        style={{ width: "20%", margin: "auto" }} />
+                        className='starReview' />
                 </div>
-
             </article>
+            <div>
+                <h3 id='peak-inside'>Take A Peak Inside</h3>
+                <div id="devitoPicHolder">
+                    <img
+                        className='devitoPic'
+                        src={devitoColouringPages}
+                        alt="colouring pages" />
+
+                    <img
+                        className='devitoPic'
+                        src={devitoColouringPages3}
+                        alt="colouring pages" />
+
+                    <img
+                        className='devitoPic'
+                        src={devitoColouringPages2}
+                        alt="colouring pages" />
+                </div>
+            </div>
             <h2>Books by Genre</h2>
             <article id="bookByGenre">
                 {listOfGenres}
