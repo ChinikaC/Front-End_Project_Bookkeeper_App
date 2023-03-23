@@ -11,14 +11,9 @@ header {
   height: auto;
   border-bottom: solid;
   border-color: #f4efe1;
-  /* background-color: #15253F; */
-  /* background-color: #2B3D5B; */
-  /* background-color: #263652; */
-  /*background-color: rgb(240, 227, 211);*/
 }
 
 nav {
-  /* background-color: rgba(239, 229, 218, 0.94); */
   display: flex;
   justify-content: space-around;
   margin-right: 2rem;
@@ -36,10 +31,6 @@ nav>a {
   display: block;
   position: absolute;
   width: 100%;
-  /* background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  padding: 12px 16px; */
   z-index: 1;
 }
 
@@ -98,7 +89,7 @@ nav>a {
 }
 
 .nav-button {
-
+  font-family: monospace;
   display: inline-block;
   align-items: center;
   justify-content: center;
@@ -139,6 +130,7 @@ nav>a {
 
 .frontPageGenres{
   font-size:larger;
+  font-family: monospace;
   font-weight: bolder;
   color: #fff;
   text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
@@ -527,15 +519,3 @@ display: grid;
     color: #000;
 
   }
-
-/* #myAccountDropDown {
-  display: flex;
-  flex-direction: column;
-  height:100%
-} */
-
-/* #bookOfTheDay{
-  background-color: rgb(226, 225, 183) ;
-  display: grid;
-  width: 100%;
-  margin: 0; */

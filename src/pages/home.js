@@ -76,9 +76,9 @@ const Home = ({ books, setCurrentFilter }) => {
 
                 <div>
                     <ul className='list'>
-                        <li class='list-item'>An awesome official Danny DeVito-inspired, biographical colouring book.</li>
-                        <li className='list-item'>Ideal for an evening of relaxation and stress relief</li>
-                        <li className='list-item'>Two copies of each image are provided</li>
+                        <li className='list-item'>An awesome official Danny DeVito-inspired, biographical colouring book.</li>
+                        <li className='list-item'>Ideal for an evening of relaxation and stress relief.</li>
+                        <li className='list-item'>Two copies of each image are provided.</li>
                         <li className='list-item'>Perfect for the whole family!</li>
 
                     </ul>
@@ -88,7 +88,7 @@ const Home = ({ books, setCurrentFilter }) => {
                 <div className='devitoColouringPageA'>
                     <img src={devitoColouringPages}
                         alt="colouring pages"
-                        style={{ width: "100%", margin: "auto" }} />
+                        style={{ width: "100%", margin: "auto" }} /> 
                 </div>
 
                 <div className='devitoColouringPageC'>
@@ -101,7 +101,6 @@ const Home = ({ books, setCurrentFilter }) => {
                     <img src={devitoColouringPages2}
                         alt="colouring pages" />
                 </div>
-
 
                 <div className='reviews'>
                     {/* <h3> Read what some of our users are saying</h3> */}
