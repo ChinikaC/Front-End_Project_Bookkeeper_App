@@ -1,5 +1,5 @@
 body {
-background-color: #23324d;
+  background-color: #23324d;
 }
 
 header {
@@ -24,95 +24,162 @@ nav {
   margin: 0;
   padding: 0;
 }
-nav > a{
-  height:100%;
+
+nav>a {
+  height: 100%;
 }
-.dropdown-menu{
-  display:block;
+
+.dropdown-menu {
+  display: block;
   position: absolute;
-  width:100%;
+  width: 100%;
   /* background-color: #f9f9f9;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   padding: 12px 16px; */
   z-index: 1;
 }
-#theBookkeepers{
-  background-color: rgb(41, 73, 58) ;
+
+#theBookkeepers {
+  background-color: #23324d;
   display: grid;
   width: 100%;
   margin: 0;
   grid-template-columns: 1fr 1fr 1fr;
-  
+}
+
+#bookOfTheDay {
+  background-color: #23324d;
+  display: grid;
+  width: 95%;
+  margin: 0 2.5% 0 2.5%;
+  width: 100%;
+  margin: 0;
+  grid-template-columns: 1fr 1fr 1fr;
+
 }
 
 #logoAndTitle {
   display: flex;
   align-items: center;
   max-height: 3rem;
-  white-space: nowrap
+  white-space: nowrap;
+  margin-left: 5%;
 }
-#logo{
+
+#logo {
   max-height: 48px;
 }
-#title{
+
+#title {
   white-space: nowrap;
+  font-size: small;
+  display: block;
+  margin-top: 5%;
+  margin-bottom: 3%;
+  margin-right: 10%;
+  margin-left: 5%;
+  color: #f4efe1;
 }
 
 .nav-button {
-  
+
   display: inline-block;
   align-items: center;
   justify-content: center;
-  height:100%;
+  height: 100%;
   color: #000;
   text-decoration-line: none;
-  background:none;
+  background: none;
   border: none;
   font-size: medium;
   position: relative;
   padding: 0;
 }
-.nav-button:link{
+
+.nav-button:link {
   text-decoration: none;
 }
-.nav-button:visited{
+
+.nav-button:visited {
   text-decoration: none;
 }
-.nav-button:hover{
+
+.nav-button:hover {
   background-color: #dfdfbc;
 }
-.nav-button:active{
+
+.nav-button:active {
   text-decoration: none;
-}
-#theBookkeepers{
-  background-color: rgb(41, 73, 58) ;
-  display: grid;
-  width: 100%;
-  margin: 0;
-  grid-template-columns: 1fr 1fr 1fr;
-  
-}
-
-
-
-#bookOfTheDay {
-  background-color: rgb(226, 225, 183) ;
-  display: grid;
-  width: 95%;
-  margin: 0 2.5% 0 2.5%;
-  width: 100%;
-  margin: 0;
-  grid-template-columns: 1fr 1fr 1fr;
-
 }
 
 #bookByGenre {
   display: grid;
-  background-color: brown;
-  width: 95%;
-  margin: 0 2.5% 0 2.5%;
+  width: 100%;
+  margin: 0;
   grid-template-columns: 1fr 1fr 1fr;
+  aspect-ratio: 1;
+}
+
+.frontPageGenres{
+  font-size:larger;
+  font-weight: bolder;
+  color: #fff;
+  text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+  height: 100%;
+  width: 100%;
+  border-radius: 15%;
+  /* color: hotpink; */
+  background: url("./assets/genre_pictures/generic\ pic.jpeg");
+  background-size: cover;
+}
+#Magicalrealism{
+  background: url("./assets/genre_pictures/magicalRealism.jpg");
+  background-size: cover;
+}
+#Autobiographicalfiction{
+  background: url("./assets/genre_pictures/autofiction.jpg");
+  background-size: cover;
+}
+#Modernistfiction{
+  background: url("./assets/genre_pictures/modernism.jpeg");
+  background-size: cover;
+}
+#Gothicfiction{
+  background: url("./assets/genre_pictures/gothicFiction.png");
+  background-size: cover;
+}
+#PoliticalSatire{
+  background: url("./assets/genre_pictures/politicalSatire.jpeg");
+  background-size: cover;
+}
+#Dystopianfiction {
+  background: url("./assets/genre_pictures/Dystopianfiction.png");
+  background-size: cover;
+}
+#RegencyRomance {
+  background: url("./assets/genre_pictures/Regency\ Romance\ img.jpeg");
+  background-size: cover;
+}
+#Coming-of-agefiction{
+  background: url("./assets/genre_pictures/commingOfAge.jpeg");
+  background-size: cover;
+}
+#Literaryfiction{
+  background: url("./assets/genre_pictures/literaryFiction.jpeg");
+  background-size: cover;
+}
+#Highfantasy{
+  background: url("./assets/genre_pictures/high-fantasy.jpeg");
+  background-size: cover;
+}
+#Sciencefiction{
+  background: url("./assets/genre_pictures/scifi.jpg");
+  background-size: cover;
+}
+#Crimefiction{
+  background: url("./assets/genre_pictures/crimeFiction.webp");
+  background-size: cover;
 }
 
 .bookTitle {
@@ -132,8 +199,8 @@ nav > a{
   list-style-type: none;
   display: grid;
   grid-template-columns: 1fr;
-  width:95%;
-  margin:0 2.5% 0 2.5%;
+  width: 95%;
+  margin: 0 2.5% 0 2.5%;
   justify-content: center;
   padding: 0;
 }
@@ -147,25 +214,25 @@ nav > a{
   padding: 5px;
   margin-bottom: 10px;
   margin-top: 10px;
-  background-color:rgb(240, 227, 211);
+  background-color: rgb(240, 227, 211);
 }
 
 /* Book buttom */
-.imageButton{
+.imageButton {
   display: grid;
   padding-left: 80px;
 }
 
 /* Image for the book button */
-.imageButton>img{
+.imageButton>img {
   grid-column: 1;
   grid-row: 1;
   width: 150px;
-  padding-top: 34px; 
+  padding-top: 34px;
 }
 
 /* Text for the book button */
-.imageButton>p{
+.imageButton>p {
   grid-column: 1;
   grid-row: 1;
   margin-left: 34.8px;
@@ -180,7 +247,7 @@ nav > a{
 }
 
 /* 'Filter by genre text' */
-.filter> p {
+.filter>p {
   font-weight: bold;
   margin-left: 25px;
   margin-bottom: 5px;
@@ -189,7 +256,7 @@ nav > a{
 }
 
 /* The drop down for 'All Books' */
-.filterDropDown>select{
+.filterDropDown>select {
   padding-right: 5px;
   padding-left: 10px;
   margin-left: 20px;
@@ -200,13 +267,13 @@ nav > a{
 }
 
 /* Dark mode */
-.dark{
+.dark {
   background-color: #272626;
-  color: #324a76; 
+  color: #324a76;
 }
 
 /* Light/dark mode button */
-.theme>button{
+.theme>button {
   background-color: white;
   margin-top: 100px;
   margin-bottom: 10px;
@@ -220,20 +287,20 @@ nav > a{
 }
 
 /* Title in sign up form */
-.register h1{
-  color:black;
+.register h1 {
+  color: black;
   margin-left: 50px;
   text-decoration: underline;
 }
 
 /* h2 in sign up form */
-.register h2{
-  color:black;
+.register h2 {
+  color: black;
   margin-left: 20px;
 }
 
 /* Paragraph in sign up form */
-.register p{
+.register p {
   color: #e6ddc5;
   margin-left: 20px;
   font-weight: 400;
@@ -245,15 +312,15 @@ nav > a{
   color: #e6ddc5;
 }
 
-.register form label{
+.register form label {
   font-weight: bold;
   border-radius: 20px;
   padding: 0px 20px 10px 6px;
   display: grid;
 }
 
-.register form input{
-  background-color:#f4efe1;
+.register form input {
+  background-color: #f4efe1;
   font-weight: bold;
   border-radius: 20px;
   padding: 10px 50px 9px 6px;
@@ -261,20 +328,20 @@ nav > a{
 }
 
 /* Button in sign up form */
-.register button{
-background-color: #e6ddc5;
-border-radius: 20px;
-padding: 2px 20px 18px 15px;
-height: 2px;
-margin-left: 40px;
-margin-top: 10px;
-font-size: 13px;
-font-weight: 600;
+.register button {
+  background-color: #e6ddc5;
+  border-radius: 20px;
+  padding: 2px 20px 18px 15px;
+  height: 2px;
+  margin-left: 40px;
+  margin-top: 10px;
+  font-size: 13px;
+  font-weight: 600;
 }
 
 /* Button in sign up form hover */
-.register button:hover{
-  background-color:#3059a5e4;
+.register button:hover {
+  background-color: #3059a5e4;
   color: #e6ddc5;
 }
 
@@ -309,9 +376,6 @@ font-weight: 600;
   border-radius: 20px;
   padding: 0px 20px 10px 6px;
   display: grid;
-  margin-left: 30px;
-  margin-top: 30px;
-  margin-right: 50%;
 }
 
 .newBook form input{
