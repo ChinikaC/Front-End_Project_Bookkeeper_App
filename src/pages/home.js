@@ -2,8 +2,9 @@ import devitoBook from './images/devitoBook.jpeg';
 import starReview from './images/starRevieww.png';
 import devitoColouringPages from './images/devColouringPage.jpeg'
 import devitoColouringPages2 from './images/devitoColouringPage.webp'
+import devitoColouringPages3 from './images/devitoColouringPageC.png'
 import React, { useState, useRef } from "react";
-import bookkeepers from './images/bookDrawing.png'
+import bookkeepers from './images/finalLogo.PNG'
 import { useOnHoverOutside } from "../hooks/useOnHover";
 
 import 'react-tippy/dist/tippy.css'
@@ -45,39 +46,50 @@ const Home = ({ books, setCurrentFilter }) => {
                         <h2 className='tbk-titles' > Keepers </h2>
                     </div>
                     <div className='bookkeepers-intro'>
-                        <img src={bookkeepers} alt="image of a book" style={{ width: "50%", margin: "auto" }} />
+                        <img src={bookkeepers} alt="image of a book" style={{ width: "55%", margin: "auto" }} />
                     </div>
-
                 </article>
 
-                <h2>Our Book of the Day</h2>
+                <h2 className='bookOTDheader'>Our Book of the Day</h2>
 
                 <article id="bookOfTheDay">
 
-                    <div>
+                    <div className='devitoColouringBook'>
                         <img src={devitoBook}
                             alt="image of Danny Devito cokouring book"
-                            style={{ width: "100%", margin: "auto" }} />
+                            style={{ margin: "auto" }} />
                     </div>
 
                     <div>
-                        <h3 className='peak-inside'>Take A Peak Inside</h3>
+                        <ul className='list'>
+                            <li class='list-item'>An awesome official Danny DeVito-inspired, biographical colouring book.</li>
+                            <li className='list-item'>Ideal for an evening of relaxation and stress relief</li>
+                            <li className='list-item'>Two copies of each image are provided</li>
+                            <li className='list-item'>Perfect for the whole family!</li>
+
+                        </ul>
+                    </div>
+
+                    <br />
+                    
+
+                    <div className='devitoColouringPageA'>
                         <img src={devitoColouringPages}
                             alt="colouring pages"
                             style={{ width: "100%", margin: "auto" }} />
                     </div>
-                    <div>
+
+                    <div className='devitoColouringPageC'>
+                    <h3 className='peak-inside'>Take A Peak Inside</h3>
+                        <img src={devitoColouringPages3}
+                            alt="colouring pages" />
+                    </div>
+
+                    <div className='devitoColouringPageB'>
                         <img src={devitoColouringPages2}
-                            alt="colouring pages"
-                            style={{ width: "100%", margin: "auto" }} />
+                            alt="colouring pages" />
                     </div>
-                    <div>
-                        <ul className='list'>
-                            <li class='list-item'>An awesome official Danny DeVito-inspired, biographical colouring book</li>
-                            <li className='list-item'>Perfect for relaxation and stress relief</li>
-                            <li className='list-item'>You even get TWO copies of each image for two chances to colour!</li>
-                        </ul>
-                    </div>
+                   
 
 
 
