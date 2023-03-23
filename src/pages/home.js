@@ -8,6 +8,7 @@ import { useOnHoverOutside } from "../hooks/useOnHover";
 
 import 'react-tippy/dist/tippy.css'
 import { Tooltip } from "react-tippy";
+import { NavLink } from "react-router-dom";
 
 
 const Home = () => {

@@ -15,6 +15,7 @@ const TopContainer = () => {
     const [users, setUsers] = useState([]);
     const [ownedBooks, setOwnedBooks] = useState([]);
     const [currentUser, setCurrentUser] = useState(null);
+    const [currentFilter, setCurrentFilter] = useState("all");
 
 
     useEffect(() => {
@@ -103,23 +104,28 @@ const TopContainer = () => {
             <Router>
                 <NavBar
                     currentUser={currentUser}
-                    setCurrentUser={setCurrentUser} />
+                    setCurrentUser={setCurrentUser}
+                    setCurrentFilter={setCurrentFilter} />
                 <Routes>
                     <Route path='/Home' element=
                         {
-                            <Home />
+                            <Home 
+                            setCurrentFilter={setCurrentFilter}
+                            books = {books}/>
                         } />
                     <Route path='/OurBooks' element=
                         {
                             <OurBooks
                                 books={books}
-                                postOwnedBook={postOwnedBook} />
+                                postOwnedBook={postOwnedBook}
+                                currentFilter={currentFilter}
+                                setCurrentFilter={setCurrentFilter} />
                         } />
                     <Route path='/MyBooks' element=
                         {
                             <MyBooks
                                 ownedBooks={ownedBooks}
-                                users={users} 
+                                users={users}
                                 books={books}
                                 currentUser={currentUser}
                                 setCurrentUser={setCurrentUser} />
