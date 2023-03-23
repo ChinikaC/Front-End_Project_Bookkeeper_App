@@ -3,6 +3,23 @@ body {
   color:#f4efe1;
 }
 
+footer{
+  border-top: solid;
+  border-color: #f4efe1;
+  flex-shrink: 0;
+}
+
+#box{
+  min-height: 66vh
+}
+
+#home{ 
+  background: url("./assets/peakpx.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  color:#f4efe1;
+}
+
 header {
   display: grid;
   grid-template-columns: 2fr 4fr 1fr;
@@ -44,7 +61,6 @@ nav>a {
 }
 
 #theBookkeepers {
-  background-color: #23324d;
   display: grid;
   width: 100%;
   margin: 0;
@@ -52,7 +68,7 @@ nav>a {
 }
 
 #bookOfTheDay {
-  background-color: #23324d;
+
   display: grid;
   width: 95%;
   margin: 0 2.5% 0 2.5%;
@@ -434,6 +450,20 @@ margin-left: 40px;
 margin-top: 10px;
 font-size: 13px;
 font-weight: 600;
+text-decoration-line: none;
+}
+
+.myAccountHeadings button:link{
+  text-decoration: none;
+}
+.myAccountHeadings button:visited{
+  text-decoration: none;
+}
+.myAccountHeadings button:active{
+  text-decoration: none;
+}
+.myAccountHeadings button:default{
+  text-decoration: none;
 }
 
 /* Button in my account form hover */

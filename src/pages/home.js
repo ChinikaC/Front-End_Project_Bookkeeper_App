@@ -52,7 +52,7 @@ const Home = ({ books, setCurrentFilter }) => {
 
 
     return (
-        <section>
+        <section id="home">
             <article id="theBookkeepers">
                 <div className='tbk-heading'>
                     <h2 className='tbk-titles'> The</h2>

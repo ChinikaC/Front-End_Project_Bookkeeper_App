@@ -7,6 +7,7 @@ import MyBooks from "../pages/MyBooks.js";
 import UserForm from "../pages/UserForm.js";
 import MyBookForm from "../pages/MyBookForm.js";
 import SignUp from "../pages/SignUp.js";
+import Footer from "../header-and-footer/footer"
 
 const TopContainer = () => {
 
@@ -123,7 +124,7 @@ const TopContainer = () => {
                         {
                             <Home
                                 setCurrentFilter={setCurrentFilter}
-                                books={books} />
+                                books={books}/>
                         } />
                     <Route path='/OurBooks' element=
                         {
@@ -165,6 +166,9 @@ const TopContainer = () => {
                     <button onClick={toggleButton}>Dark/Light Mode</button>
                 </div>
             </Router>
+            <div id="box"></div>
+            <Footer>
+            </Footer>
         </>
     )
 
