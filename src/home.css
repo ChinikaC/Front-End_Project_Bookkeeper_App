@@ -1,3 +1,10 @@
+#devitoList{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0;
+    list-style-type:none;
+  }
 .list-item {
     margin-bottom: 1.3em;
     margin-right: 0.5%;
@@ -46,12 +53,7 @@
     width: 100%;
   }
   
-  #devitoList{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 0;
-  }
+  
   #peak-inside{
     display:flex;
     justify-content: center;
