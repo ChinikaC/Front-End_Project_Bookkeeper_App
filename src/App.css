@@ -85,7 +85,7 @@ nav>a {
 }
 
 .nav-button {
-  font-family: monospace;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   display: inline-block;
   align-items: center;
   justify-content: center;
@@ -108,7 +108,6 @@ nav>a {
 }
 
 .nav-button:hover {
-  /* background-color: #f4efe1; */
   color: hotpink;
 }
 
@@ -457,7 +456,14 @@ display: grid;
     padding: 2px 20px 4px 15px;
     height:auto;
     margin-left: 40px;
-    margin-top: 10px;
+    margin-bottom: 20px;
     color: #000;
+  }
 
+  #backgroundImg {
+    height: 700px;
+    width: 100%;
+    background-position: 80%;
+    display: flex;
+    /* margin-top: 200%; */
   }

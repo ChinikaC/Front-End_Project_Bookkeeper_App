@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from "react";
 import BookList from "../components/BookList";
 import { NavLink } from "react-router-dom";
+import background from '../assets/peakpx.jpg'
+import UserForm from "./UserForm";
+import SignUp from "./SignUp";
 
-const MyBooks = ({ ownedBooks, users, books, currentUser, setCurrentUser }) => {
+const MyBooks = ({ ownedBooks, users, books, currentUser, setCurrentUser, deleteUser }) => {
 
     const [currentList, setCurrentList] = useState([]);
     const [currentReadFilter, setCurrentReadFilter] = useState("filter")
@@ -119,6 +122,10 @@ const MyBooks = ({ ownedBooks, users, books, currentUser, setCurrentUser }) => {
         )
     })
 
+    const handleDelete = (e) => {
+        deleteUser(currentUser.id);
+    }
+
     if (currentUser === null) {
         return (
             <div className="signIn">
@@ -130,6 +137,8 @@ const MyBooks = ({ ownedBooks, users, books, currentUser, setCurrentUser }) => {
                     <option value="select user">Select a user</option>
                     {userOptions}
                 </select>
+                <img id="backgroundImg" src={background} alt="image of mountains and trees" />
+
             </div>
         );
     } else {
@@ -159,6 +168,9 @@ const MyBooks = ({ ownedBooks, users, books, currentUser, setCurrentUser }) => {
                 <div>
                     Add New Book To List
                     <button> <NavLink to="/MyBookForm"> Add Book </NavLink> </button>
+                </div>
+                <div>
+                <button onClick={handleDelete}>  <NavLink to="/Home">Remove User</NavLink></button>
                 </div>
                 </div>
                 <BookList
