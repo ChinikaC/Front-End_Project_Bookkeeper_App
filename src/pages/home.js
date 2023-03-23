@@ -3,8 +3,12 @@ import starReview from './images/starRevieww.png';
 import devitoColouringPages from './images/devColouringPage.jpeg'
 import devitoColouringPages2 from './images/devitoColouringPage.webp'
 import devitoColouringPages3 from './images/devitoColouringPageC.png'
+<<<<<<< HEAD
 import devitoColouringPages4 from './images/devitoStanding.png'
 import React, { useState, useRef } from "react";
+=======
+import React, { useState, useRef, useEffect } from "react";
+>>>>>>> 7c10482fbd1c289f6935455e17602c4abed9ab2f
 import bookkeepers from './images/finalLogo.PNG'
 import { useOnHoverOutside } from "../hooks/useOnHover";
 import Dystopianfiction from "../assets/genre_pictures/Dystopianfiction.png"
@@ -15,6 +19,10 @@ import { NavLink } from "react-router-dom";
 
 const Home = ({ books, setCurrentFilter }) => {
 
+    useEffect(() => {
+        refreshGenres();
+    }, [books])
+
     const handleClick = (e) => {
         setCurrentFilter(e.target.value)
     }
@@ -22,6 +30,11 @@ const Home = ({ books, setCurrentFilter }) => {
         return self.findIndex(v => v.genre === value.genre) === index
     })
 
+    const refreshGenres = () => {
+        const uniqueGenres = books.filter((value, index, self) => {
+            return self.findIndex(v => v.genre === value.genre) === index
+        })
+    }
     const listOfGenres = uniqueGenres.map((book, index) => {
         return (
             <Tooltip
@@ -76,6 +89,23 @@ const Home = ({ books, setCurrentFilter }) => {
                     </ul>
                 </div>
                 </article>
+                
+                <div className='devitoColouringPageA'>
+                    <img src={devitoColouringPages}
+                        alt="colouring pages"
+                        style={{ width: "100%", margin: "auto" }} />
+                </div>
+
+                <div className='devitoColouringPageC'>
+                    <h3 className='peak-inside'>Take A Peak Inside</h3>
+                    <img src={devitoColouringPages3}
+                        alt="colouring pages" />
+                </div>
+
+                <div className='devitoColouringPageB'>
+                    <img src={devitoColouringPages2}
+                        alt="colouring pages" />
+                </div>
 
 
                 <div className='reviews'>
