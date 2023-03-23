@@ -74,6 +74,18 @@ nav>a {
   max-height: 48px;
 }
 
+#searchBar input {
+  background-color: #e6ddc5;
+  border-radius: 20px;
+  padding-top: 5px;
+  padding-right: 50px;
+  padding-left: 10px;
+  padding-bottom: 5px;
+  margin-right: 20px;
+  font-weight: 600; 
+
+}
+
 #title {
   white-space: nowrap;
   font-size: small;
@@ -293,14 +305,14 @@ nav>a {
 
 /* Title in sign up form */
 .register h1 {
-  color: black;
-  margin-left: 50px;
+  color: #f4efe1;
+  margin-left: 10px;
   text-decoration: underline;
 }
 
 /* h2 in sign up form */
 .register h2 {
-  color: black;
+  color: whitesmoke;
   margin-left: 20px;
 }
 
@@ -320,7 +332,7 @@ nav>a {
 .register form label {
   font-weight: bold;
   border-radius: 20px;
-  padding: 0px 20px 10px 6px;
+  padding: 2px 60% 10px 20px;
   display: grid;
 }
 
@@ -346,20 +358,19 @@ nav>a {
 
 /* Button in sign up form hover */
 .register button:hover {
-  background-color: #3059a5e4;
-  color: #e6ddc5;
+  background-color: pink;
+  color: #23324d;
 }
 
 /* Add a new book title */
 .newBook h1 {
-  color:black;
-  margin-left: 50px;
+  margin-left: 10px;
   text-decoration: underline;
 }
 
 /* h2 in new book form */
 .newBook h2{
-  color:black;
+  color: whitesmoke;
   margin-left: 20px;
 }
 
@@ -378,17 +389,17 @@ nav>a {
 
 .newBook form label{
   font-weight: bold;
-  border-radius: 20px;
-  padding: 0px 20px 10px 6px;
-  display: grid;
+border-radius: 20px;
+padding: 2px 60% 10px 20px;
+display: grid;
 }
 
-.newBook form input{
-  background-color:#f4efe1;
-  font-weight: bold;
-  border-radius: 20px;
-  padding: 10px 50px 9px 6px;
-  display: grid;
+.newBook form input {
+background-color: #f4efe1;
+font-weight: bold;
+border-radius: 20px;
+padding: 10px 50px 9px 6px;
+display: grid;
 }
 
 .newBook button{
@@ -403,7 +414,7 @@ nav>a {
   }
 
 .myAccount h1 {
-  margin-left: 50px;
+  margin-left: 10px;
   text-decoration: underline;
 }
 
@@ -434,11 +445,12 @@ margin-left: 40px;
 margin-top: 10px;
 font-size: 13px;
 font-weight: 600;
+text-decoration-line: none;
 }
 
 /* Button in my account form hover */
 .myAccountHeadings button:hover{
-  background-color:#3059a5e4;
+  background-color: pink;
   color: #e6ddc5;
 }
 
@@ -451,6 +463,70 @@ font-weight: 600;
   margin-top: 10px;
   color: #000;
 }
+
+.updateDetails h1 {
+  margin-left: 10px;
+  text-decoration: underline;
+}
+
+.updateDetails h2 {
+  color: white;
+  margin-left: 30px;
+  margin-top: 30px;
+  margin-right: 50%;
+  padding-bottom: 0px;
+  font-weight: bold;
+}
+
+.updateDetails label{
+  font-weight: bold;
+border-radius: 20px;
+padding: 2px 60% 10px 20px;
+display: grid;
+}
+
+.updateDetails form input {
+background-color: #f4efe1;
+font-weight: bold;
+border-radius: 20px;
+padding: 10px 50px 9px 6px;
+margin-bottom: 20px;
+margin-top: 5px;
+display: grid;
+}
+
+.updateDetails button{
+  background-color: #e6ddc5;
+  border-radius: 20px;
+  padding: 2px 20px 18px 15px;
+  height: 2px;
+  margin-left: 40px;
+  margin-top: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  }
+
+  .signIn h1 {
+  margin-left: 10px;
+  text-decoration: underline;
+  }
+
+  .signIn p {
+  color: #e6ddc5;
+  margin-left: 20px;
+  font-weight: 400;
+  }
+
+  .signIn select {
+    background-color: #e6ddc5;
+    border-radius: 20px;
+    padding: 2px 20px 4px 15px;
+    height:auto;
+    margin-left: 40px;
+    margin-top: 10px;
+    color: #000;
+
+  }
 
 /* #myAccountDropDown {
   display: flex;
