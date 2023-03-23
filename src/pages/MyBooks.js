@@ -121,8 +121,9 @@ const MyBooks = ({ ownedBooks, users, books, currentUser, setCurrentUser }) => {
 
     if (currentUser === null) {
         return (
-            <div>
-                Please sign in:
+            <div className="signIn">
+                <h1>Sign In</h1>
+                <p>Please select a user to sign in: </p>
                 <select
                     onChange={handleLogIn}
                     name="Users">

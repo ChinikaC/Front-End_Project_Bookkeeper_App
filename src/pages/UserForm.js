@@ -23,9 +23,11 @@ const UserForm = ({updateUserDetails}) => {
     }
 
     return (
-        <div>
+        <div className="updateDetails">
         <h1>Update My Account Details</h1>
+        <h2>Enter the details below that you wish to update</h2>
         <form onSubmit={handleFormSubmit}>
+        <label>Enter your full name
             <input 
             type="text" 
             name="fullName"
@@ -33,7 +35,8 @@ const UserForm = ({updateUserDetails}) => {
             value={changeUserDetails.fullName}
             onChange={handleChange}
             />
-
+            </label>
+            <label>Enter your email address
             <input 
             type="email" 
             name="email"
@@ -41,6 +44,7 @@ const UserForm = ({updateUserDetails}) => {
             value={changeUserDetails.email}
             onChange={handleChange}
             />
+            </label>
 
            <button type="submit">Submit</button>
         </form>
