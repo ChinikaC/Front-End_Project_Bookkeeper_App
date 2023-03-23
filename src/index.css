@@ -34,8 +34,9 @@ code {
 .bookOTDheader{
   font-size: 2.5em;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  color: #f4efe1;;
-  margin-left: 2.5%;
+  color: #f4efe1;
+  margin-left: 29%;
+
 }
 
 .bookkeepers-intro {
@@ -47,10 +48,11 @@ code {
 }
 
 .devitoColouringBook img{
-  width: 80%;
-  height: 80%;
-  margin-left: 10% !important; 
+  width: 70%;
+ margin-top: 5% !important;
+  margin-left: 60% !important; 
 }
+
 
 
 h2 {
@@ -60,8 +62,9 @@ h2 {
 .list {
   list-style: none;
   font-size: 1.1em;
-  padding-left: 20;
-  margin-top: 20%;
+  margin-left: 40%;
+  margin-top: 17%;
+
 }
 
 .list-item {
@@ -70,33 +73,6 @@ h2 {
   font-weight: bold;
   color: #f4efe1;
   font-family: sans-serif;
-}
-
-.peak-inside {
-
-  margin-left: 30%;
-  font-size: large;
-  margin-top: -10%;
-}
-
-.devitoColouringPageA{
-  width: 75%;
-  margin-left: 10%; 
-  margin-top: 3%;
-}
-
-.devitoColouringPageB img{
-  height: 50% !important;
-  margin-top: 2.5%;
-  margin: "auto";
-  margin-left: 22.5% !important;
-}
-
-.devitoColouringPageC img{
-  width: 100% !important;
-  margin-top: 4.5% !important;
-  margin-left: 4% !important;
-  margin: auto;
 }
 
 .list-item::before {
@@ -109,10 +85,20 @@ h2 {
   margin-right: 5px;
 }
 
+.person-review{
+margin-bottom: 10%;
+margin-left: -15%;
+margin-top: 10%;
+}
+
+
 .reviews {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  padding-top: 15%;
-  padding-left: 1em;
+  margin-left: 10%;
+  display: grid;
+  flex-direction: row;
+  grid-template-columns: 2fr 2fr 2fr;
+  width: 100%;
 }
 
 .starReview {
@@ -120,5 +106,4 @@ h2 {
   width: 100%;
   margin: auto;
 }
-
 
