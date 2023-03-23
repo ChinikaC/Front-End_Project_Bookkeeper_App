@@ -3,12 +3,7 @@ import starReview from './images/starRevieww.png';
 import devitoColouringPages from './images/devColouringPage.jpeg'
 import devitoColouringPages2 from './images/devitoColouringPage.webp'
 import devitoColouringPages3 from './images/devitoColouringPageC.png'
-<<<<<<< HEAD
-import devitoColouringPages4 from './images/devitoStanding.png'
-import React, { useState, useRef } from "react";
-=======
 import React, { useState, useRef, useEffect } from "react";
->>>>>>> 7c10482fbd1c289f6935455e17602c4abed9ab2f
 import bookkeepers from './images/finalLogo.PNG'
 import { useOnHoverOutside } from "../hooks/useOnHover";
 import Dystopianfiction from "../assets/genre_pictures/Dystopianfiction.png"
