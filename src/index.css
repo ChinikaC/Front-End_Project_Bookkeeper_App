@@ -80,23 +80,15 @@ h2 {
 }
 
 .devitoColouringPageA{
-  width: 75%;
-  margin-left: 10%; 
-  margin-top: 3%;
+  width: 50%;
 }
 
 .devitoColouringPageB img{
-  height: 50% !important;
-  margin-top: 2.5%;
-  margin: "auto";
-  margin-left: 22.5% !important;
+  width: 50% !important;
 }
 
 .devitoColouringPageC img{
-  width: 100% !important;
-  margin-top: 4.5% !important;
-  margin-left: 4% !important;
-  margin: auto;
+  width: 50% !important;
 }
 
 .list-item::before {
@@ -111,8 +103,9 @@ h2 {
 
 .reviews {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  padding-top: 15%;
-  padding-left: 1em;
+  margin-bottom: 100%;
+  margin-top: -60%;
+  padding-left: 10%;
 }
 
 .starReview {

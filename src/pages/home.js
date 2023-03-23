@@ -63,6 +63,26 @@ const Home = ({ books, setCurrentFilter }) => {
                             alt="image of Danny Devito cokouring book"
                             style={{ margin: "auto" }} />
                     </div>
+                    
+
+                    <div className='devitoColouringPageA'>
+                        <img src={devitoColouringPages}
+                            alt="colouring pages"
+                            style={{ width: "100%", margin: "auto" }} />
+                    </div>
+
+                    <div className='devitoColouringPageB'>
+                        <img src={devitoColouringPages2}
+                            alt="colouring pages" />
+                    </div>
+
+                    <div className='devitoColouringPageC'>
+                    <h3 className='peak-inside'>Take A Peak Inside</h3>
+                        <img src={devitoColouringPages3}
+                            alt="colouring pages" />
+                    </div>
+
+                  
 
                     <div>
                         <ul className='list'>
@@ -75,27 +95,7 @@ const Home = ({ books, setCurrentFilter }) => {
                     </div>
 
                     <br />
-                    
-
-                    <div className='devitoColouringPageA'>
-                        <img src={devitoColouringPages}
-                            alt="colouring pages"
-                            style={{ width: "100%", margin: "auto" }} />
-                    </div>
-
-                    <div className='devitoColouringPageC'>
-                    <h3 className='peak-inside'>Take A Peak Inside</h3>
-                        <img src={devitoColouringPages3}
-                            alt="colouring pages" />
-                    </div>
-
-                    <div className='devitoColouringPageB'>
-                        <img src={devitoColouringPages2}
-                            alt="colouring pages" />
-                    </div>
                    
-
-
 
                     <div className='reviews'>
                         <h3> Read what some of our users are saying</h3>
