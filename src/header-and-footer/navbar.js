@@ -1,9 +1,9 @@
 import { React, useRef, useState } from "react";
 import { NavLink } from "react-router-dom";
 import { useOnHoverOutside } from "../hooks/useOnHover";
-import logo from "../assets/bookkeeperslogo.png";
+import logo from "../assets/bookkeeperslogo.jpeg";
 
-const Header = ({ currentUser, setCurrentUser }) => {
+const Header = ({ currentUser, setCurrentUser, setCurrentFilter }) => {
 
     const dropdownRef = useRef(null); // Create a reference for dropdown container
     const [isMenuDropDownOpen, setMenuDropDownOpen] = useState(false);
@@ -23,6 +23,9 @@ const Header = ({ currentUser, setCurrentUser }) => {
         setCurrentUser(null);
     }
 
+    const handleClick = () => {
+        setCurrentFilter("all")
+    }
     const handleChange = (e) => {
         e.preventDefault();
         setSearchInput(e.target.value);
@@ -35,44 +38,47 @@ const Header = ({ currentUser, setCurrentUser }) => {
     }
 
     return (
-        <div>
-            <header id="logoAndTitle">
-                <img src={logo} alt="Book-Keepers Logo" id="logo" />
-                <h1>Book-Keepers</h1>
-            </header>
+        <header>
+            <div id="logoAndTitle">
+                <NavLink to="/home">
+                    <img src={logo} alt="Book-Keepers Logo" id="logo" />
+                </NavLink>
+                <h1 id="title">Book-Keepers</h1>
+            </div>
             <nav>
-                <ul>
-                    <li><NavLink to="/home">
-                        Home
-                    </NavLink></li>
-                    <li><NavLink to="/OurBooks">
-                        {/* CHANGE THIS SO WE CAN CHANGE THE FONT */}
-                        Our Books  
-                    </NavLink></li>
-                    <li><NavLink to="/MyBooks">
-                        <div ref={dropdownRef} id="myAccountDropDown">
-                            <button
-                                className="no-style"
-                                onMouseOver={() => { if (currentUser != null) { setMenuDropDownOpen(true) } }}>
-                                My Account
-                            </button>
+                <NavLink to="/home">
+                    <button className="nav-button">Home</button>
+                </NavLink>
+                <NavLink to="/OurBooks">
+                    <button className="nav-button" onClick={handleClick}>Our Books</button>
+                </NavLink>
+                <NavLink to="/MyBooks">
+                    <div ref={dropdownRef} className="nav-button">
+                        <button
+                            className="nav-button"
+                            onMouseOver={() => { if (currentUser != null) { setMenuDropDownOpen(true) } }}
+                        >
+                            My Account
+                        </button>
 
-                            {isMenuDropDownOpen && <button className="no-style" onClick={handleLogOut}>Log out</button>}
-                        </div>
-                    </NavLink></li>
-                    <li><NavLink to="/SignUp">
-                        Sign Up
-                    </NavLink></li>
-                </ul>
-                <div id="searchBar">
+                        {isMenuDropDownOpen &&
+                            <div className="dropdown-menu">
+                                <button className="nav-button" onClick={handleLogOut}>Log out</button>
+                            </div>}
+                    </div>
+                </NavLink>
+                <NavLink to="/SignUp">
+                    <button className="nav-button">Sign Up</button>
+                </NavLink>
+            </nav>
+            <div id="searchBar">
                 <input
                     type="text"
                     placeholder="Search Here"
                     onChange={handleChange}
                     value={searchInput} />
-                    </div>
-            </nav>
-        </div>
+            </div>
+        </header>
     )
 }
 

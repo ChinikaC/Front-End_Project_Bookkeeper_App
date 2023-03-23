@@ -116,7 +116,8 @@ const TopContainer = () => {
             <Router>
                 <NavBar
                     currentUser={currentUser}
-                    setCurrentUser={setCurrentUser} />
+                    setCurrentUser={setCurrentUser}
+                    setCurrentFilter={setCurrentFilter} />
                 <Routes>
                     <Route path='/Home' element=
                         {
