@@ -166,7 +166,6 @@ const TopContainer = () => {
                     <button onClick={toggleButton}>Dark/Light Mode</button>
                 </div>
             </Router>
-            <div id="box"></div>
             <Footer>
             </Footer>
         </>
