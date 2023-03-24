@@ -240,6 +240,8 @@ nav>a {
 /* Text above each input sections */
 .register {
   color: #e6ddc5;
+  width: 100%;
+  aspect-ratio: 64/23;
 }
 
 .register form label {
@@ -391,6 +393,7 @@ nav>a {
   margin-left: 40px;
   margin-top: 10px;
   color: #000;
+  font-weight: bold;
 }
 
 .updateDetails h1 {
@@ -484,7 +487,6 @@ nav>a {
   }
 
   .modalBackground {
-    /* background-color: rgba(200, 200, 200); */
     height: 50px;
     position:relative;
     display: flex;
@@ -496,7 +498,7 @@ nav>a {
     width: 350px;
     height: 300px;
     border-radius: 12px;
-    background-color:#e6ddc5;
+    background-color:#f4efe1;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     display: flex;
     flex-direction: column;
@@ -557,6 +559,6 @@ nav>a {
 
   }
   
-  #cancelBtn {
-    background-color: crimson;
+  #cancelButton {
+    background-color: rgb(252, 159, 175);
   }
