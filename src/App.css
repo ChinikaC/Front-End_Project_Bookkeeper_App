@@ -467,3 +467,81 @@ display: grid;
     display: flex;
     /* margin-top: 200%; */
   }
+
+  .modalBackground {
+    /* background-color: rgba(200, 200, 200); */
+    height: 50px;
+    position:relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modalContainer {
+    width: 350px;
+    height: 300px;
+    border-radius: 12px;
+    background-color:#e6ddc5;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+  }
+  
+.title p {
+    text-align: center;
+    margin-top: 10px;
+    color: #000;
+    font-size: 25px;
+  }
+  
+  .titleCloseBtn {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .titleCloseBtn button {
+    background-color: transparent;
+    border: none;
+    font-size: 25px;
+    cursor: pointer;
+  }
+  
+  .body p {
+    color:#000;
+    flex: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    text-align: center;
+  }
+  
+  .modalContainer .footer {
+    flex: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modalContainer .footer button {
+    width: 150px;
+    height: 45px;
+    margin: 10px;
+    padding-top: 15px;
+    border: none;
+    background-color:#23324d;
+    color: white;
+    border-radius: 8px;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;;
+
+  }
+  
+  #cancelBtn {
+    background-color: crimson;
+  }

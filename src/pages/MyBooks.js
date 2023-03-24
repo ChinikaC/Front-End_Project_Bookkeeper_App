@@ -2,13 +2,13 @@ import React, { useEffect, useState } from "react";
 import BookList from "../components/BookList";
 import { NavLink } from "react-router-dom";
 import background from '../assets/peakpx.jpg'
-import UserForm from "./UserForm";
-import SignUp from "./SignUp";
+import Modal from "../components/Modal";
 
 const MyBooks = ({ ownedBooks, users, books, currentUser, setCurrentUser, deleteUser }) => {
 
     const [currentList, setCurrentList] = useState([]);
-    const [currentReadFilter, setCurrentReadFilter] = useState("filter")
+    const [currentReadFilter, setCurrentReadFilter] = useState("filter");
+    const [openModal, setOpenModal]= useState(false);
 
     useEffect(() => {
         getBooks();
@@ -126,6 +126,7 @@ const MyBooks = ({ ownedBooks, users, books, currentUser, setCurrentUser, delete
         deleteUser(currentUser.id);
     }
 
+
     if (currentUser === null) {
         return (
             <div className="signIn">
@@ -170,7 +171,11 @@ const MyBooks = ({ ownedBooks, users, books, currentUser, setCurrentUser, delete
                     <button> <NavLink to="/MyBookForm"> Add Book </NavLink> </button>
                 </div>
                 <div>
-                <button onClick={handleDelete}>  <NavLink to="/Home">Remove User</NavLink></button>
+                <button onClick={handleDelete}>  <NavLink to="/Home">Delete Account</NavLink></button>
+                <button className="modalButton" onClick={() => {
+                    setOpenModal(true);
+                }}>Delete Account</button>
+                {openModal && <Modal closeModal={setOpenModal}/>}
                 </div>
                 </div>
                 <BookList
