@@ -180,7 +180,6 @@ const TopContainer = () => {
                     <button onClick={onOffButton}>Dark/Light Mode</button>
                 </div>
             </Router>
-            <div id="box"></div>
             <Footer>
             </Footer>
         </>
