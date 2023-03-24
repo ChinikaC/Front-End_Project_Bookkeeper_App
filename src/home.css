@@ -1,178 +1,183 @@
-#devitoList{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 0;
-    list-style-type:none;
-  }
+#devitoList {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0;
+  list-style-type: none;
+}
+
 .list-item {
-    margin-bottom: 1.3em;
-    margin-right: 0.5%;
-    font-weight: bold;
-    color: #f4efe1;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  }
-  
-  .list-item::before {
-    content: '';
-    display: inline-block;
-    height: 20px;
-    width: 20px;
-    background-size: contain;
-    background-image: url("https://cdn-icons-png.flaticon.com/128/2702/2702134.png");
-    margin-right: 5px;
-  }
-  #devitoPicHolder{
-    display:flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .devitoPic{
-    width:30%;
-    padding:1%
-  }
-  #reviews {
-    display: flex;
-    flex-direction: column;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  #reviews p{
-    margin:0;
-  }
-  
-  .starReview {
-    display: block;
-    width: 20%;
-    margin: 0;
-    align-items: center;
-  }
-  #devitoColouringBook{
-    width: 100%;
-  }
-  
-  
-  #peak-inside{
-    display:flex;
-    justify-content: center;
-  }
-  #home > h2 {
-    display: flex;
-    justify-content: center;
-  }
+  margin-bottom: 1.3em;
+  margin-right: 0.5%;
+  font-weight: bold;
+  color: #f4efe1;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
 
-  #theBookkeepers {
-    background: url("./assets/peakpx.jpg");
-    background-size: 100%;
-    aspect-ratio: 3840/2160;
-    background-repeat: no-repeat;
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .tbk-titles {
-    font-size: 5vh;
-    color: #f4efe1;
-    text-shadow: 1px 0 0 #23324d, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
-  }
-  
-  #tbk_HomePageLogoContainer{
-    height:33%;
-  }
-  #tbk_HomePageLogoBig{
-    height:100%;
-  }
-  
-  #bookOfTheDay {
-    display: grid;
-    width: 95%;
-    margin: 0 2.5% 0 2.5%;
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-  #bookByGenre {
-    display: grid;
-    width: 100%;
-    margin: 0;
-    grid-template-columns: 1fr 1fr 1fr;
-    aspect-ratio: 1;
-  }
-  
-  .frontPageGenres {
-    font-size: larger;
-    font-weight: bolder;
-    color: #fff;
-    text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
-    height: 100%;
-    width: 100%;
-    border-radius: 15%;
-    background: url("./assets/genre_pictures/generic\ pic.jpeg");
-    background-size: cover;
-  }
-  
-  #Magicalrealism {
-    background: url("./assets/genre_pictures/magicalRealism.jpg");
-    background-size: cover;
-  }
-  
-  #Autobiographicalfiction {
-    background: url("./assets/genre_pictures/autofiction.jpg");
-    background-size: cover;
-  }
-  
-  #Modernistfiction {
-    background: url("./assets/genre_pictures/modernism.jpeg");
-    background-size: cover;
-  }
-  
-  #Gothicfiction {
-    background: url("./assets/genre_pictures/gothicFiction.png");
-    background-size: cover;
-  }
-  
-  #PoliticalSatire {
-    background: url("./assets/genre_pictures/politicalSatire.jpeg");
-    background-size: cover;
-  }
-  
-  #Dystopianfiction {
-    background: url("./assets/genre_pictures/Dystopianfiction.png");
-    background-size: cover;
-  }
-  
-  #RegencyRomance {
-    background: url("./assets/genre_pictures/Regency\ Romance\ img.jpeg");
-    background-size: cover;
-  }
-  
-  #Coming-of-agefiction {
-    background: url("./assets/genre_pictures/comingOfAge.png");
-    background-size: cover;
-  }
-  
-  #Literaryfiction {
-    background: url("./assets/genre_pictures/literaryFiction.jpeg");
-    background-size: cover;
-  }
-  
-  #Highfantasy {
-    background: url("./assets/genre_pictures/high-fantasy.jpeg");
-    background-size: cover;
-  }
-  
-  #Sciencefiction {
-    background: url("./assets/genre_pictures/scifi.jpg");
-    background-size: cover;
-  }
-  
-  #Crimefiction {
-    background: url("./assets/genre_pictures/crimeFiction.webp");
-    background-size: cover;
-  }
+.list-item::before {
+  content: '';
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  background-size: contain;
+  background-image: url("https://cdn-icons-png.flaticon.com/128/2702/2702134.png");
+  margin-right: 5px;
+}
 
-  h2{
-    font-size: 60px;
-  }
+#devitoPicHolder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.devitoPic {
+  width: 30%;
+  padding: 1%
+}
+
+#reviews {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  justify-content: center;
+  align-items: center;
+}
+
+#reviews p {
+  margin: 0;
+}
+
+.starReview {
+  display: block;
+  width: 20%;
+  margin: 0;
+  align-items: center;
+}
+
+#devitoColouringBook {
+  width: 100%;
+}
+
+
+#peak-inside {
+  display: flex;
+  justify-content: center;
+}
+
+#home>h2 {
+  display: flex;
+  justify-content: center;
+  font-size: 60px;
+}
+
+#theBookkeepers {
+  background: url("./assets/peakpx.jpg");
+  background-size: 100%;
+  aspect-ratio: 3840/2160;
+  background-repeat: no-repeat;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.tbk-titles {
+  font-size: 5vh;
+  color: #f4efe1;
+  text-shadow: 1px 0 0 #23324d, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+}
+
+#tbk_HomePageLogoContainer {
+  height: 33%;
+}
+
+#tbk_HomePageLogoBig {
+  height: 100%;
+}
+
+#bookOfTheDay {
+  display: grid;
+  width: 95%;
+  margin: 0 2.5% 0 2.5%;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+#bookByGenre {
+  display: grid;
+  width: 100%;
+  margin: 0;
+  grid-template-columns: 1fr 1fr 1fr;
+  aspect-ratio: 1;
+}
+
+.frontPageGenres {
+  font-size: larger;
+  font-weight: bolder;
+  color: #fff;
+  text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+  height: 100%;
+  width: 100%;
+  border-radius: 15%;
+  background: url("./assets/genre_pictures/generic\ pic.jpeg");
+  background-size: cover;
+}
+
+#Magicalrealism {
+  background: url("./assets/genre_pictures/magicalRealism.jpg");
+  background-size: cover;
+}
+
+#Autobiographicalfiction {
+  background: url("./assets/genre_pictures/autofiction.jpg");
+  background-size: cover;
+}
+
+#Modernistfiction {
+  background: url("./assets/genre_pictures/modernism.jpeg");
+  background-size: cover;
+}
+
+#Gothicfiction {
+  background: url("./assets/genre_pictures/gothicFiction.png");
+  background-size: cover;
+}
+
+#PoliticalSatire {
+  background: url("./assets/genre_pictures/politicalSatire.jpeg");
+  background-size: cover;
+}
+
+#Dystopianfiction {
+  background: url("./assets/genre_pictures/Dystopianfiction.png");
+  background-size: cover;
+}
+
+#RegencyRomance {
+  background: url("./assets/genre_pictures/Regency\ Romance\ img.jpeg");
+  background-size: cover;
+}
+
+#Coming-of-agefiction {
+  background: url("./assets/genre_pictures/comingOfAge.png");
+  background-size: cover;
+}
+
+#Literaryfiction {
+  background: url("./assets/genre_pictures/literaryFiction.jpeg");
+  background-size: cover;
+}
+
+#Highfantasy {
+  background: url("./assets/genre_pictures/high-fantasy.jpeg");
+  background-size: cover;
+}
+
+#Sciencefiction {
+  background: url("./assets/genre_pictures/scifi.jpg");
+  background-size: cover;
+}
+
+#Crimefiction {
+  background: url("./assets/genre_pictures/crimeFiction.webp");
+  background-size: cover;
+}
