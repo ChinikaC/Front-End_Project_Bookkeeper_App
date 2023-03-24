@@ -73,7 +73,7 @@ nav>a {
   white-space: nowrap;
   font-size: small;
   display: block;
-  margin-top: 5%;
+  margin-top: 6%;
   margin-bottom: 3%;
   margin-right: 10%;
   margin-left: 5%;
@@ -81,7 +81,7 @@ nav>a {
 }
 
 .nav-button {
-  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   display: inline-block;
   align-items: center;
   justify-content: center;
@@ -436,55 +436,55 @@ nav>a {
   margin-top: 10px;
   font-size: 13px;
   font-weight: 600;
-  }
+}
 
-  .signIn {
-    width: 100%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    aspect-ratio: 16/8;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-  }
-  
-  .signIn div {
-    border: 2px solid #e6ddc5;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border-radius: 10px;
-    padding: 6% 8% 8% 8%;
+.signIn {
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  aspect-ratio: 16/6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.signIn div {
+  border: 2px solid #e6ddc5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+  padding: 6% 8% 8% 8%;
 
 
-  }
+}
 
-  .signIn h1 {
+.signIn h1 {
   text-decoration: underline;
 }
 
-  .signIn p {
-  color:#e6ddc5;
+.signIn p {
+  color: #e6ddc5;
   font-weight: bold;
   font-weight: bold;
-  }
+}
 
-  .signIn select {
-    background-color: #e6ddc5;
-    border-radius: 20px;
-    padding: 2px 20px 4px 20px;
-    height:auto;
-    color: #000;
-  }
+.signIn select {
+  background-color: #e6ddc5;
+  border-radius: 20px;
+  padding: 2px 20px 4px 20px;
+  height: auto;
+  color: #000;
+}
 
-  #backgroundImg {
-    height: 700px;
-    width: 100%;
-    background-position: 80%;
-    display: flex;
-    /* margin-top: 200%; */
-  }
+#backgroundImg {
+  height: 700px;
+  width: 100%;
+  background-position: 80%;
+  display: flex;
+  /* margin-top: 200%; */
+}
 
   .modalBackground {
     height: 50px;
@@ -506,56 +506,57 @@ nav>a {
   }
   
 .title p {
-    text-align: center;
-    margin-top: 10px;
-    color: #000;
-    font-size: 25px;
-  }
-  
-  .titleCloseBtn {
-    display: flex;
-    justify-content: flex-end;
-  }
-  
-  .titleCloseBtn button {
-    background-color: transparent;
-    border: none;
-    font-size: 25px;
-    cursor: pointer;
-  }
-  
-  .body p {
-    color:#000;
-    flex: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 15px;
-    text-align: center;
-  }
-  
-  .modalContainer .footer {
-    flex: 20%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .modalContainer .footer button {
-    width: 150px;
-    height: 45px;
-    margin: 10px;
-    padding-top: 15px;
-    border: none;
-    background-color:#23324d;
-    color: white;
-    border-radius: 8px;
-    font-size: 20px;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;;
+  text-align: center;
+  margin-top: 10px;
+  color: #000;
+  font-size: 25px;
+}
+
+.titleCloseBtn {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.titleCloseBtn button {
+  background-color: transparent;
+  border: none;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.body p {
+  color: #000;
+  flex: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  text-align: center;
+}
+
+.modalContainer .footer {
+  flex: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modalContainer .footer button {
+  width: 150px;
+  height: 45px;
+  margin: 10px;
+  padding-top: 15px;
+  border: none;
+  background-color: #23324d;
+  color: white;
+  border-radius: 8px;
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  ;
 
   }
   
