@@ -4,6 +4,7 @@ function Modal({closeModal, currentUser, deleteUser}) {
 
     const handleDelete = (e) => {
         deleteUser(currentUser.id);
+        closeModal(false);
     }
 
   return (

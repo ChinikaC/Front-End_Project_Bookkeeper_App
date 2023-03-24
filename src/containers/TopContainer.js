@@ -104,7 +104,8 @@ const TopContainer = () => {
     });
 
     setUsers(users.filter(user => user.id !== id))
-        }
+    setCurrentUser(null);
+        };
 
 
     const [theme, setTheme] = useState('light');

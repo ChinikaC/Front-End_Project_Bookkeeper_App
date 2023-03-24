@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import BookList from "../components/BookList";
 import { NavLink } from "react-router-dom";
-import background from '../assets/peakpx.jpg'
+import background from '../assets/Library_pic.jpeg'
 import Modal from "../components/Modal";
 
 const MyBooks = ({ ownedBooks, users, books, currentUser, setCurrentUser, deleteUser }) => {
@@ -130,6 +130,7 @@ const MyBooks = ({ ownedBooks, users, books, currentUser, setCurrentUser, delete
     if (currentUser === null) {
         return (
             <div className="signIn">
+                <div>
                 <h1>Sign In</h1>
                 <p>Please select a user to sign in: </p>
                 <select
@@ -138,8 +139,7 @@ const MyBooks = ({ ownedBooks, users, books, currentUser, setCurrentUser, delete
                     <option value="select user">Select a user</option>
                     {userOptions}
                 </select>
-                <img id="backgroundImg" src={background} alt="image of mountains and trees" />
-
+                </div>
             </div>
         );
     } else {
@@ -175,7 +175,7 @@ const MyBooks = ({ ownedBooks, users, books, currentUser, setCurrentUser, delete
                 <button className="modalButton" onClick={() => {
                     setOpenModal(true);
                 }}>Delete Account</button>
-                {openModal && <Modal closeModal={setOpenModal}/>}
+                {openModal && <Modal currentUser={currentUser} deleteUser={deleteUser} closeModal={setOpenModal}/>}
                 </div>
                 </div>
                 <BookList
