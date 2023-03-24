@@ -97,8 +97,19 @@ const TopContainer = () => {
             });
     };
 
+    const deleteUser = (id) => {
+        fetch(`http://localhost:8080/users/${id}`, {
+            method: "DELETE",
+            headers: {"Content-Type": "application/json"},
+    });
+
+    setUsers(users.filter(user => user.id !== id))
+    setCurrentUser(null);
+        };
+
+
     const [theme, setTheme] = useState('light');
-    const toggleButton = () => {
+    const onOffButton = () => {
         if (theme === 'light') {
             setTheme('dark');
         } else {
@@ -124,7 +135,8 @@ const TopContainer = () => {
                         {
                             <Home
                                 setCurrentFilter={setCurrentFilter}
-                                books={books}/>
+                                books={books}
+                                />
                         } />
                     <Route path='/OurBooks' element=
                         {
@@ -141,7 +153,9 @@ const TopContainer = () => {
                                 users={users}
                                 books={books}
                                 currentUser={currentUser}
-                                setCurrentUser={setCurrentUser} />
+                                setCurrentUser={setCurrentUser}
+                                deleteUser={deleteUser} 
+                                />
                         } />
                     <Route path='/UserForm' element=
                         {
@@ -152,7 +166,8 @@ const TopContainer = () => {
                         {
                             <MyBookForm
                                 setBooks={setBooks}
-                                books={books} />
+                                books={books}
+                                postOwnedBook={postOwnedBook} />
                         } />
                     <Route path='/SignUp' element=
                         {
@@ -163,7 +178,7 @@ const TopContainer = () => {
                         } />
                 </Routes>
                 <div className="theme">
-                    <button onClick={toggleButton}>Dark/Light Mode</button>
+                    <button onClick={onOffButton}>Dark/Light Mode</button>
                 </div>
             </Router>
             <Footer>

@@ -1,11 +1,14 @@
 import React, { useEffect, useState } from "react";
 import BookList from "../components/BookList";
 import { NavLink } from "react-router-dom";
+import background from '../assets/Library_pic.jpeg'
+import Modal from "../components/Modal";
 
-const MyBooks = ({ ownedBooks, users, books, currentUser, setCurrentUser }) => {
+const MyBooks = ({ ownedBooks, users, books, currentUser, setCurrentUser, deleteUser }) => {
 
     const [currentList, setCurrentList] = useState([]);
-    const [currentReadFilter, setCurrentReadFilter] = useState("filter")
+    const [currentReadFilter, setCurrentReadFilter] = useState("filter");
+    const [openModal, setOpenModal]= useState(false);
 
     useEffect(() => {
         getBooks();
@@ -119,9 +122,15 @@ const MyBooks = ({ ownedBooks, users, books, currentUser, setCurrentUser }) => {
         )
     })
 
+    const handleDelete = (e) => {
+        deleteUser(currentUser.id);
+    }
+
+
     if (currentUser === null) {
         return (
             <div className="signIn">
+                <div>
                 <h1>Sign In</h1>
                 <p>Please select a user to sign in: </p>
                 <select
@@ -130,6 +139,7 @@ const MyBooks = ({ ownedBooks, users, books, currentUser, setCurrentUser }) => {
                     <option value="select user">Select a user</option>
                     {userOptions}
                 </select>
+                </div>
             </div>
         );
     } else {
@@ -159,6 +169,12 @@ const MyBooks = ({ ownedBooks, users, books, currentUser, setCurrentUser }) => {
                 <div>
                     Add New Book To List
                     <button> <NavLink to="/MyBookForm"> Add Book </NavLink> </button>
+                </div>
+                <div>
+                <button className="modalButton" onClick={() => {
+                    setOpenModal(true);
+                }}>Delete Account</button>
+                {openModal && <Modal currentUser={currentUser} deleteUser={deleteUser} closeModal={setOpenModal}/>}
                 </div>
                 </div>
                 <BookList

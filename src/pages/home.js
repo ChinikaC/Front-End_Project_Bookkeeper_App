@@ -68,7 +68,7 @@ const Home = ({ books, setCurrentFilter }) => {
             <h2 className='bookOTDheader'>Our Book of the Day</h2>
 
             <article id="bookOfTheDay">
-                <ul id="devitoList">
+                <ul id="devitoList">import bookkeepers from './images/finalLogo.PNG'
                     <li className='list-item'>An awesome official Danny DeVito-inspired, biographical colouring book.</li>
                     <li className='list-item'>Ideal for an evening of relaxation and stress relief</li>
                     <li className='list-item'>Two copies of each image are provided</li>
@@ -83,17 +83,17 @@ const Home = ({ books, setCurrentFilter }) => {
                 <div id='reviews'>
                     <h3> Read what some of our users are saying</h3>
 
-                    <p>Aya H : I'll never need another colouring book again!</p>
+                    <p>Aya H: I'll never need another colouring book again!</p>
                     <img src={starReview}
                         alt="star review"
                         className='starReview' />
 
-                    <p>Ramiro R : Love me some Daddy Devito </p>
+                    <p>Ramiro R: Love me some Daddy Devito </p>
                     <img src={starReview}
                         alt="star review"
                         className='starReview' />
 
-                    <p>Leah S : If I was Matilda I'd never want to be adopted! </p>
+                    <p>Leah S: If I was Matilda I'd never want to be adopted! </p>
                     <img src={starReview}
                         alt="star review"
                         className='starReview' />
@@ -118,7 +118,7 @@ const Home = ({ books, setCurrentFilter }) => {
                         alt="colouring pages" />
                 </div>
             </div>
-            <h2>Books by Genre</h2>
+            <h2>Discover Books by Genre</h2>
             <article id="bookByGenre">
                 {listOfGenres}
             </article>

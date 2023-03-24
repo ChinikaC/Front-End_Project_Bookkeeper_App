@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const MyBooksForm = ({ books, setBooks}) => {
+const MyBooksForm = ({ books, setBooks, postOwnedBook}) => {
   const [newBookTitle, setNewBookTitle] = useState("");
   const [newBookAuthor, setNewBookAuthor] = useState("");
   const [newBookDescription, setNewBookDescription] = useState("");
@@ -50,6 +50,8 @@ const MyBooksForm = ({ books, setBooks}) => {
         if (!response) {
           throw new Error("Failed to add book");
         }
+
+        postOwnedBook(response.id)
 
         setNewBookTitle("");
         setNewBookAuthor("");
