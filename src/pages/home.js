@@ -68,7 +68,7 @@ const Home = ({ books, setCurrentFilter }) => {
             <h2 className='bookOTDheader'>Our Book of the Day</h2>
 
             <article id="bookOfTheDay">
-                <ul id="devitoList">import bookkeepers from './images/finalLogo.PNG'
+                <ul id="devitoList">
                     <li className='list-item'>An awesome official Danny DeVito-inspired, biographical colouring book.</li>
                     <li className='list-item'>Ideal for an evening of relaxation and stress relief</li>
                     <li className='list-item'>Two copies of each image are provided</li>
