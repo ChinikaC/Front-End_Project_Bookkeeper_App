@@ -118,7 +118,7 @@ const Home = ({ books, setCurrentFilter }) => {
                         alt="colouring pages" />
                 </div>
             </div>
-            <h2>Books by Genre</h2>
+            <h2>Discover Books by Genre</h2>
             <article id="bookByGenre">
                 {listOfGenres}
             </article>

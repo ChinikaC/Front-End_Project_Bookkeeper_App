@@ -172,3 +172,7 @@
     background: url("./assets/genre_pictures/crimeFiction.webp");
     background-size: cover;
   }
+
+  h2{
+    font-size: 60px;
+  }

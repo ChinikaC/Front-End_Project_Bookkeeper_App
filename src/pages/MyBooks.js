@@ -171,7 +171,6 @@ const MyBooks = ({ ownedBooks, users, books, currentUser, setCurrentUser, delete
                     <button> <NavLink to="/MyBookForm"> Add Book </NavLink> </button>
                 </div>
                 <div>
-                <button onClick={handleDelete}>  <NavLink to="/Home">Delete Account</NavLink></button>
                 <button className="modalButton" onClick={() => {
                     setOpenModal(true);
                 }}>Delete Account</button>

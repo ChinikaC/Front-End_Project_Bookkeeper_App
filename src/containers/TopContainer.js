@@ -166,7 +166,8 @@ const TopContainer = () => {
                         {
                             <MyBookForm
                                 setBooks={setBooks}
-                                books={books} />
+                                books={books}
+                                postOwnedBook={postOwnedBook} />
                         } />
                     <Route path='/SignUp' element=
                         {
