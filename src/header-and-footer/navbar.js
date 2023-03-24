@@ -40,10 +40,15 @@
      return (
          <header>
              <div id="logoAndTitle">
+             <div className="titles-group" >
+                     <h1 id="title">T</h1>
+                     <h1 id="title">B</h1>
+                     <h1 id="title"> K</h1>
+                 </div>
                  <NavLink to="/home">
                      <img src={logo} alt="Book-Keepers Logo" id="logo" />
                  </NavLink>
-                 <h1 id="title">Book-Keepers</h1>
+               
              </div>
              <nav>
                  <NavLink to="/home">
