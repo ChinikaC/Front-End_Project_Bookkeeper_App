@@ -483,7 +483,6 @@ nav>a {
   width: 100%;
   background-position: 80%;
   display: flex;
-  /* margin-top: 200%; */
 }
 
   .modalBackground {
@@ -551,7 +550,6 @@ nav>a {
   color: white;
   border-radius: 8px;
   font-size: 20px;
-  cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;

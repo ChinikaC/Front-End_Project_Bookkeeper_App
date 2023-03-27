@@ -70,8 +70,8 @@ const Home = ({ books, setCurrentFilter }) => {
             <article id="bookOfTheDay">
                 <ul id="devitoList">
                     <li className='list-item'>An awesome official Danny DeVito-inspired, biographical colouring book.</li>
-                    <li className='list-item'>Ideal for an evening of relaxation and stress relief</li>
-                    <li className='list-item'>Two copies of each image are provided</li>
+                    <li className='list-item'>Ideal for an evening of relaxation and stress relief.</li>
+                    <li className='list-item'>Two copies of each image are provided.</li>
                     <li className='list-item'>Perfect for the whole family!</li>
 
                 </ul>
@@ -88,7 +88,7 @@ const Home = ({ books, setCurrentFilter }) => {
                         alt="star review"
                         className='starReview' />
 
-                    <p>Ramiro R: Love me some Daddy Devito </p>
+                    <p>Ramiro R: Love me some Danny Devito </p>
                     <img src={starReview}
                         alt="star review"
                         className='starReview' />

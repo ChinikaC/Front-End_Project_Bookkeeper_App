@@ -22,7 +22,7 @@ function Modal({closeModal, currentUser, deleteUser}) {
                 </div>
             </div>
     </div>
-  )
-}
+  );
+};
 
 export default Modal;
