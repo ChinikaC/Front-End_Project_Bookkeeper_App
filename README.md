@@ -12,8 +12,9 @@
 1. Project Description
 2. Diagrams
 3. Tech Stack
-4. Setup Instructions
-5. Future
+4. Dependencies
+5. Setup Instructions
+6. Future
 
 <hr />
 
@@ -52,7 +53,45 @@ The technologies used in this project were:
 
 <hr />
 
-## 4. Setup Instructions
+## 4. Dependencies
+
+The depenencies that were used in the API include:
+- spring-boot-starter-data-jpa
+- spring-boot-starter-web
+- spring-boot-devtools
+- postgresql
+- spring-boot-starter-test
+
+<dependencies>
+<dependency>
+  <groupId>org.springframework.boot</groupId>
+  <artifactId>spring-boot-starter-data-jpa</artifactId>
+</dependency>
+<dependency>
+  <groupId>org.springframework.boot</groupId>
+  <artifactId>spring-boot-starter-web</artifactId>
+</dependency>
+<dependency>
+  <groupId>org.springframework.boot</groupId>
+  <artifactId>spring-boot-devtools</artifactId>
+  <scope>runtime</scope>
+  <optional>true</optional>
+</dependency>
+<dependency>
+  <groupId>org.postgresql</groupId>
+  <artifactId>postgresql</artifactId>
+  <scope>runtime</scope>
+</dependency>
+<dependency>
+  <groupId>org.springframework.boot</groupId>
+  <artifactId>spring-boot-starter-test</artifactId>
+  <scope>test</scope>
+</dependency>
+</dependencies>
+
+<hr />
+
+## 5. Setup Instructions
 
 **Instructions for the API:**<br>
 **1. Installation:**<br>
@@ -83,7 +122,7 @@ After opening your cloned bookkeeper_backend_project file in Intellij IDEA, go t
 
  <hr />
 
- **Instructions for the client-side:**<br>
+ **Instructions for the Client-Side:**<br>
 
  **1. Installation:**<br>
 The following will need to be installed onto your device:
