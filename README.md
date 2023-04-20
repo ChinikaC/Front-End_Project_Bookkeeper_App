@@ -132,9 +132,9 @@ http://localhost:3000
 ## 6. Future Developments
 
 If we had more time, we would have liked to add the following to our project:
-- Dark mode - this has already been implemented but not everything on the screen turns dark, so we would have liked to fix this
-- Accessibility - making the website more accessible
-- Mobile friendly - ensuring the site is mobile responsive
-- Sign-in page - replicating an actual sign-in page that is functional
+- **Dark mode** - This has already been implemented but not everything on the screen turns dark, so we would have liked to fix this
+- **Accessibility** - Making the website more accessible
+- **Mobile friendly** - Ensuring the site is mobile responsive
+- **Sign-in page** - Replicating an actual sign-in page that is functional
 
 
