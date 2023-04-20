@@ -55,14 +55,14 @@ The technologies used in this project were:
 ## 4. Setup Instructions
 
 **Instructions for the API:**
-1. Installation:<br>
+**1. Installation:**<br>
 The following will need to be installed onto your device:
 - Intellij IDEA , running with JDK 17
 - Postgres
 - Postman
 - Postico
 
-2. Cloning:<br>
+**2. Cloning:**<br>
 You will need to clone the API repository onto your device. Navigate back to the API ([click here](https://github.com/aya-rh/bookkeeper_backend_project)) and click on the green 'Code' button at the top of the page. Select SSH and copy the link, or simply copy it from here: git@github.com:aya-rh/bookkeeper_backend_project.git. 
 
 Next, open your terminal and type in this command:
