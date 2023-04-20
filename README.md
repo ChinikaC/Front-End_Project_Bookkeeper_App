@@ -48,4 +48,4 @@ The technologies used in this project were:
 - React.js
 - HTML
 - CSS
-- The bookkeeper API ([](https://github.com/aya-rh/bookkeeper_backend_project))
+- ([The bookkeeper API](https://github.com/aya-rh/bookkeeper_backend_project))
