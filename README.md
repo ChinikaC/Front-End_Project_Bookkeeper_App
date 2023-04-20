@@ -54,7 +54,7 @@ The technologies used in this project were:
 
 ## 4. Setup Instructions
 
-**Instructions for the API:**
+**Instructions for the API:**<br>
 **1. Installation:**<br>
 The following will need to be installed onto your device:
 - Intellij IDEA , running with JDK 17
