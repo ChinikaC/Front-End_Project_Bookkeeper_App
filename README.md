@@ -70,7 +70,7 @@ Next, open your terminal and type in this command:
 
 Then press enter and open the file.
 
-**3. PostgreSQL database:**
+**3. PostgreSQL database:**<br>
 Create a PostgresSQL database named 'bookkeeper_api' by opening your terminal and typing in the following command:<br>
 `createdb bookkeeper_api`
 
