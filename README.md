@@ -14,7 +14,7 @@
 3. Tech Stack
 4. Dependencies
 5. Setup Instructions
-6. Future
+6. Future Developments
 
 <hr />
 
@@ -61,33 +61,6 @@ The depenencies that were used in the API include:
 - spring-boot-devtools
 - postgresql
 - spring-boot-starter-test
-
-<dependencies>
-<dependency>
-  <groupId>org.springframework.boot</groupId>
-  <artifactId>spring-boot-starter-data-jpa</artifactId>
-</dependency>
-<dependency>
-  <groupId>org.springframework.boot</groupId>
-  <artifactId>spring-boot-starter-web</artifactId>
-</dependency>
-<dependency>
-  <groupId>org.springframework.boot</groupId>
-  <artifactId>spring-boot-devtools</artifactId>
-  <scope>runtime</scope>
-  <optional>true</optional>
-</dependency>
-<dependency>
-  <groupId>org.postgresql</groupId>
-  <artifactId>postgresql</artifactId>
-  <scope>runtime</scope>
-</dependency>
-<dependency>
-  <groupId>org.springframework.boot</groupId>
-  <artifactId>spring-boot-starter-test</artifactId>
-  <scope>test</scope>
-</dependency>
-</dependencies>
 
 <hr />
 
@@ -153,4 +126,15 @@ Type the following command into your terminal:
 A new page should open on your browser. If you have any difficulty with this, you can type the following into your browser:
 
 http://localhost:3000
+
+<hr />
+
+## 6. Future Developments
+
+If we had more time, we would have liked to add the following to our project:
+- Dark mode - this has already been implemented but not everything on the screen turns dark, so we would have liked to fix this
+- Accessibility - making the website more accessible
+- Mobile friendly - ensuring the site is mobile responsive
+- Sign-in page - replicating an actual sign-in page that is functional
+
 
