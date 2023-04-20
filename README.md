@@ -1,4 +1,4 @@
-# Bookkeeper FrontEnd Project 📖
+# Bookkeeper FrontEnd Project 📚
 
 ## Collaborators
 
@@ -86,7 +86,7 @@ Then press enter and open the file.
 Create a PostgresSQL database named 'bookkeeper_api' by opening your terminal and typing in the following command:<br>
 `createdb bookkeeper_api`
 
-**NOTE:** You can use postico to check this has been created successfully.
+**NOTE:** You can use Postico to check this has been created successfully.
 
 **4. Running the application:**<br>
 After opening your cloned bookkeeper_backend_project file in Intellij IDEA, go to the 'BookkeeperBackendProjectApplication' section and press the play button at the top of the file. This will run the API. Also ensure that it is running on port 8080.
@@ -102,10 +102,12 @@ The following will need to be installed onto your device:
 - Visual Studio Code
 
 **2. Cloning:**<br>
-You will need to clone this repository onto your device. Scroll to the top of this page and click on the green 'Code'. Select SSH and copy the link, or simply copy it from here: `git@github.com:ChinikaC/FrontEnd_Project_Bookkeeper_App.git`. 
+You will need to clone this repository onto your device. Scroll to the top of this page and click on the green 'Code' button. Select SSH and copy the link, or simply copy it from here: `git@github.com:ChinikaC/FrontEnd_Project_Bookkeeper_App.git`. 
 
 Next, open your terminal and type in this command:
 `git clone git@github.com:ChinikaC/FrontEnd_Project_Bookkeeper_App.git`
+
+Then press enter and open the file.
 
 **3. Installation Pt.2:**<br>
 Go to your terminal and write the following commands:
@@ -119,11 +121,11 @@ Go to your terminal and write the following commands:
 
 - For React Icons: `npm install react -icons`
 
-**4. Running the React application:**
+**4. Running the React application:**<br>
 Type the following command into your terminal:
 `npm start`
 
-A new page should open on your browser. If you have any difficulty with this, you can type the following into your browser:
+A new page should open in your browser. If you have any difficulty with this, you can type the following into the address bar:
 
 http://localhost:3000
 
