@@ -38,3 +38,14 @@ Our wireframe displays what we originally intended our website to look like. We 
 Our component diagram indicates the different sections that we had. This includes our TopContainer, pages and components and how they inherit from one another.
 
 ![Component Diagram](images/Component.png)
+
+<hr />
+
+## 3. Tech Stack
+
+The technologies used in this project were:
+- JavaScript
+- React.js
+- HTML
+- CSS
+- The bookkeeper API ([](https://github.com/aya-rh/bookkeeper_backend_project))
