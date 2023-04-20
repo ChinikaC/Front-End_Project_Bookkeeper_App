@@ -75,7 +75,7 @@ The following will need to be installed onto your device:
 - Postico
 
 **2. Cloning:**<br>
-You will need to clone the API repository onto your device. Navigate back to the API ([click here](https://github.com/aya-rh/bookkeeper_backend_project)) and click on the green 'Code' button at the top of the page. Select SSH and copy the link, or simply copy it from here: **git@github.com:aya-rh/bookkeeper_backend_project.git**. 
+You will need to clone the API repository onto your device. Navigate back to the API ([click here](https://github.com/aya-rh/bookkeeper_backend_project)) and click on the green 'Code' button at the top of the page. Select SSH and copy the link, or simply copy it from here: `git@github.com:aya-rh/bookkeeper_backend_project.git`. 
 
 Next, open your terminal and type in this command:
 `git clone git@github.com:aya-rh/bookkeeper_backend_project.git`
@@ -102,7 +102,7 @@ The following will need to be installed onto your device:
 - Visual Studio Code
 
 **2. Cloning:**<br>
-You will need to clone this repository onto your device. Scroll to the top of this page and click on the green 'Code'. Select SSH and copy the link, or simply copy it from here: git@github.com:ChinikaC/FrontEnd_Project_Bookkeeper_App.git. 
+You will need to clone this repository onto your device. Scroll to the top of this page and click on the green 'Code'. Select SSH and copy the link, or simply copy it from here: `git@github.com:ChinikaC/FrontEnd_Project_Bookkeeper_App.git`. 
 
 Next, open your terminal and type in this command:
 `git clone git@github.com:ChinikaC/FrontEnd_Project_Bookkeeper_App.git`
