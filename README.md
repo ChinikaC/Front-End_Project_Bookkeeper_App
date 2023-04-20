@@ -1,4 +1,4 @@
-# Bookkeeper FrontEnd Project 📚
+# Bookkeeper FrontEnd Project (BNTA) 📚
 
 ## Collaborators
 
