@@ -139,6 +139,8 @@ If we had more time, we would have liked to add the following to our project:
 - **Mobile friendly** - Ensuring the site is mobile responsive
 - **Sign-in page** - Replicating an actual sign-in page that is functional
 
+<hr />
+
 **DISCLAIMER:** All images used in this project were for educational purposes only. No Copyright Infringement Intended.
 
 
