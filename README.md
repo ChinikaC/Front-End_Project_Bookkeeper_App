@@ -20,9 +20,9 @@
 
 ## 1. Project Description
 
-For our frontend project, we were tasked with creating the client-side for another group's backend project (API). We were assigned the bookkeeper API which is a book inspired API, where users could add a book the main booklist which came with app to their personal booklist. They could also categorise each book into three categories: To read, reading and read. A filter function also allowed users to filter books based on the author, genre and rating. 
+For our frontend project, we were tasked with creating the client-side for another group's backend project (an API). We were assigned the bookkeeper API which is a book inspired API, where users could add a book from the main book list (which came with app) to their personal book list. They could also categorise each book into three categories: to read, reading and read. A filter function also allowed users to filter books based on the author, genre and rating. 
 
-Other functionalities include adding a new book and new user, updating a user's personal details and deleting a user account.
+Other functionalities included adding a new book and new user, updating a user's personal details, and deleting a user account.
 
 <hr />
 
