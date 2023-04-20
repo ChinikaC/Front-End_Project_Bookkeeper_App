@@ -89,8 +89,9 @@ createdb bookkeeper_api
 Next, open your terminal and type in this command:
 git clone git@github.com:ChinikaC/FrontEnd_Project_Bookkeeper_App.git
 
-3. Go to your terminal and write the following commands:
-- For Node Modules: npm install or npm i
+3. Installation.02:<br>
+Go to your terminal and write the following commands:
+- For Node Modules: `npm install or npm i`
 
 - For React Router: npm install react-router-dom \nnpm install --save styled-components
 
@@ -100,7 +101,8 @@ git clone git@github.com:ChinikaC/FrontEnd_Project_Bookkeeper_App.git
 
 - For React Icons: npm install react -icons
 
-4. Type the following command into your terminal:
+4. Running the React application:
+Type the following command into your terminal:
 npm start
 
 A new page should open on your browser. If you have any difficulty with this, you can type the following into your browser:
