@@ -90,6 +90,7 @@ The following will need to be installed onto your device:
 - Visual Studio Code
 
 2. Cloning:
+<br />
 You will need to clone this repository onto your device. Scroll to the top of this page and click on the green 'Code'. Select SSH and copy the link, or simply copy it from here: git@github.com:ChinikaC/FrontEnd_Project_Bookkeeper_App.git. 
 
 Next, open your terminal and type in this command:
