@@ -70,32 +70,32 @@ Next, open your terminal and type in this command:
 
 Then press enter and open the file.
 
-3. PostgreSQL database:
+**3. PostgreSQL database:**
 Create a PostgresSQL database named 'bookkeeper_api' by opening your terminal and typing in the following command:<br>
 `createdb bookkeeper_api`
 
 **NOTE:** You can use postico to check this has been created successfully.
 
-4. Running the application:<br>
+**4. Running the application:**<br>
 After opening your cloned bookkeeper_backend_project file in Intellij IDEA, go to the 'BookkeeperBackendProjectApplication' section and press the play button at the top of the file. This will run the API. Also ensure that it is running on port 8080.
 
 **NOTE:** If you would like to check if the endpoints are all working, you can test this in Postman. To view the different endpoints, use this ([link](https://github.com/aya-rh/bookkeeper_backend_project)) and scroll down to the 'RESTful route endpoints' section.
 
- <br />
+ <hr />
 
- **Instructions for the client-side:**
+ **Instructions for the client-side:**<br>
 
- 1. Installation:<br>
+ **1. Installation:**<br>
 The following will need to be installed onto your device:
 - Visual Studio Code
 
-2. Cloning:<br>
+**2. Cloning:**<br>
 You will need to clone this repository onto your device. Scroll to the top of this page and click on the green 'Code'. Select SSH and copy the link, or simply copy it from here: git@github.com:ChinikaC/FrontEnd_Project_Bookkeeper_App.git. 
 
 Next, open your terminal and type in this command:
 `git clone git@github.com:ChinikaC/FrontEnd_Project_Bookkeeper_App.git`
 
-3. Installation Pt.2:<br>
+**3. Installation Pt.2:**<br>
 Go to your terminal and write the following commands:
 - For Node Modules: `npm install or npm i`
 
@@ -107,7 +107,7 @@ Go to your terminal and write the following commands:
 
 - For React Icons: `npm install react -icons`
 
-4. Running the React application:
+**4. Running the React application:**
 Type the following command into your terminal:
 `npm start`
 
