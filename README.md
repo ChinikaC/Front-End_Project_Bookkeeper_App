@@ -46,7 +46,7 @@ Our component diagram indicates the different sections that we had. This include
 
 The technologies used in this project were:
 - JavaScript
-- React.js
+- React
 - HTML
 - CSS
 - [The Bookkeeper API](https://github.com/aya-rh/bookkeeper_backend_project)
@@ -120,7 +120,7 @@ Create a PostgresSQL database named 'bookkeeper_api' by opening your terminal an
 **4. Running the application:**<br>
 After opening your cloned bookkeeper_backend_project file in Intellij IDEA, go to the 'BookkeeperBackendProjectApplication' section and press the play button at the top of the file. This will run the API. Also ensure that it is running on port 8080.
 
-**NOTE:** If you would like to check if the endpoints are all working, you can test this in Postman. To view the different endpoints, use this ([link](https://github.com/aya-rh/bookkeeper_backend_project)) and scroll down to the 'RESTful route endpoints' section.
+**NOTE:** If you would like to check if the endpoints are all working, you can test this in Postman. To view the different endpoints, use this ([link](https://github.com/aya-rh/bookkeeper_backend_project)) and scroll down to the **'RESTful route endpoints' section**.
 
  <hr />
 
@@ -140,15 +140,15 @@ Then press enter and open the file.
 
 **3. Installation Pt.2:**<br>
 Go to your terminal and write the following commands:
-- For Node Modules: `npm install or npm i`
+- For node modules: `npm install or npm i`
 
-- For React Router: `npm install react-router-dom \nnpm install --save styled-components`
+- For react router: `npm install react-router-dom \nnpm install --save styled-components`
 
-- For React Stars: `npm install react-rating-stars-component --save`
+- For react stars: `npm install react-rating-stars-component --save`
 
-- For React Tippy: `npm install --save react-tippy`
+- For react tippy: `npm install --save react-tippy`
 
-- For React Icons: `npm install react -icons`
+- For react icons: `npm install react -icons`
 
 **4. Running the React application:**<br>
 Type the following command into your terminal:
@@ -161,10 +161,10 @@ A new page should open in your browser. If you have any difficulty with this, yo
 ## 6. Future Developments
 
 If we had more time, we would have liked to add the following to our project:
-- **Dark mode** - This has already been implemented but not everything on the screen turns dark, so we would have liked to fix this
-- **Accessibility** - Making the website more accessible
-- **Mobile friendly** - Ensuring the site is mobile responsive
-- **Sign-in page** - Replicating an actual sign-in page that is functional
+- **Dark mode** - This has already been implemented but not everything on the screen turns dark, so we would have liked to fix this.
+- **Accessibility** - Making the website more accessible.
+- **Mobile friendly** - Ensuring the site is mobile responsive.
+- **Sign-in page** - Replicating an actual sign-in page that is functional.
 
 <hr />
 
