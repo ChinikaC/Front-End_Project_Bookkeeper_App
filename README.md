@@ -154,9 +154,7 @@ Go to your terminal and write the following commands:
 Type the following command into your terminal:
 `npm start`
 
-A new page should open in your browser. If you have any difficulty with this, you can type the following into the address bar:
-
-http://localhost:3000
+A new page should open in your browser. If you have any difficulty with this, you can type the following into the address bar: `http://localhost:3000`
 
 <hr />
 
