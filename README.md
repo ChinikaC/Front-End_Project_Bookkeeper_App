@@ -120,7 +120,7 @@ Create a PostgresSQL database named 'bookkeeper_api' by opening your terminal an
 **4. Running the application:**<br>
 After opening your cloned bookkeeper_backend_project file in Intellij IDEA, go to the 'BookkeeperBackendProjectApplication' section and press the play button at the top of the file. This will run the API. Also ensure that it is running on port 8080.
 
-**NOTE:** If you would like to check if the endpoints are all working, you can test this in Postman. To view the different endpoints, use this ([link](https://github.com/aya-rh/bookkeeper_backend_project)) and scroll down to the **'RESTful route endpoints' section**.
+**NOTE:** If you would like to check if the endpoints are all working, you can test this in Postman. To view the different endpoints, use this ([link](https://github.com/aya-rh/bookkeeper_backend_project)) and scroll down to the **'RESTful route endpoints'** section.
 
  <hr />
 
