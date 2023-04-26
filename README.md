@@ -49,7 +49,7 @@ The technologies used in this project were:
 - React.js
 - HTML
 - CSS
-- [The bookkeeper API](https://github.com/aya-rh/bookkeeper_backend_project)
+- [The Bookkeeper API](https://github.com/aya-rh/bookkeeper_backend_project)
 
 <hr />
 
@@ -72,7 +72,6 @@ The depenencies that were used in the API include:
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
